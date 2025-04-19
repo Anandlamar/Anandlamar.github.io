@@ -855,67 +855,9 @@ with cross-functional teams to design system enhancements.</li>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   
-<div id="chatbot-container">
-  <bot-ui></bot-ui>
-</div>
 
     
   </body>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-<script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
-
-<script>
-  var botui = new BotUI('chatbot-container');
-
-  botui.message.add({
-    content: 'Hello! How are you today? 😊'
-  }).then(function () {
-    return botui.action.button({
-      action: [
-        { text: 'Good!', value: 'good' },
-        { text: 'Not bad', value: 'notbad' }
-      ]
-    });
-  }).then(function (res) {
-    return botui.message.add({
-      content: 'Did you check out my profile and projects? 🚀'
-    });
-  }).then(function () {
-    return botui.action.button({
-      action: [
-        { text: 'Yes, loved it!', value: 'yes' },
-        { text: 'Not yet', value: 'no' }
-      ]
-    });
-  }).then(function () {
-    return botui.message.add({
-      content: 'Would you like to hire me? 🎯'
-    });
-  }).then(function () {
-    return botui.action.button({
-      action: [
-        { text: 'Yes!', value: 'hire' },
-        { text: 'Let\'s talk', value: 'talk' }
-      ]
-    });
-  }).then(function () {
-    return botui.message.add({
-      content: 'Awesome! Here’s my contact info:'
-    });
-  }).then(function () {
-    return botui.message.add({
-      content: '📧 Email: yourname@email.com'
-    });
-  }).then(function () {
-    return botui.message.add({
-      content: '📞 Phone: +1-234-567-8901'
-    });
-  }).then(function () {
-    return botui.message.add({
-      content: 'Let’s schedule a call soon! 🗓️'
-    });
-  });
-</script>
-
+	
 
 </html>
