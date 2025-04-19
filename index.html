@@ -855,8 +855,7 @@ with cross-functional teams to design system enhancements.</li>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   
-  <script src="js/main.js"></script>
-	<div id="app">
+<div id="chatbot-container">
   <bot-ui></bot-ui>
 </div>
 
@@ -866,10 +865,10 @@ with cross-functional teams to design system enhancements.</li>
 <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
 
 <script>
-  var botui = new BotUI('app');
+  var botui = new BotUI('chatbot-container');
 
   botui.message.add({
-    content: 'Hello! How are you today?'
+    content: 'Hello! How are you today? 😊'
   }).then(function () {
     return botui.action.button({
       action: [
@@ -877,9 +876,9 @@ with cross-functional teams to design system enhancements.</li>
         { text: 'Not bad', value: 'notbad' }
       ]
     });
-  }).then(function () {
+  }).then(function (res) {
     return botui.message.add({
-      content: 'Did you check out my profile and projects?'
+      content: 'Did you check out my profile and projects? 🚀'
     });
   }).then(function () {
     return botui.action.button({
@@ -888,9 +887,9 @@ with cross-functional teams to design system enhancements.</li>
         { text: 'Not yet', value: 'no' }
       ]
     });
-  }).then(function (res) {
+  }).then(function () {
     return botui.message.add({
-      content: 'Would you like to hire me?'
+      content: 'Would you like to hire me? 🎯'
     });
   }).then(function () {
     return botui.action.button({
@@ -899,23 +898,24 @@ with cross-functional teams to design system enhancements.</li>
         { text: 'Let\'s talk', value: 'talk' }
       ]
     });
-  }).then(function (res) {
+  }).then(function () {
     return botui.message.add({
-      content: 'Awesome! You can reach me here:'
+      content: 'Awesome! Here’s my contact info:'
     });
   }).then(function () {
     return botui.message.add({
-      content: 'Email: Bhagatanand28@gmail.com or abhagat@lamar.edu'
+      content: '📧 Email: yourname@email.com'
     });
   }).then(function () {
     return botui.message.add({
-      content: 'Phone: +1-409-434-3518'
+      content: '📞 Phone: +1-234-567-8901'
     });
   }).then(function () {
     return botui.message.add({
-      content: 'Let’s schedule a call!'
+      content: 'Let’s schedule a call soon! 🗓️'
     });
   });
 </script>
+
 
 </html>
