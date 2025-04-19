@@ -858,4 +858,60 @@ with cross-functional teams to design system enhancements.</li>
   <script src="js/main.js"></script>
     
   </body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
+
+<script>
+  var botui = new BotUI('app');
+
+  botui.message.add({
+    content: 'Hello! How are you today?'
+  }).then(function () {
+    return botui.action.button({
+      action: [
+        { text: 'Good!', value: 'good' },
+        { text: 'Not bad', value: 'notbad' }
+      ]
+    });
+  }).then(function () {
+    return botui.message.add({
+      content: 'Did you check out my profile and projects?'
+    });
+  }).then(function () {
+    return botui.action.button({
+      action: [
+        { text: 'Yes, loved it!', value: 'yes' },
+        { text: 'Not yet', value: 'no' }
+      ]
+    });
+  }).then(function (res) {
+    return botui.message.add({
+      content: 'Would you like to hire me?'
+    });
+  }).then(function () {
+    return botui.action.button({
+      action: [
+        { text: 'Yes!', value: 'hire' },
+        { text: 'Let\'s talk', value: 'talk' }
+      ]
+    });
+  }).then(function (res) {
+    return botui.message.add({
+      content: 'Awesome! You can reach me here:'
+    });
+  }).then(function () {
+    return botui.message.add({
+      content: 'Email: Bhagatanand28@gmail.com or abhagat@lamar.edu'
+    });
+  }).then(function () {
+    return botui.message.add({
+      content: 'Phone: +1-409-434-3518'
+    });
+  }).then(function () {
+    return botui.message.add({
+      content: 'Let’s schedule a call!'
+    });
+  });
+</script>
+
 </html>
