@@ -114,37 +114,40 @@
 ================================ */
 
 #certification-section {
-  background: #0d0d0d;
+  background: #111111;
   padding: 120px 0;
 }
 
+/* MAIN: makes the whole row wider (so cards can be bigger) */
 #certification-section .container-fluid {
-  max-width: 1800px;   /* Makes row wider */
+  max-width: 1700px;   /* increase this: 1700 -> 1900 -> 2200 */
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .cert-card {
   text-align: center;
-  padding: 20px;
 }
 
+/* MAIN: makes badge image bigger */
 .cert-badge {
   width: 100%;
-  max-width: 750px;   /* Perfect size for 3 in one row */
+  max-width: 520px;    /* increase this: 520 -> 600 -> 700 */
   height: auto;
-  border-radius: 18px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 16px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .cert-card:hover .cert-badge {
-  transform: scale(1.06);
-  box-shadow: 0 35px 80px rgba(0, 150, 255, 0.45);
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(0, 150, 255, 0.35);
 }
 
 .cert-title {
   font-weight: 600;
-  margin-top: 22px;
-  font-size: 18px;
+  margin-top: 14px;
+  font-size: 16px;
   color: #ffffff;
 }
 
