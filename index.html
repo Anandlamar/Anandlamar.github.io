@@ -109,7 +109,7 @@
   transform: scale(1.1);
 }
 
-//* ==============================
+/* ==============================
    CERTIFICATION SECTION
 ================================ */
 
@@ -118,32 +118,35 @@
   padding: 120px 0;
 }
 
+#certification-section .container {
+  max-width: 1300px;
+}
+
 .cert-card {
   text-align: center;
-  transition: all 0.3s ease;
 }
 
 .cert-badge {
+  display: block;
+  margin: 0 auto;
   width: 100%;
-  max-width: 850px;  /* image size */
+  max-width: 950px;  /* Bigger than 850 */
   height: auto;
   border-radius: 14px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cert-card:hover .cert-badge {
-  transform: scale(1.08);
-  box-shadow: 0 25px 50px rgba(0, 150, 255, 0.35);
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(0, 150, 255, 0.4);
 }
 
 .cert-title {
   font-weight: 600;
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 18px;
+  font-size: 20px;
   color: #ffffff;
 }
-
-
 </style>
 
 
