@@ -109,6 +109,46 @@
   transform: scale(1.1);
 }
 
+/* ==============================
+   CERTIFICATION SECTION STYLING
+================================ */
+
+#certifications-section {
+  background: #f9f9f9;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.cert-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.cert-badge {
+  max-width: 320px;   /* controls badge size */
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-badge {
+  transform: scale(1.05);
+}
+
+.cert-title {
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 18px;
+}
 
 </style>
 
