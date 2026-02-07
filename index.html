@@ -114,74 +114,39 @@
 ================================ */
 
 #certification-section {
-  background: #111111;
+  background: #0d0d0d;
   padding: 120px 0;
 }
 
-/* NEW: because we changed HTML to container-fluid */
 #certification-section .container-fluid {
-  max-width: 1700px;
+  max-width: 1800px;   /* Makes row wider */
   margin: 0 auto;
 }
 
-/* card wrapper */
 .cert-card {
   text-align: center;
-  padding: 18px;
+  padding: 20px;
 }
 
-/* the badge image */
 .cert-badge {
-  display: block;
-  margin: 0 auto;
-  width: 100%;          /* fills the column */
-  max-width: 820px;     /* controls how big it can get */
+  width: 100%;
+  max-width: 600px;   /* Perfect size for 3 in one row */
   height: auto;
-  border-radius: 16px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border-radius: 18px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* hover effect */
 .cert-card:hover .cert-badge {
   transform: scale(1.06);
-  box-shadow: 0 28px 70px rgba(0, 150, 255, 0.45);
+  box-shadow: 0 35px 80px rgba(0, 150, 255, 0.45);
 }
 
-/* title under each badge */
 .cert-title {
   font-weight: 600;
-  margin-top: 18px;
+  margin-top: 22px;
   font-size: 18px;
   color: #ffffff;
-  line-height: 1.35;
 }
-
-/* RESPONSIVE: make it look perfect on small screens */
-@media (max-width: 991.98px) {
-  #certification-section {
-    padding: 80px 0;
-  }
-  .cert-badge {
-    max-width: 700px;
-  }
-  .cert-title {
-    font-size: 17px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .cert-card {
-    padding: 10px;
-  }
-  .cert-badge {
-    max-width: 100%;
-    border-radius: 12px;
-  }
-  .cert-title {
-    font-size: 16px;
-  }
-}
-
 
 
 </style>
