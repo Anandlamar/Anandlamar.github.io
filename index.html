@@ -246,6 +246,18 @@ body{
 #resume-section .resume-wrap.logo-amplify::before{ background-image: url('images/amplify-logo.png'); }
 #resume-section .resume-wrap.logo-lamar::before{    background-image: url('images/lamar-logo.png'); }
 #resume-section .resume-wrap.logo-metalink::before{ background-image: url('images/metalink-logo.png'); }
+#resume-section .resume-wrap.logo-mda::before{
+  content:'MDA';
+  background-image:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:120px;
+  font-weight:800;
+  letter-spacing:.08em;
+  color:#ffffff;
+  opacity:0.055;
+}
 #resume-section .resume-wrap > *{ position:relative; z-index:1; }
 
 /* small logo chip next to the company name */
@@ -260,6 +272,15 @@ body{
   height:100%;
   object-fit:contain;
   display:block;
+}
+#resume-section .logo-tile-text{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:13px;
+  color:#111 !important;
+  letter-spacing:.04em;
 }
 /* identical tile for every logo, so mismatched marks read as a set */
 #resume-section .logo-tile{
@@ -425,9 +446,9 @@ body{
 	  <section id="home-section" class="hero-new">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="hero-overline">Data &amp; Analytics Professional</div>
+          <div class="hero-overline">Data &amp; AI • SAP Analytics Professional</div>
           <h1>Turning Data into insights.</h1>
-          <p class="hero-lead">I'm Anand Kumar Bhagat, an SAP Certified analytics professional. I build reporting and planning systems that give leaders a clear, real time view of the numbers that drive their business.</p>
+          <p class="hero-lead">I'm Anand Kumar Bhagat, a Data &amp; AI and SAP Certified analytics professional. I build analytics, reporting, planning, and AI-enabled solutions that turn complex information into clear business decisions.</p>
           <span id="typing-animation"></span>
           <div class="hero-actions">
             <a href="#project-section" class="hero-btn hero-btn-solid">View my work &rarr;</a>
@@ -436,7 +457,7 @@ body{
           <div class="hero-status"><span class="hero-dot"></span> Open to analytics and SAP roles</div>
         </div>
         <div class="hero-photo">
-          <img src="images/portrait-square.png" alt="Anand Kumar Bhagat">
+          <img src="images/potrait square.png" alt="Anand Kumar Bhagat">
         </div>
       </div>
 
@@ -486,8 +507,8 @@ body{
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Anand Kumar Bhagat </span></p>
-										<p><span class="title-s">Job Role: </span> <span>SAP Business Analyst </span></p>
-										<p><span class="title-s">Experience: </span> <span>3+ Years </span></p>
+										<p><span class="title-s">Job Role: </span> <span>Data &amp; AI Engineer / SAP Analytics Professional</span></p>
+										<p><span class="title-s">Experience: </span> <span>5+ Years </span></p>
 										<p><span class="title-s">Address: </span> <span>Mississippi, USA</span></p>
 									  </div>
 									</div>
@@ -542,7 +563,7 @@ My work spans enterprise analytics, procurement and finance processes, SAC Dashb
 
 From AI research in defense systems to delivering real-world SAP analytics solutions in manufacturing environments, I operate at the intersection of business strategy, data architecture, and enterprise technology  driven by one mission: turning information into measurable impact.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+									<li class="d-flex"><span>Profile:</span> <span>Data &amp; AI, SAP Analytics &amp; Business Intelligence</span></li>
 									<li class="d-flex"><span>Domain:</span> <span> SAP ERP Systems, SAP Business Process Integration,Business Intelligence, Data Analytics, Enterprise Systems, Supply Chain Management, Information Security, Military Technology</span></li>
 									<li class="d-flex"><span>Education:</span> <span>Master of Science in Management Information Systems</span></li>
 									<li class="d-flex"><span>Language:</span> <span>English</span></li>
@@ -575,116 +596,149 @@ From AI research in defense systems to delivering real-world SAP analytics solut
 	
     <section class="ftco-section ftco-no-pb" id="resume-section">
   <div class="container-fluid resume-wide">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>SAP Certified Enterprise Analytics Professional with a Master’s in Management Information Systems, specializing in SAP S/4HANA Public Cloud, SAP Business Data Cloud (BDC), and SAP Analytics Cloud (SAC). Experienced in enterprise SAP environments including ServiceNow ticket management and SAP Concur integration, delivering data-driven solutions that improve operational efficiency and business visibility.</p>
-          </div>
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Resume</h1>
+        <h2 class="mb-4">Resume</h2>
+        <p>Data &amp; AI and SAP Analytics professional with 5+ years of experience across enterprise analytics, SAP S/4HANA Public Cloud, SAP Analytics Cloud (SAC), business intelligence, SQL, Python, and AI-enabled data solutions. Experienced in translating business requirements into reporting, planning, automation, and decision-support solutions across manufacturing, government, research, and technology environments.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <h1 class="big-4">Experience</h1>
+      <div class="underline"></div>
+    </div>
+    <br>
+
+    <div class="row">
+      <!-- Mississippi Development Authority -->
+      <div class="col-lg-3 col-md-6 col-12 mb-4">
+        <div class="resume-wrap ftco-animate has-logo logo-mda">
+          <span class="date">May 2026–Present</span>
+          <h2>Data &amp; AI Engineer</h2>
+          <span class="company-line">
+            <span class="logo-tile logo-tile-text" title="Mississippi Development Authority">MDA</span>
+            <span class="position">Mississippi Development Authority, Mississippi</span>
+          </span>
+          <p class="mt-4">Supporting data, AI, analytics, and digital initiatives for the Energy &amp; Natural Resources Division.</p>
+          <ul>
+            <li>Developing an AI/RAG knowledge system to improve search and access across decades of agency documents and program data.</li>
+            <li>Using Python, SQL, and AI-assisted workflows to organize, analyze, and surface information for program teams.</li>
+            <li>Supporting EnergySmartMS, R-STEP, reporting, web content, and data-driven program operations.</li>
+          </ul>
         </div>
+      </div>
 
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<!-- Work Experience Section -->
-<div class="row">
-  <div class="col-lg-4 col-md-6 col-12 mb-4">
-    <div class="resume-wrap ftco-animate has-logo logo-amplify">
-      <span class="date">June 2025–Present</span>
-      <h2>SAP IT Intern → SAP Analytics & Integration Analyst</h2>
-      <span class="company-line"><a href="https://www.amplifycell.com" target="_blank" rel="noopener" class="logo-tile" title="Amplify Cell Technologies logo"><img src="images/amplify-logo.png" class="company-logo" alt="Amplify Cell Technologies logo" onerror="this.parentNode.style.display='none'"></a><span class="position">Amplify Cell Technologies, Byhalia – MS</span></span>
-      <p class="mt-4">Amplify Cell Technologies is building the largest U.S. commercial battery cell manufacturing plant for heavy‑ and medium‑duty vehicles.
-        <ul>
-          <li>Designed and deployed 6+ SAP Analytics Cloud (SAC) dashboards for OPEX, CAPEX, and cost center planning, improving planning accuracy by 25% across business units.</li>
-          <li>Supported SAP S/4HANA Public Cloud procurement configuration, vendor onboarding processes, and cross-module integration across Finance and Supply Chain.</li>
-          <li>Led SAP incident and change management activities via ServiceNow, ensuring structured ticket resolution and alignment between business stakeholders and offshore SAP teams.</li>
-			<li>Administered SAP Concur processes including employee onboarding, expense policy configuration, and financial reporting alignment in coordination with Finance.</li>
-        </ul>
-      </p>
+      <!-- Amplify Cell Technologies -->
+      <div class="col-lg-3 col-md-6 col-12 mb-4">
+        <div class="resume-wrap ftco-animate has-logo logo-amplify">
+          <span class="date">June 2025–March 2026</span>
+          <h2>SAP IT Intern → SAP Analytics &amp; Integration Analyst</h2>
+          <span class="company-line">
+            <a href="https://www.amplifycell.com" target="_blank" rel="noopener" class="logo-tile" title="Amplify Cell Technologies logo">
+              <img src="images/amplify-logo.png" class="company-logo" alt="Amplify Cell Technologies logo" onerror="this.parentNode.style.display='none'">
+            </a>
+            <span class="position">Amplify Cell Technologies, Byhalia – MS</span>
+          </span>
+          <p class="mt-4">Supported enterprise SAP analytics and integration initiatives in a large-scale battery manufacturing environment.</p>
+          <ul>
+            <li>Designed and deployed 6+ SAP Analytics Cloud dashboards for OPEX, CAPEX, cost center planning, and leadership reporting.</li>
+            <li>Supported SAP S/4HANA Public Cloud procurement, Finance and Supply Chain processes, including vendor onboarding and cross-module integration.</li>
+            <li>Managed SAP incidents and changes through ServiceNow and supported SAP Concur administration and finance reporting alignment.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lamar University -->
+      <div class="col-lg-3 col-md-6 col-12 mb-4">
+        <div class="resume-wrap ftco-animate has-logo logo-lamar">
+          <span class="date">September 2024–May 2025</span>
+          <h2>Graduate Research Assistant</h2>
+          <span class="company-line">
+            <a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo">
+              <img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'">
+            </a>
+            <span class="position">Lamar University</span>
+          </span>
+          <p class="mt-4">Conducted applied research on artificial intelligence, emerging technology, and its implications for defense and society.</p>
+          <ul>
+            <li>Conducted literature reviews and synthesized research on AI applications in defense systems and military decision-making.</li>
+            <li>Developed structured research methods, AI use cases, and policy-oriented recommendations.</li>
+            <li>Collaborated on academic research and analysis supporting publication-quality work.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meta Link -->
+      <div class="col-lg-3 col-md-6 col-12 mb-4">
+        <div class="resume-wrap ftco-animate has-logo logo-metalink">
+          <span class="date">2021–2023</span>
+          <h2>Junior Data Analyst</h2>
+          <span class="company-line">
+            <span class="logo-tile" title="Meta Link">
+              <img src="images/metalink-logo.png" class="company-logo" alt="Meta Link logo" onerror="this.parentNode.style.display='none'">
+            </span>
+            <span class="position">Meta Link</span>
+          </span>
+          <p class="mt-4">Meta Link Pvt. Ltd. is an IT solutions provider in Nepal.</p>
+          <ul>
+            <li>Used Python and SQL for data analysis, technical support, and cross-functional problem solving.</li>
+            <li>Applied analytics and predictive techniques to improve project execution and decision-making.</li>
+            <li>Improved documentation and user guidance to reduce recurring errors and support requests.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="row">
+      <h1 class="big-4">Education</h1>
+      <div class="underline"></div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="resume-wrap ftco-animate has-logo logo-lamar-edu">
+          <span class="date">2024–2025</span>
+          <h2>Master of Science in Management Information Systems</h2>
+          <span class="company-line">
+            <a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo">
+              <img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'">
+            </a>
+            <span class="position">Lamar University</span>
+          </span>
+          <p class="mt-4">GPA: 3.90</p>
+          <p class="mt-4">SAP Certified – Business Process Integration with SAP S/4HANA (TS410), 2024</p>
+          <p class="mt-4">Member: Beta Gamma Sigma, 2025</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="resume-wrap ftco-animate has-logo logo-tribhuvan">
+          <span class="date">2016–2021</span>
+          <h2>Bachelor of Information Management</h2>
+          <span class="company-line">
+            <a href="https://tu.edu.np" target="_blank" rel="noopener" class="logo-tile" title="Tribhuvan University logo">
+              <img src="images/tribhuvan-logo.png" class="company-logo" alt="Tribhuvan University logo" onerror="this.parentNode.style.display='none'">
+            </a>
+            <span class="position">Tribhuvan University</span>
+          </span>
+          <p class="mt-4">GPA: 3.06</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 text-center ftco-animate">
+        <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="col-md-4">
-    <div class="resume-wrap ftco-animate has-logo logo-lamar">
-      <span class="date"> January 2024 – May 2025</span>
-      <h2>Graduate Research Assistant</h2>
-      <span class="company-line"><a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo"><img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'"></a><span class="position">Lamar University</span></span>
-      <p class="mt-4">Lamar University is a public institution known for research, innovation, and hands-on learning.
-        <ul>
-          <li>Executed research on AI integration in military tactics.</li>
-          <li>Designed research methodologies for AI's societal effects.</li>
-          <li>Conducted literature reviews on AI applications in defense.</li>
-        </ul>
-      </p>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="resume-wrap ftco-animate has-logo logo-metalink">
-      <span class="date">2021–2023</span>
-      <h2>Junior Data Analyst</h2>
-      <span class="company-line"><span class="logo-tile" title="Meta Link"><img src="images/metalink-logo.png" class="company-logo" alt="Meta Link logo" onerror="this.parentNode.style.display='none'"></span><span class="position">Meta Link</span></span>
-      <p class="mt-4">Meta Link Pvt. Ltd. is a leading IT solutions provider in Nepal.
-        <ul>
-          <li>Accelerated project completion by 20% through data analytics and predictive modeling.</li>
-          <li>Used Python and SQL for technical support and cross-functional collaboration.</li>
-          <li>Reduced user errors by 25% by streamlining user documentation and manuals.</li>
-        </ul>
-      </p>
-    </div>
-  </div>
-</div>
-
-							</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate has-logo logo-lamar-edu">
-    					<span class="date">2024-2025</span>
-    					<h2>Master of Science in Management Information Systems</h2>
-    					<span class="company-line"><a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo"><img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'"></a><span class="position">Lamar University</span></span>
-    					<p class="mt-4">GPA: 4.0 </p>
-						<p class="mt-4"> SAP Certified Business Process Integration (TS410) Summer: 2024</p> 
-						<p class="mt-4">Member: Beta Gamma Sigma, Feb 2025</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate has-logo logo-tribhuvan">
-    					<span class="date">2016-2021</span>
-    					<h2>Bachelor of Information Management </h2>
-    					<span class="company-line"><a href="https://tu.edu.np" target="_blank" rel="noopener" class="logo-tile" title="Tribhuvan University logo"><img src="images/tribhuvan-logo.png" class="company-logo" alt="Tribhuvan University logo" onerror="this.parentNode.style.display='none'"></a><span class="position">Tribhuvan University</span></span>
-    					<p class="mt-4">GPA: 3.06</p>
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-	<section class="ftco-section" id="project-section">
+<section class="ftco-section" id="project-section">
 		 <div class="container-fluid">
 
 		  <div class="row justify-content-center mb-5 pb-5">
