@@ -390,7 +390,46 @@ body{
 @media (max-width:991px){
   #home-section.hero-new .hero-grid{grid-template-columns:1fr;gap:40px;}
   #home-section.hero-new h1{font-size:46px;}
-  #home-section.hero-new .hero-photo{max-width:380px;}
+  #home-section.hero-new .hero-photo{max-width:360px;margin:0 auto;}
+}
+
+/* ===== PORTRAIT FIX: consistent hero + about photo ===== */
+#home-section.hero-new .hero-photo{
+  width:100%;
+  max-width:460px;
+  aspect-ratio:4/5;
+  margin-left:auto;
+  border-radius:20px;
+  overflow:hidden;
+  background:#f7f7f7;
+  border:1px solid #2b2b2b;
+  box-shadow:0 18px 45px rgba(0,0,0,.30);
+}
+#home-section.hero-new .hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 18%;
+  display:block;
+}
+#about-section .about-img{
+  width:150px;
+  height:150px;
+  margin:0 auto 24px;
+}
+#about-section .about-profile-photo{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  object-position:center 18%;
+  border-radius:50% !important;
+  border:3px solid #ffbd39;
+  padding:3px;
+  background:#fff;
+  margin-left:0 !important;
+}
+@media (max-width:991px){
+  #home-section.hero-new .hero-photo{max-width:360px;margin:0 auto;}
 }
 
 </style>
@@ -425,15 +464,15 @@ body{
 	  <section id="home-section" class="hero-new">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="hero-overline">Data &amp; AI • SAP Analytics Professional</div>
+          <div class="hero-overline">SAP Analytics Professional</div>
           <h1>Turning Data into insights.</h1>
-          <p class="hero-lead">I'm Anand Kumar Bhagat, a Data &amp; AI and SAP Certified analytics professional. I build analytics, reporting, planning, and AI-enabled solutions that turn complex information into clear business decisions.</p>
+          <p class="hero-lead">I'm Anand Kumar Bhagat, an SAP Certified Analytics Professional. I build reporting, planning, and enterprise analytics solutions that turn complex information into clear business decisions.</p>
           <span id="typing-animation"></span>
           <div class="hero-actions">
             <a href="#project-section" class="hero-btn hero-btn-solid">View my work &rarr;</a>
             <a href="#contact-section" class="hero-btn hero-btn-ghost">Get in touch</a>
           </div>
-          <div class="hero-status"><span class="hero-dot"></span> Open to analytics and SAP roles</div>
+          <div class="hero-status"><span class="hero-dot"></span> Open to SAP Analytics roles</div>
         </div>
         <div class="hero-photo">
           <img src="images/portrait-square.png" alt="Anand Kumar Bhagat">
@@ -479,14 +518,14 @@ body{
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/portrait-square.png" class="img-fluid rounded b-shadow-a about-profile-photo" alt="Anand Kumar Bhagat">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Anand Kumar Bhagat </span></p>
-										<p><span class="title-s">Job Role: </span> <span>Data &amp; AI Engineer / SAP Analytics Professional</span></p>
+										<p><span class="title-s">Job Role: </span> <span>SAP Analytics Professional</span></p>
 										<p><span class="title-s">Experience: </span> <span>5+ Years </span></p>
 										<p><span class="title-s">Address: </span> <span>Mississippi, USA</span></p>
 									  </div>
@@ -593,10 +632,10 @@ From AI research in defense systems to delivering real-world SAP analytics solut
       <!-- Amplify Cell Technologies -->
       <div class="col-lg-4 col-md-6 col-12 mb-4">
         <div class="resume-wrap ftco-animate has-logo logo-amplify">
-          <span class="date">June 2025–March 2026</span>
+          <span class="date">June 2025–April 2026</span>
           <h2>SAP IT Intern → SAP Analytics &amp; Integration Analyst</h2>
           <span class="company-line">
-            <a href="https://www.amplifycell.com" target="_blank" rel="noopener" class="logo-tile" title="Amplify Cell Technologies logo">
+            <a href="https://amplifycelltech.com/" target="_blank" rel="noopener" class="logo-tile" title="Amplify Cell Technologies logo">
               <img src="images/amplify-logo.png" class="company-logo" alt="Amplify Cell Technologies logo" onerror="this.parentNode.style.display='none'">
             </a>
             <span class="position">Amplify Cell Technologies, Byhalia – MS</span>
