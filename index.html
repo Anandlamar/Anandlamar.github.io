@@ -225,6 +225,174 @@ body{
   text-align: left !important;
 }
 
+/* ===== COMPANY LOGO ON RESUME CARDS ===== */
+#resume-section .resume-wrap{
+  position: relative;
+  overflow: hidden;
+}
+/* watermark layer: keeps the logo faint and behind the text */
+#resume-section .resume-wrap.has-logo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:70% auto;
+  opacity:0.14;
+  pointer-events:none;
+  z-index:0;
+}
+/* faint watermark behind each card */
+#resume-section .resume-wrap.logo-amplify::before{ background-image: url('images/amplify-logo.png'); }
+#resume-section .resume-wrap.logo-lamar::before{    background-image: url('images/lamar-logo.png'); }
+#resume-section .resume-wrap.logo-metalink::before{ background-image: url('images/metalink-logo.png'); }
+#resume-section .resume-wrap > *{ position:relative; z-index:1; }
+
+/* small logo chip next to the company name */
+#resume-section .company-line{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:2px;
+}
+#resume-section .company-logo{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+/* identical tile for every logo, so mismatched marks read as a set */
+#resume-section .logo-tile{
+  display:block;
+  transition:transform .2s ease, box-shadow .2s ease;
+  width:52px;
+  height:52px;
+  flex:0 0 auto;
+  background:#ffffff;
+  border-radius:10px;
+  padding:7px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.35);
+}
+#resume-section .logo-tile:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(0,0,0,0.5);
+}
+#resume-section .company-line{
+  gap:14px;
+}
+#resume-section .company-line .position{ margin:0; }
+
+/* education card watermarks */
+#resume-section .resume-wrap.logo-lamar-edu::before{ background-image: url('images/lamar-logo.png'); }
+#resume-section .resume-wrap.logo-tribhuvan::before{ background-image: url('images/tribhuvan-logo.png'); }
+
+/* per-logo watermark sizing */
+#resume-section .resume-wrap.logo-tribhuvan::before{ background-size:44% auto; }
+#resume-section .resume-wrap.logo-metalink::before{  background-size:cover; background-position:center center; opacity:0.16; }
+
+/* ===== HERO (static, two column) ===== */
+#home-section.hero-new{
+  min-height:auto;
+  padding:90px 0 70px;
+  background:#111111;
+}
+#home-section.hero-new .hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+  align-items:center;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 30px;
+}
+#home-section.hero-new .hero-overline{
+  font-family:'Courier New', monospace;
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#ffbd39;
+  margin-bottom:22px;
+}
+#home-section.hero-new h1{
+  font-size:76px;
+  line-height:1.02;
+  font-weight:700;
+  color:#fff;
+  margin:0 0 24px;
+  letter-spacing:-.02em;
+}
+#home-section.hero-new .hero-lead{
+  font-size:20px;
+  line-height:1.6;
+  color:#b9b9b9;
+  max-width:560px;
+  margin:0 0 18px;
+}
+#home-section.hero-new #typing-animation{
+  display:block;
+  font-size:17px;
+  color:#ffbd39;
+  min-height:26px;
+  margin-bottom:30px;
+  animation:none;
+}
+#home-section.hero-new .hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:26px;
+}
+#home-section.hero-new .hero-btn{
+  font-family:'Courier New', monospace;
+  font-size:13px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:16px 26px;
+  border-radius:6px;
+  display:inline-block;
+}
+#home-section.hero-new .hero-btn-solid{
+  background:#ffbd39;
+  color:#111 !important;
+  border:2px solid #ffbd39;
+}
+#home-section.hero-new .hero-btn-ghost{
+  background:transparent;
+  color:#fff !important;
+  border:2px solid #4a4a4a;
+}
+#home-section.hero-new .hero-btn-ghost:hover{ border-color:#ffbd39; }
+#home-section.hero-new .hero-status{
+  font-family:'Courier New', monospace;
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#9a9a9a;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+#home-section.hero-new .hero-dot{
+  width:9px;height:9px;border-radius:50%;
+  background:#ffbd39;display:inline-block;
+}
+#home-section.hero-new .hero-photo{
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:20px;
+  overflow:hidden;
+  background:#1b1b1b;
+  border:1px solid #2b2b2b;
+}
+#home-section.hero-new .hero-photo img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+@media (max-width:991px){
+  #home-section.hero-new .hero-grid{grid-template-columns:1fr;gap:40px;}
+  #home-section.hero-new h1{font-size:46px;}
+  #home-section.hero-new .hero-photo{max-width:380px;}
+}
+
 </style>
 
 
@@ -254,71 +422,48 @@ body{
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	         <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-start" data-scrollax-parent="true">
+	  <section id="home-section" class="hero-new">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-overline">Data &amp; Analytics Professional</div>
+          <h1>Turning Data into insights.</h1>
+          <p class="hero-lead">I'm Anand Kumar Bhagat, an SAP Certified analytics professional. I build reporting and planning systems that give leaders a clear, real time view of the numbers that drive their business.</p>
+          <span id="typing-animation"></span>
+          <div class="hero-actions">
+            <a href="#project-section" class="hero-btn hero-btn-solid">View my work &rarr;</a>
+            <a href="#contact-section" class="hero-btn hero-btn-ghost">Get in touch</a>
+          </div>
+          <div class="hero-status"><span class="hero-dot"></span> Open to analytics and SAP roles</div>
+        </div>
+        <div class="hero-photo">
+          <img src="images/portrait-square.png" alt="Anand Kumar Bhagat">
+        </div>
+      </div>
 
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url();">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Anand Kumar Bhagat</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'SAP Certified – Business Data Cloud (BDC)',
-						'SAP Certified – SAP Analytics Cloud (SAC)',
-						'SAP Certified – S/4HANA Business Process Integration (TS410)',
-						'   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>"Turning Data into insights."</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 3 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.instagram.com/traveller_arrives" class="btn btn-primary py-3 px-4">Instagram</a> 
-							<a href="https://github.com/Anandlamar" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
+      <script>
+      (function(){
+        var el = document.getElementById('typing-animation');
+        if(!el) return;
+        var lines = [
+          'SAP Certified \u2013 Business Data Cloud (BDC)',
+          'SAP Certified \u2013 SAP Analytics Cloud (SAC)',
+          'SAP Certified \u2013 S/4HANA Business Process Integration (TS410)'
+        ];
+        var li = 0, ci = 0, deleting = false;
+        function tick(){
+          var text = lines[li];
+          if(!deleting){
+            el.textContent = text.slice(0, ++ci);
+            if(ci === text.length){ deleting = true; return setTimeout(tick, 1600); }
+          } else {
+            el.textContent = text.slice(0, --ci);
+            if(ci === 0){ deleting = false; li = (li + 1) % lines.length; }
+          }
+          setTimeout(tick, deleting ? 30 : 55);
+        }
+        tick();
+      })();
+      </script>
     </section>
 
 
@@ -447,10 +592,10 @@ From AI research in defense systems to delivering real-world SAP analytics solut
 		<!-- Work Experience Section -->
 <div class="row">
   <div class="col-lg-4 col-md-6 col-12 mb-4">
-    <div class="resume-wrap ftco-animate">
+    <div class="resume-wrap ftco-animate has-logo logo-amplify">
       <span class="date">June 2025–Present</span>
       <h2>SAP IT Intern → SAP Analytics & Integration Analyst</h2>
-      <span class="position">Amplify Cell Technologies, Byhalia – MS</span>
+      <span class="company-line"><a href="https://www.amplifycell.com" target="_blank" rel="noopener" class="logo-tile" title="Amplify Cell Technologies logo"><img src="images/amplify-logo.png" class="company-logo" alt="Amplify Cell Technologies logo" onerror="this.parentNode.style.display='none'"></a><span class="position">Amplify Cell Technologies, Byhalia – MS</span></span>
       <p class="mt-4">Amplify Cell Technologies is building the largest U.S. commercial battery cell manufacturing plant for heavy‑ and medium‑duty vehicles.
         <ul>
           <li>Designed and deployed 6+ SAP Analytics Cloud (SAC) dashboards for OPEX, CAPEX, and cost center planning, improving planning accuracy by 25% across business units.</li>
@@ -463,10 +608,10 @@ From AI research in defense systems to delivering real-world SAP analytics solut
   </div>
 
   <div class="col-md-4">
-    <div class="resume-wrap ftco-animate">
+    <div class="resume-wrap ftco-animate has-logo logo-lamar">
       <span class="date"> January 2024 – May 2025</span>
       <h2>Graduate Research Assistant</h2>
-      <span class="position">Lamar University</span>
+      <span class="company-line"><a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo"><img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'"></a><span class="position">Lamar University</span></span>
       <p class="mt-4">Lamar University is a public institution known for research, innovation, and hands-on learning.
         <ul>
           <li>Executed research on AI integration in military tactics.</li>
@@ -478,10 +623,10 @@ From AI research in defense systems to delivering real-world SAP analytics solut
   </div>
 
   <div class="col-md-4">
-    <div class="resume-wrap ftco-animate">
+    <div class="resume-wrap ftco-animate has-logo logo-metalink">
       <span class="date">2021–2023</span>
       <h2>Junior Data Analyst</h2>
-      <span class="position">Meta Link</span>
+      <span class="company-line"><span class="logo-tile" title="Meta Link"><img src="images/metalink-logo.png" class="company-logo" alt="Meta Link logo" onerror="this.parentNode.style.display='none'"></span><span class="position">Meta Link</span></span>
       <p class="mt-4">Meta Link Pvt. Ltd. is a leading IT solutions provider in Nepal.
         <ul>
           <li>Accelerated project completion by 20% through data analytics and predictive modeling.</li>
@@ -511,10 +656,10 @@ From AI research in defense systems to delivering real-world SAP analytics solut
 		
 			<div class="row">
     			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
+    				<div class="resume-wrap ftco-animate has-logo logo-lamar-edu">
     					<span class="date">2024-2025</span>
     					<h2>Master of Science in Management Information Systems</h2>
-    					<span class="position">Lamar University</span>
+    					<span class="company-line"><a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo"><img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'"></a><span class="position">Lamar University</span></span>
     					<p class="mt-4">GPA: 4.0 </p>
 						<p class="mt-4"> SAP Certified Business Process Integration (TS410) Summer: 2024</p> 
 						<p class="mt-4">Member: Beta Gamma Sigma, Feb 2025</p>
@@ -522,10 +667,10 @@ From AI research in defense systems to delivering real-world SAP analytics solut
     			</div>
 
     			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
+    				<div class="resume-wrap ftco-animate has-logo logo-tribhuvan">
     					<span class="date">2016-2021</span>
     					<h2>Bachelor of Information Management </h2>
-    					<span class="position">Tribhuvan University</span>
+    					<span class="company-line"><a href="https://tu.edu.np" target="_blank" rel="noopener" class="logo-tile" title="Tribhuvan University logo"><img src="images/tribhuvan-logo.png" class="company-logo" alt="Tribhuvan University logo" onerror="this.parentNode.style.display='none'"></a><span class="position">Tribhuvan University</span></span>
     					<p class="mt-4">GPA: 3.06</p>
     				</div>
 				</div>
