@@ -220,7 +220,7 @@ a, .text-primary {
   left: 0;
   width: 100%;
   z-index: 9999;
-  background: rgba(18, 18, 18, 0.82) !important;
+  background: rgba(18, 18, 18, 0.88) !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -232,6 +232,24 @@ a, .text-primary {
 
 .custom-navbar .navbar-nav {
   margin-left: auto !important;
+}
+
+@media (max-width: 991.98px) {
+  .custom-navbar .navbar-collapse {
+    background: rgba(18, 18, 18, 0.98) !important;
+    padding: 18px 24px !important;
+    border-radius: 14px;
+    margin-top: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  }
+  .custom-navbar .navbar-nav {
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+  .custom-navbar .nav-link {
+    padding: 10px 0 !important;
+  }
 }
 
 body {
@@ -269,6 +287,17 @@ body {
   padding: 24px !important;
   min-height: 490px;
   height: 100%;
+}
+
+@media (max-width: 991.98px) {
+  #resume-section .resume-wide {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #resume-section .resume-wrap {
+    min-height: auto !important;
+    height: auto !important;
+  }
 }
 
 /* ===== COMPANY LOGO ON RESUME CARDS ===== */
@@ -686,13 +715,13 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
   </section>
 
   <!-- ==============================================
-       ROADTRIP NATION SPOTLIGHT SECTION
+       ROADTRIP NATION SPOTLIGHT SECTION (SEAMLESS EDITORIAL)
   =============================================== -->
-  <section class="ftco-section pb-0" id="roadtrip-section" style="background: #09090b; padding-top: 75px; padding-bottom: 35px;">
+  <section class="ftco-section pb-0" id="roadtrip-section" style="background: transparent; padding-top: 60px; padding-bottom: 40px; position: relative;">
     <div class="container">
       
-      <!-- Top Place & Documentary Metadata Bar (Inspired by andrevv.com) -->
-      <div class="row justify-content-between align-items-center mb-4 px-3" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 18px;">
+      <!-- Top Place & Documentary Metadata Bar -->
+      <div class="row justify-content-between align-items-center mb-4 px-2" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 16px;">
         <div class="col-md-7 d-flex align-items-center flex-wrap gap-2 mb-2 mb-md-0">
           <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 200, 83, 0.15); border: 1px solid rgba(0, 200, 83, 0.35); color: #00c853; font-family: 'Courier New', monospace; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; letter-spacing: 1px; text-transform: uppercase;">
             <span style="width: 6px; height: 6px; border-radius: 50%; background: #00c853; box-shadow: 0 0 8px #00c853;"></span>
@@ -706,27 +735,23 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
         </div>
       </div>
 
-      <!-- Main Showcase Card -->
-      <div class="row align-items-center" style="background: linear-gradient(180deg, #131316 0%, #0c0c0e 100%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 24px; padding: 30px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7); position: relative; overflow: hidden;">
-        <!-- Ambient Cinematic Glow -->
-        <div style="position: absolute; top: -60px; right: -60px; width: 260px; height: 260px; background: rgba(0, 200, 83, 0.09); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
-        <div style="position: absolute; bottom: -60px; left: -60px; width: 260px; height: 260px; background: rgba(255, 189, 57, 0.06); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
-
+      <!-- Seamless 2-Column Showcase (No Enclosing Black Card Box) -->
+      <div class="row align-items-center">
         <!-- Left: Cinematic Video Player (16:9 Aspect with Glass Controls) -->
         <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
-          <div style="position: relative; width: 100%; border-radius: 16px; overflow: hidden; background: #000; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
-            <video id="rtn-video" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 16px;" autoplay loop muted playsinline poster="images/cropped-1750471618951.jpeg">
+          <div style="position: relative; width: 100%; border-radius: 20px; overflow: hidden; background: #000; border: 1px solid rgba(255, 255, 255, 0.16); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 200, 83, 0.15); transition: transform 0.3s ease;">
+            <video id="rtn-video" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 20px;" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="images/cropped-1750471618951.jpeg">
               <source src="images/roadtrip-clip.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
 
             <!-- Video Overlay Badges -->
             <div style="position: absolute; top: 14px; left: 14px; display: flex; gap: 8px; z-index: 2; pointer-events: none;">
-              <span style="background: rgba(15,15,18,0.75); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 600; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 6px;">
+              <span style="background: rgba(15,15,18,0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18); color: #fff; font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 600; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 6px;">
                 <span style="width: 7px; height: 7px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
                 FILM CLIP
               </span>
-              <span style="background: rgba(0, 200, 83, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(0, 200, 83, 0.35); color: #00c853; font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 700; font-family: 'Courier New', monospace;">
+              <span style="background: rgba(0, 200, 83, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(0, 200, 83, 0.4); color: #00c853; font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 700; font-family: 'Courier New', monospace;">
                 ROADTRIP NATION
               </span>
             </div>
@@ -738,10 +763,10 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
 
             <!-- Floating Controls: Play/Pause & Mute/Unmute -->
             <div style="position: absolute; bottom: 14px; right: 14px; display: flex; gap: 8px; z-index: 4;">
-              <button id="rtn-play-btn" onclick="toggleRtnPlay()" style="background: rgba(18, 18, 22, 0.75); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; backdrop-filter: blur(12px); transition: all 0.2s;" onmouseover="this.style.background='#ffbd39';this.style.color='#111';" onmouseout="this.style.background='rgba(18, 18, 22, 0.75)';this.style.color='#fff';">
+              <button id="rtn-play-btn" onclick="toggleRtnPlay()" style="background: rgba(18, 18, 22, 0.8); border: 1px solid rgba(255,255,255,0.25); color: #fff; padding: 7px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: all 0.2s;" onmouseover="this.style.background='#ffbd39';this.style.color='#111';" onmouseout="this.style.background='rgba(18, 18, 22, 0.8)';this.style.color='#fff';">
                 ❚❚ Pause
               </button>
-              <button id="rtn-mute-btn" onclick="toggleRtnAudio()" style="background: #00c853; border: none; color: #09090b; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; backdrop-filter: blur(12px); transition: all 0.2s; box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);">
+              <button id="rtn-mute-btn" onclick="toggleRtnAudio()" style="background: #00c853; border: none; color: #09090b; padding: 7px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: all 0.2s; box-shadow: 0 4px 15px rgba(0, 200, 83, 0.45);">
                 🔇 Unmute Audio
               </button>
             </div>
@@ -756,28 +781,28 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
             <span style="color: #ffbd39; font-size: 11px; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: 0.5px;">LEADER ARCHIVE</span>
           </div>
 
-          <h3 style="font-size: 24px; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 12px;">
+          <h3 style="font-size: 26px; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 14px;">
             Navigating Pathways in Tech &amp; Applied AI
           </h3>
 
-          <p style="color: #d4d4d8; font-size: 14px; line-height: 1.6; margin-bottom: 16px; border-left: 2px solid #ffbd39; padding-left: 14px; font-style: italic;">
+          <p style="color: #e4e4e7; font-size: 14px; line-height: 1.65; margin-bottom: 18px; border-left: 2px solid #ffbd39; padding-left: 14px; font-style: italic;">
             "Sitting down with Roadtrip Nation in Mississippi to share the journey from international graduate studies to architecting enterprise SAP analytics and Generative AI pipelines."
           </p>
 
           <div class="d-flex flex-wrap gap-2 mb-3" style="font-family: 'Courier New', monospace; font-size: 11px;">
-            <span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 4px 10px; border-radius: 6px; color: #e4e4e7;">
+            <span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); padding: 5px 12px; border-radius: 6px; color: #e4e4e7;">
               🎓 Tribhuvan &rarr; Lamar (MS MIS 3.90)
             </span>
-            <span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 4px 10px; border-radius: 6px; color: #e4e4e7;">
+            <span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); padding: 5px 12px; border-radius: 6px; color: #e4e4e7;">
               ⚡ MDA AI Engineer &amp; Amplify
             </span>
           </div>
 
-          <ul style="list-style: none; padding-left: 0; margin-bottom: 22px; color: #a1a1aa; font-size: 13px; line-height: 1.6;">
-            <li style="margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 24px; color: #d4d4d8; font-size: 13px; line-height: 1.7;">
+            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
               <span style="color: #00c853; font-weight: bold;">✔</span> On-camera discussion on perseverance &amp; STEM careers
             </li>
-            <li style="margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
               <span style="color: #00c853; font-weight: bold;">✔</span> Demystifying enterprise data, ERP &amp; AI architecture
             </li>
             <li style="display: flex; align-items: center; gap: 8px;">
@@ -785,7 +810,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
             </li>
           </ul>
 
-          <a href="https://roadtripnation.com/leader/anand-bhagat" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: #00c853; color: #09090b; font-weight: 700; font-size: 13px; padding: 11px 22px; border-radius: 30px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 16px rgba(0,200,83,0.3);" onmouseover="this.style.background='#00e676';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#00c853';this.style.transform='none';">
+          <a href="https://roadtripnation.com/leader/anand-bhagat" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: #00c853; color: #09090b; font-weight: 700; font-size: 13px; padding: 12px 24px; border-radius: 30px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 18px rgba(0,200,83,0.35);" onmouseover="this.style.background='#00e676';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#00c853';this.style.transform='none';">
             <span>Explore Leader Feature on Roadtrip Nation</span>
             <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </a>
