@@ -126,42 +126,67 @@ ul.about-info li span:last-child {
 
 .btn.btn-primary {
   background: #ffbd39 !important;
-  border-color: #ffbd39 !important;
-  color: #111111 !important;
+  border-color: #ffbd39  !important;
 }
 
 a, .text-primary {
-  color: #ffbd39 !important;
+  color: #ffbd39  !important;
 }
 
-/* Project image zoom effect */
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing-cursor {
+  from { width: 5px; }
+  to { width: 0; }
+}
+
+/* project image zoom effect */
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
 }
 
 .zoom-effect:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-/* Certification Grid Layout */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
+/* ==============================
+   CERTIFICATION SECTION
+================================ */
+#certification-section {
+  background: #111111;
+  padding: 120px 0;
 }
 
-@media (max-width: 991px) {
-  .cert-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
+#certification-section .container-fluid {
+  max-width: 2100px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .cert-card {
@@ -495,7 +520,6 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
   70% { box-shadow: 0 0 0 18px rgba(255, 189, 57, 0); }
   100% { box-shadow: 0 0 0 0 rgba(255, 189, 57, 0); }
 }
-
 @keyframes hcWheel {
   0% { opacity: 1; transform: none; }
   100% { opacity: 0; transform: translateY(12px); }
@@ -610,44 +634,40 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
     <div class="hc-avatar">
       <img src="images/cropped-1750471618951.jpeg" alt="Anand Kumar Bhagat">
     </div>
-
     <h1>Anand Kumar Bhagat</h1>
-
-    <div class="hc-tagline">
-      AI Engineer | SAP Analytics | GenAI, RAG &amp; Prompt Engineering
-    </div>
-
+    <p class="hc-tagline">AI Engineer | SAP Analytics | GenAI, RAG &amp; Prompt Engineering</p>
     <span id="typing-animation"></span>
 
+    <!-- High-Impact Action CTAs -->
     <div class="hero-cta-group">
       <a href="#project-section" class="btn-hero-solid">View Projects</a>
-      <a href="images/Anand_Kumar_Bhagat.pdf" target="_blank" class="btn-hero-outline">Download CV</a>
+      <a href="#contact-section" class="btn-hero-outline">Get In Touch</a>
     </div>
 
+    <!-- Social Icons -->
     <div class="hc-icons">
-      <a href="https://www.linkedin.com/in/anand-bhagat-a616462b4" target="_blank" rel="noopener" title="LinkedIn">
-        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-      </a>
-      <a href="https://github.com/Anandlamar" target="_blank" rel="noopener" title="GitHub">
-        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-      </a>
-      <a href="mailto:anandbhagat747@gmail.com" title="Email">
-        <svg viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
-      </a>
+      <a href="https://www.linkedin.com/in/anand-bhagat-a616462b4" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95V21H9z"/></svg></a>
+      <a href="https://github.com/Anandlamar" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a>
+      <a href="https://public.tableau.com/app/profile/anand.bhagat" target="_blank" rel="noopener" aria-label="Tableau Public"><svg viewBox="0 0 24 24"><path d="M11 2h2v4h4v2h-4v4h-2V8H7V6h4zM4 12h1.5v2.5H8V16H5.5v2.5H4V16H1.5v-1.5H4zm14 0h1.5v2.5H22V16h-2.5v2.5H18V16h-2.5v-1.5H18zM11 16h2v2.5h2.5v2H13V23h-2v-2.5H8.5v-2H11z"/></svg></a>
+      <a href="https://www.youtube.com/@traveller_arrives1755" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+      <a href="https://www.instagram.com/traveller_arrives" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.2 5.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+      <a href="mailto:Bhagatanand28@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5H18V9.2l-6 4.6-6-4.6V20H3.5A1.5 1.5 0 0 1 2 18.5zM4.3 4 12 9.9 19.7 4z"/></svg></a>
     </div>
 
     <a href="#about-section" class="hc-scroll" aria-label="Scroll down"></a>
 
+    <!-- Typing Animation Script with Prompt Engineering & RAG -->
     <script>
     (function(){
-      var lines = [
-        "Prompt Engineering & Advanced LLMs",
-        "Enterprise RAG & Autonomous AI Systems",
-        "SAP Analytics Cloud (SAC) Architecture",
-        "SAP S/4HANA Public Cloud Integration"
-      ];
       var el = document.getElementById('typing-animation');
       if(!el) return;
+      var lines = [
+        'Building Enterprise RAG & AI document search',
+        'Advanced Prompt Engineering & LLM Applications',
+        'SAP Certified \u2013 Business Data Cloud (BDC)',
+        'SAP Certified \u2013 SAP Analytics Cloud (SAC)',
+        'SAP Certified \u2013 S/4HANA Business Process Integration (TS410)'
+      ];
       var li = 0, ci = 0, deleting = false;
       function tick(){
         var text = lines[li];
@@ -664,6 +684,159 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
     })();
     </script>
   </section>
+
+  <!-- ==============================================
+       ROADTRIP NATION SPOTLIGHT SECTION
+  =============================================== -->
+  <section class="ftco-section pb-0" id="roadtrip-section" style="background: #09090b; padding-top: 75px; padding-bottom: 35px;">
+    <div class="container">
+      
+      <!-- Top Place & Documentary Metadata Bar (Inspired by andrevv.com) -->
+      <div class="row justify-content-between align-items-center mb-4 px-3" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 18px;">
+        <div class="col-md-7 d-flex align-items-center flex-wrap gap-2 mb-2 mb-md-0">
+          <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 200, 83, 0.15); border: 1px solid rgba(0, 200, 83, 0.35); color: #00c853; font-family: 'Courier New', monospace; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; letter-spacing: 1px; text-transform: uppercase;">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: #00c853; box-shadow: 0 0 8px #00c853;"></span>
+            DOCUSERIES SPOTLIGHT
+          </span>
+          <span style="color: rgba(255,255,255,0.25); font-family: monospace;">/</span>
+          <span style="color: #e4e4e7; font-size: 13px; font-weight: 500;">Roadtrip Nation: <strong style="color: #fff;">Paths Across Mississippi</strong></span>
+        </div>
+        <div class="col-md-5 text-md-right text-left" style="font-family: 'Courier New', monospace; font-size: 12px; color: #a1a1aa;">
+          <span>📍 Mississippi, USA &bull; 32.3547° N, 89.3985° W</span>
+        </div>
+      </div>
+
+      <!-- Main Showcase Card -->
+      <div class="row align-items-center" style="background: linear-gradient(180deg, #131316 0%, #0c0c0e 100%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 24px; padding: 30px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7); position: relative; overflow: hidden;">
+        <!-- Ambient Cinematic Glow -->
+        <div style="position: absolute; top: -60px; right: -60px; width: 260px; height: 260px; background: rgba(0, 200, 83, 0.09); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: -60px; left: -60px; width: 260px; height: 260px; background: rgba(255, 189, 57, 0.06); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
+
+        <!-- Left: Cinematic Video Player (16:9 Aspect with Glass Controls) -->
+        <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
+          <div style="position: relative; width: 100%; border-radius: 16px; overflow: hidden; background: #000; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+            <video id="rtn-video" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 16px;" autoplay loop muted playsinline poster="images/cropped-1750471618951.jpeg">
+              <source src="images/roadtrip-clip.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Video Overlay Badges -->
+            <div style="position: absolute; top: 14px; left: 14px; display: flex; gap: 8px; z-index: 2; pointer-events: none;">
+              <span style="background: rgba(15,15,18,0.75); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 600; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 6px;">
+                <span style="width: 7px; height: 7px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+                FILM CLIP
+              </span>
+              <span style="background: rgba(0, 200, 83, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(0, 200, 83, 0.35); color: #00c853; font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 700; font-family: 'Courier New', monospace;">
+                ROADTRIP NATION
+              </span>
+            </div>
+
+            <!-- Video Progress Bar at Base of Player -->
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.15); z-index: 3;">
+              <div id="rtn-progress" style="height: 100%; width: 0%; background: #00c853; transition: width 0.1s linear;"></div>
+            </div>
+
+            <!-- Floating Controls: Play/Pause & Mute/Unmute -->
+            <div style="position: absolute; bottom: 14px; right: 14px; display: flex; gap: 8px; z-index: 4;">
+              <button id="rtn-play-btn" onclick="toggleRtnPlay()" style="background: rgba(18, 18, 22, 0.75); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; backdrop-filter: blur(12px); transition: all 0.2s;" onmouseover="this.style.background='#ffbd39';this.style.color='#111';" onmouseout="this.style.background='rgba(18, 18, 22, 0.75)';this.style.color='#fff';">
+                ❚❚ Pause
+              </button>
+              <button id="rtn-mute-btn" onclick="toggleRtnAudio()" style="background: #00c853; border: none; color: #09090b; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; backdrop-filter: blur(12px); transition: all 0.2s; box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);">
+                🔇 Unmute Audio
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Story Narrative, Journey Quote & Leader Profile Link -->
+        <div class="col-lg-5 col-md-12 pl-lg-4">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+            <span style="color: #00c853; font-weight: 800; font-size: 15px; letter-spacing: 1px;">ROADTRIP NATION</span>
+            <span style="color: rgba(255,255,255,0.25);">&bull;</span>
+            <span style="color: #ffbd39; font-size: 11px; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: 0.5px;">LEADER ARCHIVE</span>
+          </div>
+
+          <h3 style="font-size: 24px; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 12px;">
+            Navigating Pathways in Tech &amp; Applied AI
+          </h3>
+
+          <p style="color: #d4d4d8; font-size: 14px; line-height: 1.6; margin-bottom: 16px; border-left: 2px solid #ffbd39; padding-left: 14px; font-style: italic;">
+            "Sitting down with Roadtrip Nation in Mississippi to share the journey from international graduate studies to architecting enterprise SAP analytics and Generative AI pipelines."
+          </p>
+
+          <div class="d-flex flex-wrap gap-2 mb-3" style="font-family: 'Courier New', monospace; font-size: 11px;">
+            <span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 4px 10px; border-radius: 6px; color: #e4e4e7;">
+              🎓 Tribhuvan &rarr; Lamar (MS MIS 3.90)
+            </span>
+            <span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 4px 10px; border-radius: 6px; color: #e4e4e7;">
+              ⚡ MDA AI Engineer &amp; Amplify
+            </span>
+          </div>
+
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 22px; color: #a1a1aa; font-size: 13px; line-height: 1.6;">
+            <li style="margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+              <span style="color: #00c853; font-weight: bold;">✔</span> On-camera discussion on perseverance &amp; STEM careers
+            </li>
+            <li style="margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+              <span style="color: #00c853; font-weight: bold;">✔</span> Demystifying enterprise data, ERP &amp; AI architecture
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px;">
+              <span style="color: #00c853; font-weight: bold;">✔</span> Permanent leader story featured on Roadtrip Nation's library
+            </li>
+          </ul>
+
+          <a href="https://roadtripnation.com/leader/anand-bhagat" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: #00c853; color: #09090b; font-weight: 700; font-size: 13px; padding: 11px 22px; border-radius: 30px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 16px rgba(0,200,83,0.3);" onmouseover="this.style.background='#00e676';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#00c853';this.style.transform='none';">
+            <span>Explore Leader Feature on Roadtrip Nation</span>
+            <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleRtnAudio() {
+      var v = document.getElementById('rtn-video');
+      var btn = document.getElementById('rtn-mute-btn');
+      if (!v || !btn) return;
+      if (v.muted) {
+        v.muted = false;
+        btn.innerHTML = '🔊 Mute Audio';
+        btn.style.background = '#ffbd39';
+        btn.style.color = '#111';
+      } else {
+        v.muted = true;
+        btn.innerHTML = '🔇 Unmute Audio';
+        btn.style.background = '#00c853';
+        btn.style.color = '#09090b';
+      }
+    }
+
+    function toggleRtnPlay() {
+      var v = document.getElementById('rtn-video');
+      var btn = document.getElementById('rtn-play-btn');
+      if (!v || !btn) return;
+      if (v.paused) {
+        v.play();
+        btn.innerHTML = '❚❚ Pause';
+      } else {
+        v.pause();
+        btn.innerHTML = '▶ Play';
+      }
+    }
+
+    // Video progress bar
+    (function(){
+      var v = document.getElementById('rtn-video');
+      var p = document.getElementById('rtn-progress');
+      if(!v || !p) return;
+      v.addEventListener('timeupdate', function(){
+        if(v.duration) {
+          p.style.width = ((v.currentTime / v.duration) * 100) + '%';
+        }
+      });
+    })();
+  </script>
 
   <!-- About Section -->
   <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
@@ -903,8 +1076,14 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
               </a>
               <span class="position">Tribhuvan University</span>
             </span>
-            <p class="mt-4">Graduated in first division with focus on business analytics and management information systems.</p>
+            <p class="mt-4">GPA: 3.06</p>
           </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6 text-center ftco-animate">
+          <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
         </div>
       </div>
     </div>
@@ -1139,31 +1318,28 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
       </div>
 
       <div class="row justify-content-center">
-        <!-- 1. Business Data Cloud (BDC) -->
         <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
           <div class="cert-card w-100">
-            <a href="https://www.credly.com/earner/earned/badge/99384e7b-0e0e-4fba-9866-ca70d69d6ef8" target="_blank" rel="noopener">
-              <img src="images/bdc-badge.png" class="cert-badge" alt="SAP Business Data Cloud Badge">
+            <a href="https://www.credly.com/earner/earned/badge/99384e7b-0e0e-4fba-9866-ca70d69d6ef8" target="_blank">
+              <img src="images/bdc-badge.png" class="cert-badge" alt="SAP Business Data Cloud">
             </a>
             <div class="cert-title">SAP Certified Associate – Business Data Cloud</div>
           </div>
         </div>
 
-        <!-- 2. SAP Analytics Cloud (SAC) -->
         <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
           <div class="cert-card w-100">
-            <a href="https://www.credly.com/badges/f8e77581-0b88-416f-a537-592aa4b3c4d7" target="_blank" rel="noopener">
-              <img src="images/sac-badge3.png" class="cert-badge" alt="SAP Analytics Cloud Badge">
+            <a href="https://www.credly.com/badges/f8e77581-0b88-416f-a537-592aa4b3c4d7" target="_blank">
+              <img src="images/sac-badge3.png" class="cert-badge" alt="SAP Analytics Cloud">
             </a>
             <div class="cert-title">SAP Certified Associate – SAP Analytics Cloud</div>
           </div>
         </div>
 
-        <!-- 3. TS410 S/4HANA -->
         <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
           <div class="cert-card w-100">
-            <a href="https://www.credly.com/badges/cf4ecc7a-bc1c-45aa-949e-c01934d6a705" target="_blank" rel="noopener">
-              <img src="images/ts410-badge3.png" class="cert-badge" alt="SAP TS410 Badge">
+            <a href="https://www.credly.com/badges/cf4ecc7a-bc1c-45aa-949e-c01934d6a705" target="_blank">
+              <img src="images/ts410-badge3.png" class="cert-badge" alt="SAP TS410">
             </a>
             <div class="cert-title">SAP Certified Associate – Business Process Integration (TS410)</div>
           </div>
@@ -1244,17 +1420,38 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
         <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
           <div class="block-18">
             <div class="text">
-              <strong class="number" data-number="6">0</strong>
-              <span>Certifications Completed</span>
+              <strong class="number" data-number="15">0</strong>
+              <span>Projects</span>
             </div>
           </div>
         </div>
         <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
           <div class="block-18">
             <div class="text">
-              <strong class="number" data-number="10">0</strong>
-              <span>Enterprise &amp; AI Projects</span>
+              <strong class="number" data-number="65">0</strong>
+              <span>Mentored Students</span>
             </div>
+          </div>
+        </div>
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18">
+            <div class="text">
+              <strong class="number" data-number="90">0</strong>
+              <span>Cups of coffee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+      <div class="row justify-content-center">
+        <div class="col-md-7 ftco-animate text-center">
+          <h2>More projects on<span> Tableau, Github  </span> </h2>
+          <div class="heading">
+            <h4>I enjoy tackling technical challenges and leveraging data insights for impactful solutions.</h4>
+            <br>
+            <p><a href="https://github.com/Anandlamar" class="btn btn-primary py-3 px-5">GitHub</a></p>
           </div>
         </div>
       </div>
@@ -1279,7 +1476,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
               <span class="icon-map-signs"></span>
             </div>
             <h3 class="mb-4">Address</h3>
-            <p>Mississippi, USA</p>
+            <p>Beaumont, Texas</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -1288,7 +1485,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
               <span class="icon-phone2"></span>
             </div>
             <h3 class="mb-4">Contact Number</h3>
-            <p><a href="tel://4099370724">+1 (409) 937-0724</a></p>
+            <p><a href="tel://4094343518">+ 1 409 434 3518</a></p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -1297,7 +1494,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
               <span class="icon-paper-plane"></span>
             </div>
             <h3 class="mb-4">Email Address</h3>
-            <p><a href="mailto:anandbhagat747@gmail.com">anandbhagat747@gmail.com</a></p>
+            <p><a href="mailto:Bhagatanand28@gmail.com">Bhagatanand28@gmail.com</a></p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -1305,21 +1502,19 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
             <div class="icon d-flex align-items-center justify-content-center">
               <span class="icon-globe"></span>
             </div>
-            <h3 class="mb-4">Resume</h3>
-            <p><a href="images/Anand_Kumar_Bhagat.pdf" target="_blank">Download Resume</a></p>
+            <h3 class="mb-4">Download Resume</h3>
+            <p><a href="#">resumelink</a></p>
           </div>
         </div>
-      </div>
 
-      <div class="container">
-        <br>
-        <br>
-        <div class="row justify-content-center">
-          <div class="col-md-7 ftco-animate text-center">
-            <h2>Have a<span> Question?</span> <a href="https://forms.gle/4m3U2m9gPjN1a5Hw5" target="_blank" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+        <div class="container">
+          <br><br>
+          <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+              <h2>Have a<span> Question?  </span> <a href="#contact-section" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+            </div>
           </div>
-        </div>
-        <br>
+          <br>
           <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
             <li class="ftco-animate normal-txt">Find me on  </li>
             <li class="ftco-animate"><a href="https://www.youtube.com/@traveller_arrives1755"><span class="icon-youtube"></span></a></li>
