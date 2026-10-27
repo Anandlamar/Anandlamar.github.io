@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-
-
 <style>
 
 /*======================================
@@ -43,9 +41,7 @@
   margin-left: 10px;
 }
 
-
 .skill-mf .progress {
-  /* background-color: #cde1f8; */
   margin: .5rem 0 1.2rem 0;
   border-radius: 0;
   height: .7rem;
@@ -78,7 +74,6 @@ a, .text-primary {
 
 #typing-animation:before {
   content: "";
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 0;
@@ -88,26 +83,16 @@ a, .text-primary {
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+  from { width: 5px; }
+  to { width: 0; }
 }
 
-
 /* project image zoom effect */
-
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
@@ -120,15 +105,13 @@ a, .text-primary {
 /* ==============================
    CERTIFICATION SECTION
 ================================ */
-
 #certification-section {
   background: #111111;
   padding: 120px 0;
 }
 
-/* MAIN: makes the whole row wider (so cards can be bigger) */
 #certification-section .container-fluid {
-  max-width: 2100px;   /* increase this: 1700 -> 1900 -> 2200 */
+  max-width: 2100px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -138,10 +121,9 @@ a, .text-primary {
   text-align: center;
 }
 
-/* MAIN: makes badge image bigger */
 .cert-badge {
   width: 100%;
-  max-width: 1300x;    /* increase this: 520 -> 600 -> 700 */
+  max-width: 1300px;
   height: auto;
   border-radius: 16px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -158,1189 +140,1114 @@ a, .text-primary {
   font-size: 16px;
   color: #ffffff;
 }
-.cert-title {
-  font-weight: 600;
-  margin-top: 14px;
-  font-size: 16px;
-  color: #ffffff;
-}
 
-/* ===== FIX NAVBAR TO TOP + RIGHT CORNER ===== */
-.custom-navbar{
+/* ===== MODERN GLASSMORPHISM NAVBAR ===== */
+.custom-navbar {
   position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
+  background: rgba(18, 18, 18, 0.82) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.custom-navbar .navbar-collapse{
+.custom-navbar .navbar-collapse {
   justify-content: flex-end !important;
 }
 
-.custom-navbar .navbar-nav{
+.custom-navbar .navbar-nav {
   margin-left: auto !important;
 }
 
-body{
+body {
   padding-top: 80px;
 }
-/* ===== FORCE NAVBAR BRAND LEFT + MENU RIGHT ===== */
-#ftco-navbar .container-fluid{
+
+#ftco-navbar .container-fluid {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
   width: 100% !important;
 }
 
-#ftco-navbar .navbar-collapse{
+#ftco-navbar .navbar-collapse {
   flex-grow: 0 !important;
   justify-content: flex-end !important;
 }
 
-#ftco-navbar .navbar-nav{
+#ftco-navbar .navbar-nav {
   margin-left: auto !important;
   display: flex !important;
   justify-content: flex-end !important;
   width: 100% !important;
 }
+
 /* Make Resume section wide like Certification */
-#resume-section .resume-wide{
+#resume-section .resume-wide {
   max-width: 2100px;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-/* Make experience cards bigger */
-#resume-section .resume-wrap{
+#resume-section .resume-wrap {
   padding: 30px !important;
   min-height: 520px;
 }
-#home-section .slider-text{
-  justify-content: flex-start !important;
-  text-align: left !important;
-}
-#home-section .text{
-  text-align: left !important;
-}
 
 /* ===== COMPANY LOGO ON RESUME CARDS ===== */
-#resume-section .resume-wrap{
+#resume-section .resume-wrap {
   position: relative;
   overflow: hidden;
 }
-/* watermark layer: keeps the logo faint and behind the text */
-#resume-section .resume-wrap.has-logo::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-size:70% auto;
-  opacity:0.14;
-  pointer-events:none;
-  z-index:0;
+#resume-section .resume-wrap.has-logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70% auto;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
 }
-/* faint watermark behind each card */
-#resume-section .resume-wrap.logo-amplify::before{ background-image: url('images/amplify-logo.png'); }
-#resume-section .resume-wrap.logo-lamar::before{    background-image: url('images/lamar-logo.png'); }
-#resume-section .resume-wrap.logo-metalink::before{ background-image: url('images/metalink-logo.png'); }
-#resume-section .resume-wrap > *{ position:relative; z-index:1; }
+#resume-section .resume-wrap.logo-amplify::before { background-image: url('images/amplify-logo.png'); }
+#resume-section .resume-wrap.logo-lamar::before {    background-image: url('images/lamar-logo.png'); }
+#resume-section .resume-wrap.logo-metalink::before { background-image: url('images/metalink-logo.png'); }
+#resume-section .resume-wrap > * { position: relative; z-index: 1; }
 
-/* small logo chip next to the company name */
-#resume-section .company-line{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-top:2px;
+#resume-section .company-line {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 2px;
 }
-#resume-section .company-logo{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
+#resume-section .company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
-/* identical tile for every logo, so mismatched marks read as a set */
-#resume-section .logo-tile{
-  display:block;
-  transition:transform .2s ease, box-shadow .2s ease;
-  width:52px;
-  height:52px;
-  flex:0 0 auto;
-  background:#ffffff;
-  border-radius:10px;
-  padding:7px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.35);
+#resume-section .logo-tile {
+  display: block;
+  transition: transform .2s ease, box-shadow .2s ease;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 7px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
 }
-#resume-section .logo-tile:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 18px rgba(0,0,0,0.5);
+#resume-section .logo-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
-#resume-section .company-line{
-  gap:14px;
-}
-#resume-section .company-line .position{ margin:0; }
+#resume-section .company-line .position { margin: 0; }
 
-/* education card watermarks */
-#resume-section .resume-wrap.logo-lamar-edu::before{ background-image: url('images/lamar-logo.png'); }
-#resume-section .resume-wrap.logo-tribhuvan::before{ background-image: url('images/tribhuvan-logo.png'); }
+#resume-section .resume-wrap.logo-lamar-edu::before { background-image: url('images/lamar-logo.png'); }
+#resume-section .resume-wrap.logo-tribhuvan::before { background-image: url('images/tribhuvan-logo.png'); background-size: 44% auto; }
+#resume-section .resume-wrap.logo-metalink::before  { background-size: cover; background-position: center center; opacity: 0.16; }
 
-/* per-logo watermark sizing */
-#resume-section .resume-wrap.logo-tribhuvan::before{ background-size:44% auto; }
-#resume-section .resume-wrap.logo-metalink::before{  background-size:cover; background-position:center center; opacity:0.16; }
+/* ===== READABILITY ===== */
+body { color: #ececec !important; background: #1b1b1b !important; }
+p, li, .title-s, .pull-right, .about-info span, .normal-txt,
+#about-section ul li span, #resume-section .position, #resume-section p,
+#project-section p, #craft-haven-section p, #certification-section p,
+#volunteering-section p, #contact-section p, #section-counter span { color: #ececec !important; }
 
-/* ===== HERO (static, two column) ===== */
-#home-section.hero-new{
-  min-height:auto;
-  padding:90px 0 70px;
-  background:#111111;
-}
-#home-section.hero-new .hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:60px;
-  align-items:center;
-  max-width:1280px;
-  margin:0 auto;
-  padding:0 30px;
-}
-#home-section.hero-new .hero-overline{
-  font-family:'Courier New', monospace;
-  font-size:13px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#ffbd39;
-  margin-bottom:22px;
-}
-#home-section.hero-new h1{
-  font-size:76px;
-  line-height:1.02;
-  font-weight:700;
-  color:#fff;
-  margin:0 0 24px;
-  letter-spacing:-.02em;
-}
-#home-section.hero-new .hero-lead{
-  font-size:20px;
-  line-height:1.6;
-  color:#b9b9b9;
-  max-width:560px;
-  margin:0 0 18px;
-}
-#home-section.hero-new #typing-animation{
-  display:block;
-  font-size:17px;
-  color:#ffbd39;
-  min-height:26px;
-  margin-bottom:30px;
-  animation:none;
-}
-#home-section.hero-new .hero-actions{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-bottom:26px;
-}
-#home-section.hero-new .hero-btn{
-  font-family:'Courier New', monospace;
-  font-size:13px;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  padding:16px 26px;
-  border-radius:6px;
-  display:inline-block;
-}
-#home-section.hero-new .hero-btn-solid{
-  background:#ffbd39;
-  color:#111 !important;
-  border:2px solid #ffbd39;
-}
-#home-section.hero-new .hero-btn-ghost{
-  background:transparent;
-  color:#fff !important;
-  border:2px solid #4a4a4a;
-}
-#home-section.hero-new .hero-btn-ghost:hover{ border-color:#ffbd39; }
-#home-section.hero-new .hero-status{
-  font-family:'Courier New', monospace;
-  font-size:12px;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:#9a9a9a;
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-#home-section.hero-new .hero-dot{
-  width:9px;height:9px;border-radius:50%;
-  background:#ffbd39;display:inline-block;
-}
-#home-section.hero-new .hero-photo{
-  width:100%;
-  aspect-ratio:1/1;
-  border-radius:20px;
-  overflow:hidden;
-  background:#1b1b1b;
-  border:1px solid #2b2b2b;
-}
-#home-section.hero-new .hero-photo img{
-  width:100%;height:100%;object-fit:cover;display:block;
-}
-@media (max-width:991px){
-  #home-section.hero-new .hero-grid{grid-template-columns:1fr;gap:40px;}
-  #home-section.hero-new h1{font-size:46px;}
-  #home-section.hero-new .hero-photo{max-width:360px;margin:0 auto;}
+/* ===== CANVAS BACKGROUND ===== */
+#bg-net {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  display: block;
 }
 
-/* ===== PORTRAIT FIX: consistent hero + about photo ===== */
-#home-section.hero-new .hero-photo{
-  width:100%;
-  max-width:460px;
-  aspect-ratio:4/5;
-  margin-left:auto;
-  border-radius:20px;
-  overflow:hidden;
-  background:#f7f7f7;
-  border:1px solid #2b2b2b;
-  box-shadow:0 18px 45px rgba(0,0,0,.30);
-}
-#home-section.hero-new .hero-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 18%;
-  display:block;
-}
-#about-section .about-img{
-  width:150px;
-  height:150px;
-  margin:0 auto 24px;
-}
-#about-section .about-profile-photo{
-  width:150px;
-  height:150px;
-  object-fit:cover;
-  object-position:center 18%;
-  border-radius:50% !important;
-  border:3px solid #ffbd39;
-  padding:3px;
-  background:#fff;
-  margin-left:0 !important;
-}
-@media (max-width:991px){
-  #home-section.hero-new .hero-photo{max-width:360px;margin:0 auto;}
+/* ===== HERO CENTER WITH AMBIENT GLOW & MINI AVATAR ===== */
+#home-section.hero-center {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px 80px;
+  position: relative;
+  background: radial-gradient(circle at 50% 36%, rgba(255, 189, 57, 0.12) 0%, rgba(18, 18, 18, 0) 68%) !important;
 }
 
+#home-section.hero-center .hc-avatar {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 2.5px solid rgba(255, 189, 57, 0.85);
+  box-shadow: 0 0 20px rgba(255, 189, 57, 0.35);
+  opacity: 0;
+  transform: scale(0.85);
+  animation: hcPop .8s .1s forwards, hcHalo 3.5s 1s ease-out infinite;
+}
+#home-section.hero-center .hc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+}
+
+#home-section.hero-center h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: clamp(38px, 6.5vw, 76px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: hcUp .9s .35s forwards;
+}
+
+#home-section.hero-center .hc-tagline {
+  font-size: clamp(15px, 2vw, 23px);
+  color: #ececec;
+  margin: 18px 0 0;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: hcUp .9s .55s forwards;
+}
+
+#home-section.hero-center #typing-animation {
+  display: block;
+  min-height: 28px;
+  margin-top: 14px;
+  font-size: 17px;
+  color: #ffbd39;
+  font-family: 'Courier New', monospace;
+  opacity: 0;
+  animation: hcUp .9s .75s forwards;
+}
+
+/* Call to Action Buttons */
+.hero-cta-group {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 26px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: hcUp .9s .95s forwards;
+}
+.btn-hero-solid {
+  background: #ffbd39;
+  color: #111 !important;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border-radius: 6px;
+  border: 2px solid #ffbd39;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none !important;
+}
+.btn-hero-solid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 189, 57, 0.4);
+}
+.btn-hero-outline {
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  transition: border-color 0.2s, transform 0.2s;
+  text-decoration: none !important;
+}
+.btn-hero-outline:hover {
+  border-color: #ffbd39;
+  color: #ffbd39 !important;
+  transform: translateY(-2px);
+}
+
+#home-section.hero-center .hc-icons {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: hcUp .9s 1.1s forwards;
+}
+#home-section.hero-center .hc-icons a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  transition: transform .2s;
+}
+#home-section.hero-center .hc-icons a:hover {
+  transform: translateY(-4px) scale(1.1);
+}
+#home-section.hero-center .hc-icons svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+  transition: fill .2s;
+}
+#home-section.hero-center .hc-icons a:hover svg {
+  fill: #ffbd39;
+}
+
+#home-section.hero-center .hc-scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  margin-left: -13px;
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255,255,255,.35);
+  border-radius: 14px;
+  opacity: 0;
+  animation: hcUp .9s 1.3s forwards;
+}
+#home-section.hero-center .hc-scroll::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  width: 4px;
+  height: 8px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: #fff;
+  animation: hcWheel 1.6s infinite;
+}
+
+@keyframes hcPop { to { opacity: 1; transform: scale(1); } }
+@keyframes hcUp  { to { opacity: 1; transform: none; } }
+@keyframes hcHalo {
+  0% { box-shadow: 0 0 0 0 rgba(255, 189, 57, 0.45); }
+  70% { box-shadow: 0 0 0 18px rgba(255, 189, 57, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 189, 57, 0); }
+}
+@keyframes hcWheel {
+  0% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home-section.hero-center * { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
 </style>
-
-
-
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target fixed-top custom-navbar" id="ftco-navbar">
+  
+  <!-- Interactive Constellation Canvas with Gold Accent Nodes -->
+  <canvas id="bg-net"></canvas>
+  <script>
+  (function(){
+    var cv = document.getElementById('bg-net');
+    if(!cv) return;
+    var ctx = cv.getContext('2d'), dpr = Math.min(window.devicePixelRatio||1, 2), W, H, pts = [], mx = -1e4, my = -1e4;
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-	   <div class="container-fluid">
+    function size(){
+      W = cv.width = innerWidth * dpr;
+      H = cv.height = innerHeight * dpr;
+      var n = Math.round(innerWidth * innerHeight / 14000);
+      pts = [];
+      for(var i = 0; i < n; i++){
+        var isGold = Math.random() < 0.22;
+        pts.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.25 * dpr,
+          vy: (Math.random() - 0.5) * 0.25 * dpr,
+          r: (Math.random() * 1.3 + 1.6) * dpr,
+          isGold: isGold
+        });
+      }
+    }
+    size();
 
-	      <a class="navbar-brand" href="index.html">Anand Kumar Bhagat</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    var rt;
+    addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(size, 150); });
+    addEventListener('mousemove', function(e){ mx = e.clientX * dpr; my = e.clientY * dpr; });
+    document.addEventListener('mouseleave', function(){ mx = my = -1e4; });
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-				<li class="nav-item"><a href="#certification-section" class="nav-link"><span>Certification</span></a></li>
-		  <li class="nav-item"><a href="#volunteering-section" class="nav-link"><span>Volunteering</span></a></li>
+    function frame(){
+      ctx.clearRect(0, 0, W, H);
+      var D = 110 * dpr, M = 160 * dpr;
+      ctx.lineWidth = dpr;
 
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero-new">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <div class="hero-overline">SAP Analytics Professional</div>
-          <h1>Turning Data into insights.</h1>
-          <p class="hero-lead">I'm Anand Kumar Bhagat, an SAP Certified Analytics Professional. I build reporting, planning, and enterprise analytics solutions that turn complex information into clear business decisions.</p>
-          <span id="typing-animation"></span>
-          <div class="hero-actions">
-            <a href="#project-section" class="hero-btn hero-btn-solid">View my work &rarr;</a>
-            <a href="#contact-section" class="hero-btn hero-btn-ghost">Get in touch</a>
-          </div>
-          <div class="hero-status"><span class="hero-dot"></span> Open to Analytics roles</div>
-        </div>
-        <div class="hero-photo">
-          <img src="images/cropped-1750471618951.jpeg" alt="Anand Kumar Bhagat">
-        </div>
-      </div>
+      for(var i = 0; i < pts.length; i++){
+        var p = pts[i];
+        p.x += p.vx; p.y += p.vy;
+        if(p.x < -10) p.x = W + 10;
+        if(p.x > W + 10) p.x = -10;
+        if(p.y < -10) p.y = H + 10;
+        if(p.y > H + 10) p.y = -10;
+      }
 
-      <script>
-      (function(){
-        var el = document.getElementById('typing-animation');
-        if(!el) return;
-        var lines = [
-          'SAP Certified \u2013 Business Data Cloud (BDC)',
-          'SAP Certified \u2013 SAP Analytics Cloud (SAC)',
-          'SAP Certified \u2013 S/4HANA Business Process Integration (TS410)'
-        ];
-        var li = 0, ci = 0, deleting = false;
-        function tick(){
-          var text = lines[li];
-          if(!deleting){
-            el.textContent = text.slice(0, ++ci);
-            if(ci === text.length){ deleting = true; return setTimeout(tick, 1600); }
-          } else {
-            el.textContent = text.slice(0, --ci);
-            if(ci === 0){ deleting = false; li = (li + 1) % lines.length; }
+      for(var i = 0; i < pts.length; i++){
+        var a = pts[i];
+        for(var j = i + 1; j < pts.length; j++){
+          var b = pts[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx * dx + dy * dy);
+          if(d < D){
+            var hasGold = (a.isGold || b.isGold);
+            ctx.strokeStyle = hasGold 
+              ? 'rgba(255, 189, 57, ' + ((1 - d / D) * 0.45) + ')' 
+              : 'rgba(200, 200, 200, ' + ((1 - d / D) * 0.35) + ')';
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
           }
-          setTimeout(tick, deleting ? 30 : 55);
         }
-        tick();
-      })();
-      </script>
-    </section>
 
+        var md = Math.hypot(a.x - mx, a.y - my);
+        if(md < M){
+          ctx.strokeStyle = 'rgba(255, 189, 57, ' + ((1 - md / M) * 0.75) + ')';
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mx, my); ctx.stroke();
+        }
 
+        ctx.fillStyle = a.isGold ? 'rgba(255, 189, 57, 0.95)' : 'rgba(215, 215, 215, 0.85)';
+        ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 7); ctx.fill();
+      }
+      if(!reduce) requestAnimationFrame(frame);
+    }
+    frame();
+  })();
+  </script>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/cropped-1750471618951.jpeg" class="img-fluid rounded b-shadow-a about-profile-photo" alt="Anand Kumar Bhagat">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Anand Kumar Bhagat </span></p>
-										<p><span class="title-s">Job Role: </span> <span>SAP Analytics Professional</span></p>
-										<p><span class="title-s">Experience: </span> <span>5+ Years </span></p>
-										<p><span class="title-s">Address: </span> <span>Mississippi, USA</span></p>
-									  </div>
-									</div>
-								  </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target fixed-top custom-navbar" id="ftco-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Anand Kumar Bhagat</a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>SAP S/4HANA</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>SQL</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>SAP Analytics Cloud(SAC)</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>With a Master’s in Management Information Systems and hands-on experience in SAP S/4HANA Public Cloud implementation, I specialize in transforming complex business processes into data-driven, scalable solutions. As an SAP Certified professional in Business Data Cloud (BDC), SAP Analytics Cloud (SAC), and S/4HANA Business Process Integration (TS410), I bridge functional expertise with technical execution.
-
-My work spans enterprise analytics, procurement and finance processes, SAC Dashboard Architecture, and cross-module SAP integration. I focus on building intelligent reporting ecosystems that improve operational visibility, cost control, and strategic decision-making.
-
-From AI research in defense systems to delivering real-world SAP analytics solutions in manufacturing environments, I operate at the intersection of business strategy, data architecture, and enterprise technology  driven by one mission: turning information into measurable impact.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data &amp; AI, SAP Analytics &amp; Business Intelligence</span></li>
-									<li class="d-flex"><span>Domain:</span> <span> SAP ERP Systems, SAP Business Process Integration,Business Intelligence, Data Analytics, Enterprise Systems, Supply Chain Management, Information Security, Military Technology</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Master of Science in Management Information Systems</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span> SAP Analytics Cloud (SAC),SAP Business Objects, Tableau, Power BI, SPSS, SAS Visual Analytics</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>SAP ABAP, SAP/S4HANA, Python, SQL, Java, C/C++, HTML/CSS, MySQL, Cybersecurity Tools (Nmap, OpenVAS, Kali Linux)&amp; Excel (VBA macros)</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling,Videography,Teaching, Content Creator</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="6">0</span> <span>+</span>
-									<span>&nbsp; Certification completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/anand-bhagat-a616462b4" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-  <div class="container-fluid resume-wide">
-    <div class="row justify-content-center pb-5">
-      <div class="col-md-10 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Resume</h1>
-        <h2 class="mb-4">Resume</h2>
-        <p>Data &amp; AI and SAP Analytics professional with 5+ years of experience across enterprise analytics, SAP S/4HANA Public Cloud, SAP Analytics Cloud (SAC), business intelligence, SQL, Python, and AI-enabled data solutions. Experienced in translating business requirements into reporting, planning, automation, and decision-support solutions across manufacturing, government, research, and technology environments.</p>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          <li class="nav-item"><a href="#certification-section" class="nav-link"><span>Certification</span></a></li>
+          <li class="nav-item"><a href="#volunteering-section" class="nav-link"><span>Volunteering</span></a></li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <div class="row">
-      <h1 class="big-4">Experience</h1>
-      <div class="underline"></div>
+  <!-- Hero Section -->
+  <section id="home-section" class="hero-center">
+    <div class="hc-avatar">
+      <img src="images/cropped-1750471618951.jpeg" alt="Anand Kumar Bhagat">
     </div>
-    <br>
+    <h1>Anand Kumar Bhagat</h1>
+    <p class="hc-tagline">AI Engineer | SAP Analytics | GenAI, RAG &amp; Prompt Engineering</p>
+    <span id="typing-animation"></span>
 
-    <div class="row">
-      <!-- Amplify Cell Technologies -->
-      <div class="col-lg-4 col-md-6 col-12 mb-4">
-        <div class="resume-wrap ftco-animate has-logo logo-amplify">
-          <span class="date">June 2025–April 2026</span>
-          <h2>SAP IT Intern → SAP Analytics &amp; Integration Analyst</h2>
-          <span class="company-line">
-            <a href="https://amplifycelltech.com/" target="_blank" rel="noopener" class="logo-tile" title="Amplify Cell Technologies logo">
-              <img src="images/amplify-logo.png" class="company-logo" alt="Amplify Cell Technologies logo" onerror="this.parentNode.style.display='none'">
-            </a>
-            <span class="position">Amplify Cell Technologies, Byhalia – MS</span>
-          </span>
-          <p class="mt-4">Supported enterprise SAP analytics and integration initiatives in a large-scale battery manufacturing environment.</p>
-          <ul>
-            <li>Designed and deployed 6+ SAP Analytics Cloud dashboards for OPEX, CAPEX, cost center planning, and leadership reporting.</li>
-            <li>Supported SAP S/4HANA Public Cloud procurement, Finance and Supply Chain processes, including vendor onboarding and cross-module integration.</li>
-            <li>Managed SAP incidents and changes through ServiceNow and supported SAP Concur administration and finance reporting alignment.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Lamar University -->
-      <div class="col-lg-4 col-md-6 col-12 mb-4">
-        <div class="resume-wrap ftco-animate has-logo logo-lamar">
-          <span class="date">September 2024–May 2025</span>
-          <h2>Graduate Research Assistant</h2>
-          <span class="company-line">
-            <a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo">
-              <img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'">
-            </a>
-            <span class="position">Lamar University</span>
-          </span>
-          <p class="mt-4">Conducted applied research on artificial intelligence, emerging technology, and its implications for defense and society.</p>
-          <ul>
-            <li>Conducted literature reviews and synthesized research on AI applications in defense systems and military decision-making.</li>
-            <li>Developed structured research methods, AI use cases, and policy-oriented recommendations.</li>
-            <li>Collaborated on academic research and analysis supporting publication-quality work.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Meta Link -->
-      <div class="col-lg-4 col-md-6 col-12 mb-4">
-        <div class="resume-wrap ftco-animate has-logo logo-metalink">
-          <span class="date">2021–2023</span>
-          <h2>Junior Data Analyst</h2>
-          <span class="company-line">
-            <span class="logo-tile" title="Meta Link">
-              <img src="images/metalink-logo.png" class="company-logo" alt="Meta Link logo" onerror="this.parentNode.style.display='none'">
-            </span>
-            <span class="position">Meta Link</span>
-          </span>
-          <p class="mt-4">Meta Link Pvt. Ltd. is an IT solutions provider in Nepal.</p>
-          <ul>
-            <li>Used Python and SQL for data analysis, technical support, and cross-functional problem solving.</li>
-            <li>Applied analytics and predictive techniques to improve project execution and decision-making.</li>
-            <li>Improved documentation and user guidance to reduce recurring errors and support requests.</li>
-          </ul>
-        </div>
-      </div>
+    <!-- High-Impact Action CTAs -->
+    <div class="hero-cta-group">
+      <a href="#project-section" class="btn-hero-solid">View Projects</a>
+      <a href="#contact-section" class="btn-hero-outline">Get In Touch</a>
     </div>
 
-    <br><br>
-
-    <div class="row">
-      <h1 class="big-4">Education</h1>
-      <div class="underline"></div>
-    </div>
-    <br>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="resume-wrap ftco-animate has-logo logo-lamar-edu">
-          <span class="date">2024–2025</span>
-          <h2>Master of Science in Management Information Systems</h2>
-          <span class="company-line">
-            <a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo">
-              <img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'">
-            </a>
-            <span class="position">Lamar University</span>
-          </span>
-          <p class="mt-4">GPA: 3.90</p>
-          <p class="mt-4">SAP Certified – Business Process Integration with SAP S/4HANA (TS410), 2024</p>
-          <p class="mt-4">Member: Beta Gamma Sigma, 2025</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="resume-wrap ftco-animate has-logo logo-tribhuvan">
-          <span class="date">2016–2021</span>
-          <h2>Bachelor of Information Management</h2>
-          <span class="company-line">
-            <a href="https://tu.edu.np" target="_blank" rel="noopener" class="logo-tile" title="Tribhuvan University logo">
-              <img src="images/tribhuvan-logo.png" class="company-logo" alt="Tribhuvan University logo" onerror="this.parentNode.style.display='none'">
-            </a>
-            <span class="position">Tribhuvan University</span>
-          </span>
-          <p class="mt-4">GPA: 3.06</p>
-        </div>
-      </div>
+    <!-- Social Icons -->
+    <div class="hc-icons">
+      <a href="https://www.linkedin.com/in/anand-bhagat-a616462b4" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95V21H9z"/></svg></a>
+      <a href="https://github.com/Anandlamar" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a>
+      <a href="https://public.tableau.com/app/profile/anand.bhagat" target="_blank" rel="noopener" aria-label="Tableau Public"><svg viewBox="0 0 24 24"><path d="M11 2h2v4h4v2h-4v4h-2V8H7V6h4zM4 12h1.5v2.5H8V16H5.5v2.5H4V16H1.5v-1.5H4zm14 0h1.5v2.5H22V16h-2.5v2.5H18V16h-2.5v-1.5H18zM11 16h2v2.5h2.5v2H13V23h-2v-2.5H8.5v-2H11z"/></svg></a>
+      <a href="https://www.youtube.com/@traveller_arrives1755" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+      <a href="https://www.instagram.com/traveller_arrives" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.2 5.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+      <a href="mailto:Bhagatanand28@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5H18V9.2l-6 4.6-6-4.6V20H3.5A1.5 1.5 0 0 1 2 18.5zM4.3 4 12 9.9 19.7 4z"/></svg></a>
     </div>
 
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-6 text-center ftco-animate">
-        <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
-      </div>
-    </div>
-  </div>
-</section>
+    <a href="#about-section" class="hc-scroll" aria-label="Scroll down"></a>
 
-<section class="ftco-section" id="project-section">
-		 <div class="container-fluid">
-
-		  <div class="row justify-content-center mb-5 pb-5">
-			<div class="col-md-7 heading-section text-center ftco-animate">
-			  <h1 class="big big-2">Projects</h1>
-			  <h2 class="mb-4">Projects</h2>
-			  <p>Below are the sample Data Analytics projects on SQL, Python, Tableau, Power BI & ML.</p>
-			</div>
-		  </div>
-		  <div class="row">
-  <!-- Power BI Project: SAP Cloud Analytics - ERP Simulation & Data Analysis -->
-  <div class="col-md-4 d-flex ftco-animate">
-    <div class="blog-entry">
-      <a href="images/Cloudanalytics.docx" class="block-20 zoom-effect" 
-         style="background-image: url('images/SAP.png');" 
-         target="_blank">
-      </a>
-      <div class="text mt-3 d-block">
-        <h3 class="heading">
-          <a href="images/Cloudanalytics.docx" target="_blank">
-            SAP Cloud Analytics - ERP Simulation & Data Analysis
-          </a>
-        </h3>
-        <p>Implemented an ERP simulation analysis using SAP Cloud Analytics to extract actionable insights from sales and revenue data. Applied Benford’s Law with SAP Predictive Analytics to detect anomalies and ensure data integrity in financial reports. This project demonstrates my ability to leverage SAP tools for data-driven decision-making and accuracy.</p>
-        <p>
-          <a href="images/Cloudanalytics.docx" target="_blank">Click here to download the project details and analysis.</a>
-        </p>
-      </div>
-    </div>
-  </div>
-
-		  
-			
-		   <!-- Titanic Association Analysis Using SAP Analytics Cloud -->
-  <div class="col-md-4 d-flex ftco-animate">
-    <div class="blog-entry">
-      <a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" 
-         class="block-20 zoom-effect" 
-         style="background-image: url('images/project24.webp');" 
-         target="_blank">
-      </a>
-      <div class="text mt-3 d-block">
-        <h3 class="heading">
-          <a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" target="_blank">
-            Titanic Association Analysis Using SAP Analytics Cloud
-          </a>
-        </h3>
-        <p>Implemented a comprehensive association analysis using SAP Analytics Cloud (SAC) to derive insights into Titanic passenger survivability based on characteristics like class, gender, and age. The project identified frequent patterns such as the high survival probability of second-class male children. Visualization was done using bar and bubble charts to highlight rule frequencies and associations.</p>
-        <p>
-          <a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" target="_blank">
-            Click here to download the project details and analysis.
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-	<!-- Global Bike Sales Analysis Using SAP Analytics Cloud -->
-<div class="col-md-4 d-flex ftco-animate">
-  <div class="blog-entry">
-    <a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" 
-       class="block-20 zoom-effect" 
-       style="background-image: url('images/globalbike.webp');" 
-       target="_blank">
-    </a>
-    <div class="text mt-3 d-block">
-      <h3 class="heading">
-        <a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" target="_blank">
-           Global Bike Sales Analysis Using SAP Analytics Cloud
-        </a>
-      </h3>
-      <p>Leveraged SAP Analytics Cloud (SAC) to create an interactive dashboard for analyzing Global Bike Inc.'s sales data, uncovering sales trends and customer segmentation. The project included k-means clustering for identifying high-value customer groups and calculated measures for discount impact analysis.</p>
-      <p>
-        <a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" target="_blank">
-          Click here to download the project details and analysis.
-        </a>
-      </p>
-    </div>
-  </div>
-</div>		
-  
-			     </p>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		  
-    
-<br>
-	
-	<br>
-				
-	<section>
-		<!-- added justify-content-center to center align the last two projects -->
-	</section>
-	<div class="row d-flex justify-content-center">  
-		<div class="col-md-4 d-flex ftco-animate">
-			<div class="blog-entry justify-content-end">
-				<a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book2_17294682765470/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-					<h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book2_17294682765470/Dashboard1">Comprehensive Data Analytics and Visualization of the NYC Airbnb Market</a></h3>
-					<p>This comprehensive visualization delves into critical metrics such as top hosts by reviews, neighborhood pricing dynamics, seasonal booking patterns, and a detailed geospatial analysis of property listings.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 d-flex ftco-animate">
-			<div class="blog-entry justify-content-end">
-				<a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book1_17295392959840/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-					<h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book1_17295392959840/Dashboard1">Tripadvisor Hotel Analytics Dashboard using Tableau</a></h3>
-					<p>This project showcases my ability to design intuitive visualizations, analyze multi-dimensional data, and create interactive elements like filters and tooltips. I highlighted key metrics such as total hotels & user demographics while employing color theory for enhanced readability.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 d-flex ftco-animate">
-			<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Anandlamar/Movie-Portfolio-Project/blob/main/Untitled7.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_13.webp');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-					<h3 class="heading"><a href="https://github.com/Anandlamar/Movie-Portfolio-Project/blob/main/Untitled7.ipynb">Film Data Analysis</a></h3>
-					<p>Dive into the world of cinema with our Film Data Analysis project, utilizing Python to uncover insights from a comprehensive dataset of over 7,668 films. Explore correlations between critical metrics like budget, gross revenue, and audience ratings, revealing what drives success in the film industry.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-</section>
-<!-- New Section for GitHub Projects -->
-<section>
-	<div class="row d-flex justify-content-center">
-  
-	  <!-- GitHub Project 1: Customer Satisfaction Analysis -->
-	  <div class="col-md-4 d-flex ftco-animate">
-		<div class="blog-entry">
-		  <a href="https://github.com/Anandlamar/Customer-Satisfaction-Analysis-with-Python/blob/main/Untitled5.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_9.png');">
-		  </a>
-		  <div class="text mt-3 d-block">
-			<h3 class="heading">
-			  <a href="https://github.com/Anandlamar/Customer-Satisfaction-Analysis-with-Python/blob/main/Untitled5.ipynb">Customer Satisfaction Analysis with Python</a>
-			</h3>
-			<p>Analyzed customer satisfaction survey data using Python, employing data visualization and statistical analysis to uncover key factors impacting customer experience.</p>
-		  </div>
-		</div>
-	  </div>
-  
-	  <!-- GitHub Project 2: Mutual Fund Plan Creation -->
-	  <div class="col-md-4 d-flex ftco-animate">
-		<div class="blog-entry">
-		  <a href="https://github.com/Anandlamar/Creating-a-Mutual-Fund-Plan-with-Python/blob/main/Untitled2.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_12.jfif');">
-		  </a>
-		  <div class="text mt-3 d-block">
-			<h3 class="heading">
-			  <a href="https://github.com/Anandlamar/Creating-a-Mutual-Fund-Plan-with-Python/blob/main/Untitled2.ipynb">Creating a Mutual Fund Plan with Python</a>
-			</h3>
-			<p>Developed a Python model to analyze and create personalized mutual fund plans, offering investment insights and projected returns based on historical data analysis.</p>
-		  </div>
-		</div>
-	  </div>
-  
-	  <!-- GitHub Project 3: Netflix Content Strategy Analysis -->
-	  <div class="col-md-4 d-flex ftco-animate">
-		<div class="blog-entry">
-		  <a href="https://github.com/Anandlamar/Netflix-Content-Strategy-Analysis-with-Python/blob/main/Untitled3.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_11.png');">
-		  </a>
-		  <div class="text mt-3 d-block">
-			<h3 class="heading">
-			  <a href="https://github.com/Anandlamar/Netflix-Content-Strategy-Analysis-with-Python/blob/main/Untitled3.ipynb">Netflix Content Strategy Analysis with Python</a>
-			</h3>
-			<p>Examined Netflix’s content library to identify trends in genre popularity, release patterns, and viewer preferences, providing insights for data-driven content strategy decisions.</p>
-		  </div>
-		</div>
-	  </div>
-  
-	</div>
+    <!-- Typing Animation Script with Prompt Engineering & RAG -->
+    <script>
+    (function(){
+      var el = document.getElementById('typing-animation');
+      if(!el) return;
+      var lines = [
+        'Building Enterprise RAG & AI document search',
+        'Advanced Prompt Engineering & LLM Applications',
+        'SAP Certified \u2013 Business Data Cloud (BDC)',
+        'SAP Certified \u2013 SAP Analytics Cloud (SAC)',
+        'SAP Certified \u2013 S/4HANA Business Process Integration (TS410)'
+      ];
+      var li = 0, ci = 0, deleting = false;
+      function tick(){
+        var text = lines[li];
+        if(!deleting){
+          el.textContent = text.slice(0, ++ci);
+          if(ci === text.length){ deleting = true; return setTimeout(tick, 1800); }
+        } else {
+          el.textContent = text.slice(0, --ci);
+          if(ci === 0){ deleting = false; li = (li + 1) % lines.length; }
+        }
+        setTimeout(tick, deleting ? 30 : 55);
+      }
+      setTimeout(tick, 1200);
+    })();
+    </script>
   </section>
- <!-- AWS Project Section -->
-<section>
-	<div class="row d-flex justify-content-center">
-	  <section class="ftco-section">
-		<div class="container-fluid">
 
-		  <div class="row d-flex flex-wrap">
-			
-			<!-- AWS Project: Netflix Data Analysis using AWS S3 -->
-			<div class="col-md-4 d-flex ftco-animate">
-			  <div class="blog-entry">
-				<a href="https://github.com/Anandlamar/Netflix-Data-Analytics-with-AWS-QuickSight/blob/main/AWS%20S3.docx" class="block-20 zoom-effect" style="background-image: url('images/proj_aws.PNG');"></a>
-				<div class="text mt-3 d-block">
-				  <h3 class="heading">
-					<a href="https://github.com/Anandlamar/Netflix-Data-Analytics-with-AWS-QuickSight/blob/main/AWS%20S3.docx">Netflix Data Analysis using AWS S3</a>
-				  </h3>
-				  <p>Utilized AWS S3 to manage and analyze Netflix's movie and TV show datasets, building a scalable data pipeline. Employed AWS services for efficient storage, processing, and analysis of large-scale entertainment data.</p>
-				</div>
-			  </div>
-			</div>
-  
-			<!-- Health Monitoring and Analysis Project -->
-			<div class="col-md-4 d-flex ftco-animate">
-			  <div class="blog-entry">
-				<a href="https://github.com/Anandlamar/Health-Monitoring-and-Analysis/blob/main/Untitled9.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_16.webp');"></a>
-				<div class="text mt-3 d-block">
-				  <h3 class="heading">
-					<a href="https://github.com/Anandlamar/Health-Monitoring-and-Analysis/blob/main/Untitled9.ipynb">Health Monitoring and Analysis</a>
-				  </h3>
-				  <p>Project focuses on analyzing health-related datasets to identify patterns, anomalies, and trends in patient data. It uses data science techniques to monitor vital signs and predict potential health risks, aiding in early intervention.</p>
-				</div>
-			  </div>
-			</div>
-  
-			<!-- Power BI Project: Sales Dashboard -->
-			<div class="col-md-4 d-flex ftco-animate">
-			  <div class="blog-entry">
-				<a href="https://app.powerbi.com/groups/me/reports/96278b8d-cb91-4af2-bc02-9186cf566af5/828d26aafdb26c6f6cf8?experience=power-bi" class="block-20 zoom-effect" style="background-image: url('images/proj_15.png');"></a>
-				<div class="text mt-3 d-block">
-				  <h3 class="heading">
-					<a href="https://app.powerbi.com/groups/me/reports/96278b8d-cb91-4af2-bc02-9186cf566af5/828d26aafdb26c6f6cf8?experience=power-bi">HR Analytics Dashboard</a>
-				  </h3>
-				  <p>HR Analytics Dashboard provides key insights into workforce trends, including attrition rate, average salary, and tenure. It analyzes attrition by age, education, salary, and job role, highlighting critical patterns. This tool helps HR teams enhance employee retention and satisfaction through data-driven strategies.</p>
-				</div>
-			  </div>
-			</div>
-  
-		  </div>
-		</div>
-	  </section>
-	</div>
-<div class="row d-flex g-4">
-			<!-- First Project -->
-			<div class="col-md-4 d-flex ftco-animate">
-			  <div class="blog-entry justify-content-end">
-				<a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Netflixprojectanand/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
-				</a>
-				<div class="text mt-3 d-block">
-				  <h3 class="heading">
-					<a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Netflixprojectanand/Dashboard1">
-					  Netflix Movies & TV Shows Analysis Using Tableau
-					</a>
-				  </h3>
-				  <p>Created a Tableau dashboard analyzing Netflix’s movie and TV show data, providing insights into top genres, global content distribution, release trends, and content types.</p>
-				</div>
-			  </div>
-			</div>
+  <!-- About Section -->
+  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="row d-flex align-items-stretch">
+          <div class="col-md-6 col-lg-5 d-flex">
+            <div class="img-about img d-flex align-items-stretch">
+              <div class="overlay">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="images/cropped-1750471618951.jpeg" class="img-fluid rounded b-shadow-a about-profile-photo" alt="Anand Kumar Bhagat">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Anand Kumar Bhagat </span></p>
+                      <p><span class="title-s">Job Role: </span> <span>AI &amp; SAP Analytics Professional</span></p>
+                      <p><span class="title-s">Experience: </span> <span>5+ Years </span></p>
+                      <p><span class="title-s">Address: </span> <span>Mississippi, USA</span></p>
+                    </div>
+                  </div>
+                </div>
 
-  <!-- Second Project -->
-			<div class="col-md-4 d-flex ftco-animate">
-			  <div class="blog-entry">
-				<a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Primevideo_17296990475160/Dashboard1?publish=yes" class="block-20 zoom-effect" style="background-image: url('images/proj_8.png');">
-				</a>
-				<div class="text mt-3 d-block">
-				  <h3 class="heading">
-					<a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Primevideo_17296990475160/Dashboard1?publish=yes">
-						Prime Video Shows & Movies Analysis Using Tableau
-					</a>
-				  </h3>
-				  <p>Developed a visually engaging Tableau dashboard to analyze Prime Video's vast collection of shows across countries. The project explores content distribution, genre performance, and audience ratings. This analysis helps identify global viewing patterns and content trends on Prime Video.</p>
-				</div>
-			  </div>
-			</div>
-<!-- Third Project -->
-			<div class="col-md-4 d-flex ftco-animate">
-			  <div class="blog-entry">
-				<a href="https://app.powerbi.com/groups/me/reports/2c4c2d37-acd0-4422-9947-aaec6a59c480/528e3f210c01c0102c8c?experience=power-bi" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
-				</a>
-				<div class="text mt-3 d-block">
-				  <h3 class="heading">
-					<a href="https://app.powerbi.com/groups/me/reports/2c4c2d37-acd0-4422-9947-aaec6a59c480/528e3f210c01c0102c8c?experience=power-bi">
-					  Power BI Sales Dashboard Project
-					</a>
-				  </h3>
-				  <p> Built a robust Power BI dashboard for Blinkit, focusing on real-time sales data and regional performance analysis across India. The dashboard offers detailed insights into top-selling products, market trends, and sales forecasting. It serves as a powerful tool for decision-making and business growth.
+                <div class="skill-mf">
+                  <p class="title-s">Skills</p>
+                  <span>SAP S/4HANA</span> <span class="pull-right">95%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <span>SQL</span> <span class="pull-right">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <span>Data Visualization</span> <span class="pull-right">90%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <span>SAP Analytics Cloud(SAC)</span> <span class="pull-right">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <span>PYTHON</span> <span class="pull-right">80%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+                <h1 class="big">About</h1>
+                <h2 class="mb-4">About Me</h2>
+                
+                <p>With a Master’s in Management Information Systems and hands-on experience in SAP S/4HANA Public Cloud implementation, I specialize in transforming complex business processes into data-driven, scalable solutions. As an SAP Certified professional in Business Data Cloud (BDC), SAP Analytics Cloud (SAC), and S/4HANA Business Process Integration (TS410), I bridge functional enterprise systems with modern data &amp; AI architectures.</p>
+                <p>My work spans enterprise analytics, procurement and finance processes, SAC Dashboard Architecture, cross-module SAP integration, and building generative AI, RAG systems, and prompt engineering pipelines. I focus on building intelligent reporting ecosystems that improve operational visibility, cost control, and strategic decision-making.</p>
+                <p>From applied AI research in defense systems to delivering real-world SAP analytics solutions in manufacturing environments, I operate at the intersection of enterprise business strategy, data architecture, and emerging AI technologies.</p>
+                
+                <ul class="about-info mt-4 px-md-0 px-2">
+                  <li class="d-flex"><span>Profile:</span> <span>AI &amp; Data Engineering, SAP Analytics &amp; BI</span></li>
+                  <li class="d-flex"><span>Domain:</span> <span>SAP ERP Systems, Enterprise Integration, Business Intelligence, Data Analytics, Generative AI, RAG &amp; Prompt Engineering</span></li>
+                  <li class="d-flex"><span>Education:</span> <span>Master of Science in Management Information Systems</span></li>
+                  <li class="d-flex"><span>Language:</span> <span>English</span></li>
+                  <li class="d-flex"><span>BI Tools:</span> <span>SAP Analytics Cloud (SAC), Tableau, Power BI, SAP Business Objects, SPSS</span></li>
+                  <li class="d-flex"><span>Tech Stack:</span> <span>Python, SQL, SAP ABAP, SAP S/4HANA, Prompt Engineering, RAG / Vector Search, Java, C/C++, HTML/CSS, MySQL</span></li>
+                  <li class="d-flex"><span>Interests:</span> <span>Traveling, Videography, Teaching, Content Creation</span></li>
+                </ul>
+              </div>
+            </div>
 
-	</div>
-  </div>
-				
-	<!-- Close the previous Project Row and Container properly -->
-</div> <!-- CLOSE last .row -->
-</div> <!-- CLOSE last .container -->
-</section> <!-- CLOSE last #project-section -->
+            <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+                <p class="mb-4">
+                  <span class="number" data-number="6">0</span> <span>+</span>
+                  <span>&nbsp; Certifications completed</span>
+                </p>
+                <p><a href="https://www.linkedin.com/in/anand-bhagat-a616462b4" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Resume Section -->
+  <section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container-fluid resume-wide">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Resume</h1>
+          <h2 class="mb-4">Resume</h2>
+          <p>AI Engineer and SAP Analytics professional with 5+ years of experience across enterprise analytics, SAP S/4HANA Public Cloud, SAP Analytics Cloud (SAC), business intelligence, SQL, Python, and AI-enabled data solutions.</p>
+        </div>
+      </div>
 
-<section class="ftco-section" id="craft-haven-section">
-  <div class="container">
-    <div class="row"> <!-- NO justify-content-center -->
+      <div class="row">
+        <h1 class="big-4">Experience</h1>
+        <div class="underline"></div>
+      </div>
+      <br>
 
-      <!-- Craft Haven E-Commerce Platform -->
-      <div class="col-md-6 d-flex ftco-animate">
+      <div class="row">
+        <!-- Amplify Cell Technologies -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="resume-wrap ftco-animate has-logo logo-amplify">
+            <span class="date">June 2025–April 2026</span>
+            <h2>SAP IT Intern → SAP Analytics &amp; Integration Analyst</h2>
+            <span class="company-line">
+              <a href="https://amplifycelltech.com/" target="_blank" rel="noopener" class="logo-tile" title="Amplify Cell Technologies logo">
+                <img src="images/amplify-logo.png" class="company-logo" alt="Amplify Cell Technologies logo" onerror="this.parentNode.style.display='none'">
+              </a>
+              <span class="position">Amplify Cell Technologies, Byhalia – MS</span>
+            </span>
+            <p class="mt-4">Supported enterprise SAP analytics and integration initiatives in a large-scale battery manufacturing environment.</p>
+            <ul>
+              <li>Designed and deployed 6+ SAP Analytics Cloud dashboards for OPEX, CAPEX, cost center planning, and leadership reporting.</li>
+              <li>Supported SAP S/4HANA Public Cloud procurement, Finance and Supply Chain processes, including vendor onboarding and cross-module integration.</li>
+              <li>Managed SAP incidents and changes through ServiceNow and supported SAP Concur administration and finance reporting alignment.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Lamar University -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="resume-wrap ftco-animate has-logo logo-lamar">
+            <span class="date">September 2024–May 2025</span>
+            <h2>Graduate Research Assistant</h2>
+            <span class="company-line">
+              <a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo">
+                <img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'">
+              </a>
+              <span class="position">Lamar University</span>
+            </span>
+            <p class="mt-4">Conducted applied research on artificial intelligence, emerging technology, and its implications for defense and society.</p>
+            <ul>
+              <li>Conducted literature reviews and synthesized research on AI applications in defense systems and military decision-making.</li>
+              <li>Developed structured research methods, AI use cases, and policy-oriented recommendations.</li>
+              <li>Collaborated on academic research and analysis supporting publication-quality work.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Meta Link -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="resume-wrap ftco-animate has-logo logo-metalink">
+            <span class="date">2021–2023</span>
+            <h2>Junior Data Analyst</h2>
+            <span class="company-line">
+              <span class="logo-tile" title="Meta Link">
+                <img src="images/metalink-logo.png" class="company-logo" alt="Meta Link logo" onerror="this.parentNode.style.display='none'">
+              </span>
+              <span class="position">Meta Link</span>
+            </span>
+            <p class="mt-4">Meta Link Pvt. Ltd. is an IT solutions provider in Nepal.</p>
+            <ul>
+              <li>Used Python and SQL for data analysis, technical support, and cross-functional problem solving.</li>
+              <li>Applied analytics and predictive techniques to improve project execution and decision-making.</li>
+              <li>Improved documentation and user guidance to reduce recurring errors and support requests.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="row">
+        <h1 class="big-4">Education</h1>
+        <div class="underline"></div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate has-logo logo-lamar-edu">
+            <span class="date">2024–2025</span>
+            <h2>Master of Science in Management Information Systems</h2>
+            <span class="company-line">
+              <a href="https://www.lamar.edu" target="_blank" rel="noopener" class="logo-tile" title="Lamar University logo">
+                <img src="images/lamar-logo.png" class="company-logo" alt="Lamar University logo" onerror="this.parentNode.style.display='none'">
+              </a>
+              <span class="position">Lamar University</span>
+            </span>
+            <p class="mt-4">GPA: 3.90</p>
+            <p class="mt-4">SAP Certified – Business Process Integration with SAP S/4HANA (TS410), 2024</p>
+            <p class="mt-4">Member: Beta Gamma Sigma, 2025</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate has-logo logo-tribhuvan">
+            <span class="date">2016–2021</span>
+            <h2>Bachelor of Information Management</h2>
+            <span class="company-line">
+              <a href="https://tu.edu.np" target="_blank" rel="noopener" class="logo-tile" title="Tribhuvan University logo">
+                <img src="images/tribhuvan-logo.png" class="company-logo" alt="Tribhuvan University logo" onerror="this.parentNode.style.display='none'">
+              </a>
+              <span class="position">Tribhuvan University</span>
+            </span>
+            <p class="mt-4">GPA: 3.06</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6 text-center ftco-animate">
+          <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="ftco-section" id="project-section">
+    <div class="container-fluid">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Projects</h1>
+          <h2 class="mb-4">Projects</h2>
+          <p>Below are sample AI, Machine Learning, and Data Analytics projects using Python, SQL, Tableau, Power BI &amp; SAP.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Power BI Project: SAP Cloud Analytics -->
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="images/Cloudanalytics.docx" class="block-20 zoom-effect" style="background-image: url('images/SAP.png');" target="_blank"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading"><a href="images/Cloudanalytics.docx" target="_blank">SAP Cloud Analytics - ERP Simulation &amp; Data Analysis</a></h3>
+              <p>Implemented an ERP simulation analysis using SAP Cloud Analytics to extract actionable insights from sales and revenue data. Applied Benford’s Law with SAP Predictive Analytics to detect anomalies and ensure data integrity in financial reports.</p>
+              <p><a href="images/Cloudanalytics.docx" target="_blank">Click here to download project details.</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Titanic Association Analysis -->
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/project24.webp');" target="_blank"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading"><a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" target="_blank">Titanic Association Analysis Using SAP Analytics Cloud</a></h3>
+              <p>Implemented an association analysis using SAC to derive insights into passenger survivability. Used bar and bubble charts to visualize rule frequencies and statistical associations.</p>
+              <p><a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" target="_blank">Click here to view analysis.</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Bike Sales Analysis -->
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" class="block-20 zoom-effect" style="background-image: url('images/globalbike.webp');" target="_blank"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading"><a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" target="_blank">Global Bike Sales Analysis Using SAP Analytics Cloud</a></h3>
+              <p>Leveraged SAP Analytics Cloud (SAC) to create an interactive dashboard analyzing sales data, uncovering trends, and performing k-means customer clustering.</p>
+              <p><a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" target="_blank">Click here to view analysis.</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mt-4">  
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book2_17294682765470/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book2_17294682765470/Dashboard1">Comprehensive Data Analytics and Visualization of NYC Airbnb Market</a></h3>
+              <p>Explores metrics including host reviews, neighborhood pricing dynamics, seasonal booking patterns, and geospatial analysis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book1_17295392959840/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book1_17295392959840/Dashboard1">Tripadvisor Hotel Analytics Dashboard using Tableau</a></h3>
+              <p>Intuitive multi-dimensional data analysis with interactive filters and tooltips showcasing user demographics and key hotel metrics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="https://github.com/Anandlamar/Movie-Portfolio-Project/blob/main/Untitled7.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_13.webp');"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading"><a href="https://github.com/Anandlamar/Movie-Portfolio-Project/blob/main/Untitled7.ipynb">Film Data Analysis</a></h3>
+              <p>Python data analysis across a dataset of over 7,668 films exploring correlations between budget, gross revenue, and audience ratings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Projects Section -->
+  <section>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry">
-          <a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" 
-             class="block-20 zoom-effect" 
-             style="background-image: url('images/craft-haven.webp');" 
-             target="_blank"></a>
+          <a href="https://github.com/Anandlamar/Customer-Satisfaction-Analysis-with-Python/blob/main/Untitled5.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_9.png');"></a>
           <div class="text mt-3 d-block">
-            <h3 class="heading">
-              <a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" target="_blank">
-                Craft Haven - E-Commerce Platform for Handmade Crafts
-              </a>
-            </h3>
-            <p>Craft Haven is an e-commerce platform designed to connect artisans with customers seeking unique, handcrafted products. It provides a user-friendly shopping experience while empowering independent creators to expand their reach. The platform features seamless product listings, secure transactions, and personalized recommendations to enhance user engagement.</p>
-            <p>
-              <a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" target="_blank">
-                Click here to access the project details and analysis.
-              </a>
-            </p>
+            <h3 class="heading"><a href="https://github.com/Anandlamar/Customer-Satisfaction-Analysis-with-Python/blob/main/Untitled5.ipynb">Customer Satisfaction Analysis with Python</a></h3>
+            <p>Analyzed customer satisfaction survey data using Python, employing data visualization and statistical analysis to uncover key factors impacting customer experience.</p>
           </div>
         </div>
       </div>
 
-      <!-- Tesla vs. Ford Project -->
-      <div class="col-md-6 d-flex ftco-animate">
+      <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry">
-          <a href="https://public.tableau.com/views/Dataanalyticsprojectfinal/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
-             class="block-20 zoom-effect" 
-             style="background-image: url('images/Tesla.png');" 
-             target="_blank"></a>
+          <a href="https://github.com/Anandlamar/Creating-a-Mutual-Fund-Plan-with-Python/blob/main/Untitled2.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_12.jfif');"></a>
           <div class="text mt-3 d-block">
-            <h3 class="heading">
-              <a href="https://public.tableau.com/views/Dataanalyticsprojectfinal/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">
-                Tesla vs. Ford (2017–2023): Innovation Outpaces Legacy 
-</a>
-            </h3>
-            <p>This project analyzes the financial performance of Tesla and Ford between 2017 and 2023, focusing on their R&D investment, gross margin, net income, and vehicle production costs. The aim was to compare Tesla's innovation-driven model with Ford's legacy approach to understand the competitive edge Tesla holds in the electric vehicle (EV) space.</p>
-              <a href="https://docs.google.com/document/d/1whsykJRFmOB8GEwMxUx-UXFYYGWBs2Ej/edit?usp=sharing&ouid=102117268856523270424&rtpof=true&sd=true" target="_blank">
-                Click here to access the project details and findings.
-              </a>
-            </p>
+            <h3 class="heading"><a href="https://github.com/Anandlamar/Creating-a-Mutual-Fund-Plan-with-Python/blob/main/Untitled2.ipynb">Creating a Mutual Fund Plan with Python</a></h3>
+            <p>Developed a Python model to analyze and create personalized mutual fund plans, offering investment insights and projected returns based on historical data.</p>
           </div>
         </div>
       </div>
 
-    </div> <!-- CLOSE row -->
-  </div> <!-- CLOSE container -->
-</section>
-<!-- CERTIFICATION SECTION START -->
-<section class="ftco-section" id="certification-section">
-  <div class="container-fluid">
-
-    <!-- Heading -->
-    <div class="row justify-content-center mb-5 pb-3">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Certification</h1>
-        <h2 class="mb-4">Professional Certifications</h2>
-        <p>Click a badge to verify on Credly.</p>
-      </div>
-    </div>
-
-    <!-- BADGES ROW -->
-    <div class="row justify-content-center">
-
-      <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
-        <div class="cert-card w-100">
-          <a href="https://www.credly.com/earner/earned/badge/99384e7b-0e0e-4fba-9866-ca70d69d6ef8" target="_blank">
-            <img src="images/bdc-badge.png" class="cert-badge" alt="SAP Business Data Cloud">
-          </a>
-          <div class="cert-title">SAP Certified Associate – Business Data Cloud</div>
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="https://github.com/Anandlamar/Netflix-Content-Strategy-Analysis-with-Python/blob/main/Untitled3.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_11.png');"></a>
+          <div class="text mt-3 d-block">
+            <h3 class="heading"><a href="https://github.com/Anandlamar/Netflix-Content-Strategy-Analysis-with-Python/blob/main/Untitled3.ipynb">Netflix Content Strategy Analysis with Python</a></h3>
+            <p>Examined Netflix’s content library to identify trends in genre popularity, release patterns, and viewer preferences for data-driven content decisions.</p>
+          </div>
         </div>
       </div>
-
-      <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
-        <div class="cert-card w-100">
-          <a href="https://www.credly.com/badges/f8e77581-0b88-416f-a537-592aa4b3c4d7" target="_blank">
-            <img src="images/sac-badge3.png" class="cert-badge" alt="SAP Analytics Cloud">
-          </a>
-          <div class="cert-title">SAP Certified Associate – SAP Analytics Cloud</div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
-        <div class="cert-card w-100">
-          <a href="https://www.credly.com/badges/cf4ecc7a-bc1c-45aa-949e-c01934d6a705" target="_blank">
-            <img src="images/ts410-badge3.png" class="cert-badge" alt="SAP TS410">
-          </a>
-          <div class="cert-title">SAP Certified Associate – Business Process Integration (TS410)</div>
-        </div>
-      </div>
-
     </div>
+  </section>
 
-  </div>
-</section>
-<!-- CERTIFICATION SECTION END -->
-
-
-
-<!-- Volunteer Section Start -->
-<section class="ftco-section" id="volunteering-section">
- <div class="container-fluid">
-
-    <div class="row justify-content-center mb-5 pb-5">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Volunteering</h1>
-        <h2 class="mb-4">Educational Leadership Activities</h2>
-        <p>Empowering students with cybersecurity, digital literacy, and leadership skills as part of the AT&T Foundation's Bridging the Digital Divide initiative at Lamar University.</p>
-      </div>
-    </div>
-
-    <div class="row d-flex">
-
-      <!-- Activity 1 -->
-    <div class="col-md-6 d-flex ftco-animate">
-  <div class="blog-entry justify-content-end">
-    <a href="images/damon.JPG" class="block-20 zoom-effect" 
-       style="background-image: url('images/damon.JPG'); background-size: cover; background-position: center center; background-repeat: no-repeat; height: 300px;">
-    </a>
-    <div class="text mt-3 d-block">
-      <h3 class="heading">Cybersecurity Session at Martin Elementary</h3>
-      <p>On February 9, 2024, we conducted a hands-on cybersecurity session at Martin Elementary School, teaching students how to create strong passwords by focusing on the importance of using uppercase letters, lowercase letters, numbers, and special characters. To make learning interactive and fun, I demonstrated how students could temporarily personalize their school website by changing the title to their own names, introducing them to the basics of website development and understanding web page structures. Picture(Damon), an 8-year-old third-grader</p>
-    </div>
-  </div>
-</div>
-
-
-
-      <!-- Activity 2 -->
-    <div class="col-md-6 d-flex ftco-animate">
-  <div class="blog-entry justify-content-end">
-    <a href="images/photosynthesis.JPG" class="block-20 zoom-effect" 
-       style="background-image: url('images/photosynthesis.jpg'); background-size: cover; background-position: center 55%; background-repeat: no-repeat; height: 300px;">
-    </a>
-    <div class="text mt-3 d-block">
-      <h3 class="heading">Leadership & Community Engagement</h3>
-      <p>Organized and facilitated educational activities during the Bridging the Digital Divide event, helping students learn through experiments like the water cycle demonstration, while strengthening leadership and mentorship skills through collaboration with school faculty and peers.</p>
-    </div>
-  </div>
-</div>
-
-
-    <div class="row d-flex mt-5">
-<div class="row justify-content-center">
-   <!-- Activity 3 -->
-<div class="col-md-6 d-flex ftco-animate">
-  <div class="blog-entry justify-content-end" style="padding: 10px;">
-    <a href="images/Lamar.JPG" class="block-20 zoom-effect" 
-       style="background-image: url('images/Lamar.JPG'); background-size: cover; background-position: center center; background-repeat: no-repeat; height: 300px;">
-    </a>
-    <div class="text mt-3 d-block">
-      <h3 class="heading">Bridging the Digital Divide Member – Lamar University</h3>
-      <p>Actively contributed as a Bridging the Digital Divide (BDD) team member at Lamar University, supporting community outreach programs focused on digital literacy, technology education, and student empowerment. Collaborated with a diverse group to organize hands-on events, helping bridge the technology gap for K-12 students and promote educational equity.</p>
-    </div>
-  </div>
-</div>
-
-
-      <!-- Activity 4 -->
-<div class="col-md-6 d-flex ftco-animate">
-  <div class="blog-entry justify-content-end">
-    <a href="images/macbook.png" class="block-20 zoom-effect" 
-       style="background-image: url('images/macbook.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; height: 300px;">
-    </a>
-    <div class="text mt-3 d-block">
-      <h3 class="heading">Introduction to Website Structure</h3>
-      <p>Taught elementary students the basics of web page layout by showing how website titles can be edited. Encouraged early exploration of coding, digital literacy, and IT skills, sparking curiosity and excitement for technology at a young age.</p>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- Volunteer Section End -->
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="7">0</strong>
-                <span>Achievements</span>
-              </div>
+  <!-- AWS & Cloud Projects -->
+  <section class="ftco-section">
+    <div class="container-fluid">
+      <div class="row d-flex flex-wrap">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://github.com/Anandlamar/Netflix-Data-Analytics-with-AWS-QuickSight/blob/main/AWS%20S3.docx" class="block-20 zoom-effect" style="background-image: url('images/proj_aws.PNG');"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading"><a href="https://github.com/Anandlamar/Netflix-Data-Analytics-with-AWS-QuickSight/blob/main/AWS%20S3.docx">Netflix Data Analysis using AWS S3</a></h3>
+              <p>Utilized AWS S3 to manage and analyze Netflix datasets, building a scalable cloud data pipeline for large-scale entertainment analytics.</p>
             </div>
           </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="15">0</strong>
-                <span>Projects</span>
-              </div>
+        </div>
+
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://github.com/Anandlamar/Health-Monitoring-and-Analysis/blob/main/Untitled9.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_16.webp');"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading"><a href="https://github.com/Anandlamar/Health-Monitoring-and-Analysis/blob/main/Untitled9.ipynb">Health Monitoring and Analysis</a></h3>
+              <p>Analyzed health-related datasets using data science techniques to identify anomalies, monitor vitals, and predict potential health risks.</p>
             </div>
           </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="65">0</strong>
-                <span>Mentored Students </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="90">0</strong>
-                <span>Cups of coffee</span>
-              </div>
+        </div>
+
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://app.powerbi.com/groups/me/reports/96278b8d-cb91-4af2-bc02-9186cf566af5/828d26aafdb26c6f6cf8?experience=power-bi" class="block-20 zoom-effect" style="background-image: url('images/proj_15.png');"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading"><a href="https://app.powerbi.com/groups/me/reports/96278b8d-cb91-4af2-bc02-9186cf566af5/828d26aafdb26c6f6cf8?experience=power-bi">HR Analytics Dashboard</a></h3>
+              <p>Provides workforce insights on attrition, salary distribution, and tenure across demographics to support data-driven retention strategies.</p>
             </div>
           </div>
         </div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Tableau, Github  </span> </h2>
-						<div class="heading"> <h4>I enjoy tackling technical challenges and leveraging data insights for impactful solutions.</h4>
-						<br>
-						<p><a href="https://github.com/Anandlamar" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+    </div>
+  </section>
 
-
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+  <!-- Craft Haven & Tesla Section -->
+  <section class="ftco-section" id="craft-haven-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" class="block-20 zoom-effect" style="background-image: url('images/craft-haven.webp');" target="_blank"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading"><a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" target="_blank">Craft Haven - E-Commerce Platform for Handmade Crafts</a></h3>
+              <p>E-commerce platform designed to connect artisans with customers seeking handcrafted products. Features seamless listings, transactions, and recommendations.</p>
+              <p><a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" target="_blank">Click here to access details.</a></p>
+            </div>
           </div>
         </div>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Beaumont, Texas</p>
-	          </div>
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://public.tableau.com/views/Dataanalyticsprojectfinal/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="block-20 zoom-effect" style="background-image: url('images/Tesla.png');" target="_blank"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading"><a href="https://public.tableau.com/views/Dataanalyticsprojectfinal/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Tesla vs. Ford (2017–2023): Innovation Outpaces Legacy</a></h3>
+              <p>Analyzes financial performance between Tesla and Ford, comparing R&amp;D investments, margins, and manufacturing costs in the EV transition.</p>
+              <p><a href="https://docs.google.com/document/d/1whsykJRFmOB8GEwMxUx-UXFYYGWBs2Ej/edit?usp=sharing&ouid=102117268856523270424&rtpof=true&sd=true" target="_blank">Click here to access findings.</a></p>
+            </div>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://4094343518">+ 1 409 434 3518</a></p>
-	          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification Section -->
+  <section class="ftco-section" id="certification-section">
+    <div class="container-fluid">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Certification</h1>
+          <h2 class="mb-4">Professional Certifications</h2>
+          <p>Click a badge to verify on Credly.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
+          <div class="cert-card w-100">
+            <a href="https://www.credly.com/earner/earned/badge/99384e7b-0e0e-4fba-9866-ca70d69d6ef8" target="_blank">
+              <img src="images/bdc-badge.png" class="cert-badge" alt="SAP Business Data Cloud">
+            </a>
+            <div class="cert-title">SAP Certified Associate – Business Data Cloud</div>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:Bhagatanand28@gmail.com">Bhagatanand28@gmail.com</a></p>
-	          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
+          <div class="cert-card w-100">
+            <a href="https://www.credly.com/badges/f8e77581-0b88-416f-a537-592aa4b3c4d7" target="_blank">
+              <img src="images/sac-badge3.png" class="cert-badge" alt="SAP Analytics Cloud">
+            </a>
+            <div class="cert-title">SAP Certified Associate – SAP Analytics Cloud</div>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
-	          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
+          <div class="cert-card w-100">
+            <a href="https://www.credly.com/badges/cf4ecc7a-bc1c-45aa-949e-c01934d6a705" target="_blank">
+              <img src="images/ts410-badge3.png" class="cert-badge" alt="SAP TS410">
+            </a>
+            <div class="cert-title">SAP Certified Associate – Business Process Integration (TS410)</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.youtube.com/@traveller_arrives1755"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/anand-bhagat-a616462b4"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href=""><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.instagram.com/traveller_arrives"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/traveller_arrives"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+  <!-- Volunteering Section -->
+  <section class="ftco-section" id="volunteering-section">
+    <div class="container-fluid">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Volunteering</h1>
+          <h2 class="mb-4">Educational Leadership Activities</h2>
+          <p>Empowering students with cybersecurity, digital literacy, and leadership skills as part of the AT&amp;T Foundation's Bridging the Digital Divide initiative at Lamar University.</p>
+        </div>
+      </div>
 
-   
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- -->
-			</div>
-		  </div>
-		</div>
-	  </footer>
+      <div class="row d-flex">
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="images/damon.JPG" class="block-20 zoom-effect" style="background-image: url('images/damon.JPG'); background-size: cover; background-position: center; height: 300px;"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading">Cybersecurity Session at Martin Elementary</h3>
+              <p>Conducted hands-on cybersecurity sessions teaching password security and basic web development structures to introduce young learners to STEM.</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="images/photosynthesis.JPG" class="block-20 zoom-effect" style="background-image: url('images/photosynthesis.jpg'); background-size: cover; background-position: center 55%; height: 300px;"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading">Leadership &amp; Community Engagement</h3>
+              <p>Organized interactive STEM experiments, strengthening leadership and mentorship skills while fostering student curiosity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <!-- loader -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end" style="padding: 10px;">
+            <a href="images/Lamar.JPG" class="block-20 zoom-effect" style="background-image: url('images/Lamar.JPG'); background-size: cover; background-position: center; height: 300px;"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading">Bridging the Digital Divide – Lamar University</h3>
+              <p>Supported community outreach programs focused on digital literacy, helping bridge technology gaps for K-12 students.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="images/macbook.png" class="block-20 zoom-effect" style="background-image: url('images/macbook.png'); background-size: cover; background-position: center; height: 300px;"></a>
+            <div class="text mt-3 d-block">
+              <h3 class="heading">Introduction to Website Structure</h3>
+              <p>Taught elementary students fundamentals of webpage layout and early coding exploration, sparking curiosity for technology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counter Section -->
+  <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <div class="container">
+      <div class="row d-md-flex align-items-center">
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18">
+            <div class="text">
+              <strong class="number" data-number="7">0</strong>
+              <span>Achievements</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18">
+            <div class="text">
+              <strong class="number" data-number="15">0</strong>
+              <span>Projects</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18">
+            <div class="text">
+              <strong class="number" data-number="65">0</strong>
+              <span>Mentored Students</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18">
+            <div class="text">
+              <strong class="number" data-number="90">0</strong>
+              <span>Cups of coffee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+      <div class="row justify-content-center">
+        <div class="col-md-7 ftco-animate text-center">
+          <h2>More projects on<span> Tableau, Github  </span> </h2>
+          <div class="heading">
+            <h4>I enjoy tackling technical challenges and leveraging data insights for impactful solutions.</h4>
+            <br>
+            <p><a href="https://github.com/Anandlamar" class="btn btn-primary py-3 px-5">GitHub</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Contact</h1>
+          <h2 class="mb-4">Contact Me</h2>
+          <p>Below are the details to reach out to me!</p>
+        </div>
+      </div>
+
+      <div class="row d-flex contact-info mb-5">
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-map-signs"></span>
+            </div>
+            <h3 class="mb-4">Address</h3>
+            <p>Beaumont, Texas</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-phone2"></span>
+            </div>
+            <h3 class="mb-4">Contact Number</h3>
+            <p><a href="tel://4094343518">+ 1 409 434 3518</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-paper-plane"></span>
+            </div>
+            <h3 class="mb-4">Email Address</h3>
+            <p><a href="mailto:Bhagatanand28@gmail.com">Bhagatanand28@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-globe"></span>
+            </div>
+            <h3 class="mb-4">Download Resume</h3>
+            <p><a href="#">resumelink</a></p>
+          </div>
+        </div>
+
+        <div class="container">
+          <br><br>
+          <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+              <h2>Have a<span> Question?  </span> <a href="#contact-section" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+            </div>
+          </div>
+          <br>
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+            <li class="ftco-animate normal-txt">Find me on  </li>
+            <li class="ftco-animate"><a href="https://www.youtube.com/@traveller_arrives1755"><span class="icon-youtube"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.linkedin.com/in/anand-bhagat-a616462b4"><span class="icon-linkedin"></span></a></li>  
+            <li class="ftco-animate"><a href="https://www.instagram.com/traveller_arrives"><span class="icon-instagram"></span></a></li>
+          </ul>
+          <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; Anand Kumar Bhagat &bull; All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-
+  <!-- Scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -1353,7 +1260,6 @@ From AI research in defense systems to delivering real-world SAP analytics solut
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  
   <script src="js/main.js"></script>
     
   </body>
