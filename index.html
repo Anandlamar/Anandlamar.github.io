@@ -1923,152 +1923,94 @@ p, li, .normal-txt {
 
 
   <!-- ======================================================== -->
-  <!-- 2026 AUTONOMOUS AI RAG AGENT (ANAND'S AI SHOWCASE)       -->
+  <!-- 2026 CONVERSATIONAL ASTRONAUT AI COMPANION               -->
   <!-- ======================================================== -->
-  <div id="ai-rag-widget" class="ai-rag-container">
+  <div id="ai-rag-widget" class="ai-companion-container">
     
-    <!-- Glassmorphic Speech Bubble / What I Have Done Card -->
-    <div id="rag-speech-card" class="rag-card" role="dialog" aria-label="AI RAG System Assistant">
+    <!-- 1. The Interactive Chat Dialog Card (Collapsed by default) -->
+    <div id="chat-dialog-card" class="companion-chat-card" role="dialog" aria-label="Anand AI Companion">
       
       <!-- Card Top Header -->
-      <div class="rag-card-header">
-        <div class="rag-header-left">
-          <span class="rag-radar-pulse"></span>
-          <span class="rag-title-tag">AI RAG SYSTEM &bull; 2026 ARCHITECTURE</span>
+      <div class="companion-header">
+        <div class="companion-header-left">
+          <span class="companion-live-pulse"></span>
+          <span class="companion-title-tag">ANAND'S AI COMPANION &bull; RAG ONLINE</span>
         </div>
-        <button type="button" class="rag-close" onclick="toggleRagWidget(event)" aria-label="Close">&times;</button>
+        <button type="button" class="companion-close-btn" onclick="closeChatDialog()" aria-label="Close">&times;</button>
       </div>
 
-      <!-- Card Scrollable Content Body -->
-      <div class="rag-card-body">
+      <!-- Dialogue Body -->
+      <div class="companion-body">
         
-        <!-- Friendly 2026 Greeting Pill -->
-        <div class="rag-greeting-badge">
-          <span class="rag-wave-hand">👋</span>
-          <span class="rag-greeting-text">HELLO! I AM ANAND'S AI AGENT</span>
+        <!-- Bot Speech Bubble Row -->
+        <div class="companion-speech-row">
+          <div class="companion-mini-avatar">
+            <img src="images/ai-agent-avatar.jpg" onerror="this.src='data:image/jpeg;base64,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'" alt="Anand AI Avatar" class="companion-avatar-img">
+          </div>
+          <div id="bot-speech-text" class="companion-speech-bubble">
+            <span id="bot-time-greeting" class="companion-greeting-bold">Good morning! 👋</span><br>
+            I am Anand’s personal AI Agent. What would you like to explore about him?
+          </div>
         </div>
 
-        <!-- Main Identity Statement -->
-        <div class="rag-main-statement">
-          "I am the <strong>AI RAG System</strong> architected by Anand Kumar Bhagat."
+        <!-- Interactive Question Chips Container -->
+        <div id="chips-container" class="companion-chips-list">
+          <button type="button" onclick="handleCompanionOption('mda')" class="companion-chip-btn chip-emerald">
+            <span>⚡ 1. MDA (AI Engineer &amp; RAG)</span>
+            <span class="chip-arrow">&rarr;</span>
+          </button>
+          <button type="button" onclick="handleCompanionOption('amplify')" class="companion-chip-btn chip-gold">
+            <span>📊 2. Amplify (SAP Analytics &amp; SAC)</span>
+            <span class="chip-arrow">&rarr;</span>
+          </button>
+          <button type="button" onclick="handleCompanionOption('projects')" class="companion-chip-btn chip-sky">
+            <span>🚀 3. Projects (What did he build?)</span>
+            <span class="chip-arrow">&rarr;</span>
+          </button>
+          <button type="button" onclick="handleCompanionOption('relocate')" class="companion-chip-btn chip-purple">
+            <span>📍 4. Relocation, Lamar MIS &amp; Certs</span>
+            <span class="chip-arrow">&rarr;</span>
+          </button>
         </div>
 
-        <p class="rag-sub-statement">
-          Anand engineers enterprise neural intelligence, autonomous agentic workflows, and scalable cloud architectures:
-        </p>
-
-        <!-- 2026 Frontier AI & Enterprise Pillars -->
-        <div class="rag-pillars-group">
-          
-          <!-- Pillar 1: Enterprise RAG & Vector Search -->
-          <div class="rag-pillar-item">
-            <div class="rag-pillar-head">
-              <span class="rag-bullet-icon">⚡</span>
-              <span class="rag-pillar-title">Enterprise RAG &amp; Vector Search</span>
-            </div>
-            <p class="rag-pillar-desc">
-              Production semantic retrieval pipelines, hybrid embeddings, and vector database architectures at <strong>Mississippi Development Authority (MDA)</strong>.
-            </p>
-            <div class="rag-micro-tags">
-              <span class="rag-tag green">Neural Search</span>
-              <span class="rag-tag">Vector DBs</span>
-              <span class="rag-tag">MDA Current</span>
-            </div>
-          </div>
-
-          <!-- Pillar 2: Generative AI & Prompt Engineering -->
-          <div class="rag-pillar-item">
-            <div class="rag-pillar-head">
-              <span class="rag-bullet-icon">🤖</span>
-              <span class="rag-pillar-title">Generative AI &amp; Prompt Engineering</span>
-            </div>
-            <p class="rag-pillar-desc">
-              Automated executive decision-support, LLM reasoning pipelines, and structured enterprise knowledge extraction.
-            </p>
-            <div class="rag-micro-tags">
-              <span class="rag-tag">GenAI Pipelines</span>
-              <span class="rag-tag gold">Agentic Workflows</span>
-              <span class="rag-tag">Decision AI</span>
-            </div>
-          </div>
-
-          <!-- Pillar 3: SAP S/4HANA & SAC Analytics Governance -->
-          <div class="rag-pillar-item">
-            <div class="rag-pillar-head">
-              <span class="rag-bullet-icon">📊</span>
-              <span class="rag-pillar-title">SAP S/4HANA &amp; SAC Integration</span>
-            </div>
-            <p class="rag-pillar-desc">
-              Deployed <strong>6+ executive dashboards</strong> and OPEX/CAPEX governance at <strong>Amplify Cell Technologies</strong> (battery manufacturing).
-            </p>
-            <div class="rag-micro-tags">
-              <span class="rag-tag blue">SAP S/4HANA</span>
-              <span class="rag-tag blue">SAC Analytics</span>
-              <span class="rag-tag">OPEX/CAPEX</span>
-            </div>
-          </div>
-
-          <!-- Pillar 4: Applied AI Research & Credentials -->
-          <div class="rag-pillar-item">
-            <div class="rag-pillar-head">
-              <span class="rag-bullet-icon">🎓</span>
-              <span class="rag-pillar-title">Applied Research &amp; 3x SAP Certified</span>
-            </div>
-            <p class="rag-pillar-desc">
-              MS in Management Information Systems (<strong>GPA 3.90</strong>, Lamar University) researching defense AI systems &bull; SAP Certified in BDC, SAC, &amp; TS410.
-            </p>
-            <div class="rag-micro-tags">
-              <span class="rag-tag gold">GPA 3.90</span>
-              <span class="rag-tag">Beta Gamma Sigma</span>
-              <span class="rag-tag green">Credly Verified</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Quick Jump Action Links -->
-        <div class="rag-card-footer">
-          <a href="#resume-section" class="rag-btn-pill" onclick="closeRagWidget()">View Experience &nearr;</a>
-          <a href="#project-section" class="rag-btn-pill gold-pill" onclick="closeRagWidget()">View 17 Projects &nearr;</a>
-          <a href="#contact-section" class="rag-btn-pill contact-pill" onclick="closeRagWidget()">Get In Touch &nearr;</a>
-        </div>
-
-        <!-- Micro Status Strip -->
-        <div class="rag-status-strip">
-          <span>📍 Mississippi, USA &bull; Open to Relocate</span>
-          <span class="rag-strip-dot">&bull;</span>
-          <span style="color: #22c55e;">Available for AI Roles</span>
+        <!-- Footer Bar -->
+        <div class="companion-footer-bar">
+          <span class="companion-footer-meta">Powered by Anand's Architecture</span>
+          <button type="button" onclick="resetCompanionMenu()" class="companion-reset-btn">Reset Menu ↻</button>
         </div>
 
       </div>
     </div>
 
-    <!-- Floating 2026 Option 3: Synaptic Neural Wave Trigger Orb -->
-    <button id="rag-trigger-btn" class="rag-trigger" onclick="toggleRagWidget(event)" onmouseenter="openRagOnHover()" onmouseleave="closeRagOnLeave()" aria-label="Open AI RAG Assistant">
-      <div class="rag-halo-ring"></div>
-      <div class="rag-orb-inner">
-        <!-- 2026 Option 3: Synaptic Neural Frequency Wave -->
-        <div class="rag-wave-container">
-          <span class="rag-wave-bar wave-1"></span>
-          <span class="rag-wave-bar wave-2"></span>
-          <span class="rag-wave-bar wave-3"></span>
-          <span class="rag-wave-bar wave-4"></span>
-          <span class="rag-wave-bar wave-5"></span>
-        </div>
-        <span class="rag-live-dot"></span>
+    <!-- 2. Gentle Pop Notification Bubble (Pops in on load based on time of day) -->
+    <div id="greeting-pop-bubble" onclick="openChatDialog()" class="companion-pop-bubble">
+      <span class="companion-pop-dot"></span>
+      <div class="companion-pop-content">
+        <div id="pop-greeting-headline" class="companion-pop-headline">Good morning! ☀️</div>
+        <div class="companion-pop-sub">Want to know about Anand? Click me!</div>
       </div>
-      <span class="rag-hover-tooltip">Hello! I am Anand's AI Agent &bull; Click to explore ⚡</span>
+      <button type="button" onclick="dismissGreetingPop(event)" class="companion-pop-close" aria-label="Dismiss">&times;</button>
+    </div>
+
+    <!-- 3. Floating Astronaut Robot Trigger Orb -->
+    <button id="astronaut-trigger-btn" type="button" onclick="toggleChatDialog()" class="companion-trigger-btn" aria-label="Open AI Companion">
+      <div class="companion-halo-glow"></div>
+      <div class="companion-avatar-frame">
+        <img src="images/ai-agent-avatar.jpg" onerror="this.src='data:image/jpeg;base64,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'" alt="Anand AI Companion" class="companion-trigger-img">
+        <span class="companion-online-pip"><span class="pip-inner"></span></span>
+      </div>
+      <span class="companion-hover-label">Ask Anand's AI Companion ⚡</span>
     </button>
   </div>
 
   <style>
     /* ======================================================== */
-    /* 2026 AI RAG FLOATING AGENT STYLES & TYPOGRAPHY           */
+    /* CONVERSATIONAL ASTRONAUT AI COMPANION STYLES             */
     /* ======================================================== */
-    .ai-rag-container {
+    .ai-companion-container {
       position: fixed;
-      bottom: 26px;
-      right: 26px;
+      bottom: 24px;
+      right: 24px;
       z-index: 999999;
       display: flex;
       flex-direction: column;
@@ -2076,33 +2018,23 @@ p, li, .normal-txt {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     }
 
-    /* Dynamic 2D Autonomous Floating Physics (Left to Right Sway + Levitation) */
-    @keyframes ragSwayFloat {
-      0% {
-        transform: translate3d(0, 0, 0) rotate(0deg);
-      }
-      25% {
-        transform: translate3d(-30px, -8px, 0) rotate(-4deg);
-      }
-      50% {
-        transform: translate3d(0, -14px, 0) rotate(0deg);
-      }
-      75% {
-        transform: translate3d(30px, -7px, 0) rotate(4deg);
-      }
-      100% {
-        transform: translate3d(0, 0, 0) rotate(0deg);
-      }
+    /* Floating Levitation with Left-to-Right Subtle Sway */
+    @keyframes astronautFloatSway {
+      0%   { transform: translate3d(0, 0, 0) rotate(0deg); }
+      25%  { transform: translate3d(-18px, -6px, 0) rotate(-3deg); }
+      50%  { transform: translate3d(0, -12px, 0) rotate(0deg); }
+      75%  { transform: translate3d(18px, -6px, 0) rotate(3deg); }
+      100% { transform: translate3d(0, 0, 0) rotate(0deg); }
     }
 
-    .rag-trigger {
+    .companion-trigger-btn {
       position: relative;
       background: none;
       border: none;
       padding: 0;
       cursor: pointer;
       outline: none !important;
-      animation: ragSwayFloat 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+      animation: astronautFloatSway 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2110,105 +2042,79 @@ p, li, .normal-txt {
       will-change: transform;
     }
 
-    /* Pause and gently anchor when user hovers or opens card */
-    .rag-trigger:hover,
-    .ai-rag-container:hover .rag-trigger,
-    .rag-card.is-active ~ .rag-trigger {
+    .companion-trigger-btn:hover,
+    .companion-chat-card.is-active ~ .companion-trigger-btn {
       animation-play-state: paused !important;
     }
 
-    .rag-halo-ring {
+    .companion-halo-glow {
       position: absolute;
       inset: -6px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 200, 83, 0.4) 0%, rgba(255, 189, 57, 0.22) 60%, transparent 80%);
+      background: radial-gradient(circle, rgba(0, 200, 83, 0.45) 0%, rgba(255, 189, 57, 0.25) 60%, transparent 80%);
       filter: blur(8px);
       pointer-events: none;
-      animation: ragHaloPulse 3s ease-in-out infinite;
+      animation: companionHaloPulse 3s ease-in-out infinite;
     }
 
-    @keyframes ragHaloPulse {
-      0%, 100% { transform: scale(0.92); opacity: 0.65; }
-      50% { transform: scale(1.18); opacity: 1; }
+    @keyframes companionHaloPulse {
+      0%, 100% { transform: scale(0.92); opacity: 0.6; }
+      50%      { transform: scale(1.18); opacity: 1; }
     }
 
-    .rag-orb-inner {
+    .companion-avatar-frame {
       position: relative;
-      width: 58px;
-      height: 58px;
+      width: 62px;
+      height: 62px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #181822 0%, #0a0a0f 100%);
-      border: 2px solid rgba(0, 200, 83, 0.75);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.75), 0 0 20px rgba(0, 200, 83, 0.35);
+      border: 2.5px solid #00c853;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 200, 83, 0.4);
+      background: #09090c;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
     }
 
-    .rag-trigger:hover .rag-orb-inner {
-      transform: scale(1.08);
+    .companion-trigger-btn:hover .companion-avatar-frame {
+      transform: scale(1.1);
       border-color: #ffbd39;
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.85), 0 0 26px rgba(255, 189, 57, 0.5);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 189, 57, 0.5);
     }
 
-    /* Option 3: Synaptic Neural Wave Frequency Bars */
-    .rag-wave-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3.5px;
-      height: 26px;
+    .companion-trigger-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
     }
 
-    .rag-wave-bar {
-      width: 3.5px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, #ffbd39 0%, #00c853 100%);
-      box-shadow: 0 0 6px rgba(0, 200, 83, 0.7);
-      display: inline-block;
-      transform-origin: center;
-      transition: height 0.2s ease;
-    }
-
-    @keyframes ragWavePulse {
-      0%, 100% {
-        transform: scaleY(0.42);
-        opacity: 0.65;
-      }
-      50% {
-        transform: scaleY(1.35);
-        opacity: 1;
-        box-shadow: 0 0 10px rgba(255, 189, 57, 0.9);
-      }
-    }
-
-    .rag-wave-bar.wave-1 { height: 10px; animation: ragWavePulse 1.1s ease-in-out infinite; }
-    .rag-wave-bar.wave-2 { height: 18px; animation: ragWavePulse 1.1s ease-in-out 0.2s infinite; background: linear-gradient(180deg, #00c853 0%, #38bdf8 100%); }
-    .rag-wave-bar.wave-3 { height: 26px; animation: ragWavePulse 1.1s ease-in-out 0.4s infinite; background: linear-gradient(180deg, #ffbd39 0%, #38bdf8 50%, #00c853 100%); box-shadow: 0 0 10px rgba(56, 189, 248, 0.8); }
-    .rag-wave-bar.wave-4 { height: 16px; animation: ragWavePulse 1.1s ease-in-out 0.6s infinite; background: linear-gradient(180deg, #ffbd39 0%, #00c853 100%); }
-    .rag-wave-bar.wave-5 { height: 9px;  animation: ragWavePulse 1.1s ease-in-out 0.3s infinite; }
-
-    .rag-trigger:hover .rag-wave-bar {
-      animation-duration: 0.65s;
-    }
-
-    .rag-live-dot {
+    .companion-online-pip {
       position: absolute;
       bottom: 2px;
       right: 2px;
-      width: 12px;
-      height: 12px;
+      width: 13px;
+      height: 13px;
       border-radius: 50%;
       background: #00c853;
       border: 2px solid #09090c;
-      box-shadow: 0 0 6px #00c853;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Hover Tooltip Label */
-    .rag-hover-tooltip {
+    .pip-inner {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+
+    .companion-hover-label {
       position: absolute;
-      right: 70px;
+      right: 76px;
       white-space: nowrap;
       background: rgba(18, 18, 24, 0.96);
       backdrop-filter: blur(12px);
@@ -2227,24 +2133,102 @@ p, li, .normal-txt {
       box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     }
 
-    .rag-trigger:hover .rag-hover-tooltip {
+    .companion-trigger-btn:hover .companion-hover-label {
       opacity: 1;
       transform: translateX(0);
     }
 
-    /* Speech Card */
-    .rag-card {
+    /* 2. Gentle Pop Notification Bubble on Load */
+    .companion-pop-bubble {
+      cursor: pointer;
+      margin-bottom: 10px;
+      margin-right: 4px;
+      background: rgba(18, 18, 24, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(0, 200, 83, 0.45);
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: 18px 18px 4px 18px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75), 0 0 20px rgba(0, 200, 83, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      transform: translateY(12px) scale(0.92);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .companion-pop-bubble.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .companion-pop-bubble:hover {
+      transform: scale(1.03);
+      border-color: #ffbd39;
+    }
+
+    .companion-pop-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00c853;
+      box-shadow: 0 0 8px #00c853;
+      flex-shrink: 0;
+      animation: companionDotPulse 2s infinite;
+    }
+
+    @keyframes companionDotPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7); }
+      70%  { box-shadow: 0 0 0 6px rgba(0, 200, 83, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
+    }
+
+    .companion-pop-content {
+      text-align: left;
+    }
+
+    .companion-pop-headline {
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    .companion-pop-sub {
+      font-size: 11px;
+      color: #a1a1aa;
+      line-height: 1.3;
+    }
+
+    .companion-pop-close {
+      background: none;
+      border: none;
+      color: #71717a;
+      font-size: 16px;
+      line-height: 1;
+      padding: 0 0 0 4px;
+      cursor: pointer;
+    }
+
+    .companion-pop-close:hover {
+      color: #ffffff;
+    }
+
+    /* 3. The Interactive Chat Dialog Card */
+    .companion-chat-card {
       position: absolute;
-      bottom: 74px;
+      bottom: 76px;
       right: 0;
-      width: 400px;
+      width: 375px;
       max-width: calc(100vw - 32px);
-      max-height: 84vh;
+      max-height: 82vh;
       display: flex;
       flex-direction: column;
-      background: rgba(18, 18, 24, 0.95);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      background: rgba(18, 18, 24, 0.96);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
       border: 1px solid rgba(0, 200, 83, 0.4);
       border-radius: 20px;
       box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 200, 83, 0.2);
@@ -2252,30 +2236,29 @@ p, li, .normal-txt {
       pointer-events: none;
       transform: translateY(14px) scale(0.95);
       transform-origin: bottom right;
-      transition: all 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
       overflow: hidden;
     }
 
-    .rag-card.is-active {
+    .companion-chat-card.is-active {
       opacity: 1;
       pointer-events: auto;
       transform: translateY(0) scale(1);
     }
 
-    .rag-card-header {
+    .companion-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 14px 18px 12px;
+      padding: 12px 16px;
       background: rgba(255, 255, 255, 0.02);
       flex-shrink: 0;
       position: relative;
       overflow: hidden;
     }
 
-    /* Left-to-Right Neural Scan Beam */
-    .rag-card-header::after {
+    .companion-header::after {
       content: "";
       position: absolute;
       top: 0;
@@ -2284,326 +2267,401 @@ p, li, .normal-txt {
       height: 100%;
       background: linear-gradient(90deg, transparent 0%, rgba(0, 200, 83, 0.22) 50%, rgba(255, 189, 57, 0.25) 80%, transparent 100%);
       pointer-events: none;
-      animation: scanBeamLR 3.8s ease-in-out infinite;
+      animation: companionScanLR 4s ease-in-out infinite;
     }
 
-    @keyframes scanBeamLR {
+    @keyframes companionScanLR {
       0% { left: -100%; }
       50%, 100% { left: 160%; }
     }
 
-    .rag-header-left {
+    .companion-header-left {
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .rag-radar-pulse {
+    .companion-live-pulse {
       display: inline-block;
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: #00c853;
       box-shadow: 0 0 8px #00c853;
-      animation: ragRadarDot 2s infinite;
     }
 
-    @keyframes ragRadarDot {
-      0% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7); }
-      70% { box-shadow: 0 0 0 7px rgba(0, 200, 83, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
-    }
-
-    .rag-title-tag {
+    .companion-title-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       color: #00c853;
       letter-spacing: 0.9px;
-      text-transform: uppercase;
     }
 
-    .rag-close {
+    .companion-close-btn {
       background: none;
       border: none;
       color: #a1a1aa;
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1;
       padding: 0 4px;
       cursor: pointer;
       transition: color 0.2s, transform 0.2s;
     }
 
-    .rag-close:hover {
+    .companion-close-btn:hover {
       color: #ffffff;
       transform: scale(1.15);
     }
 
-    .rag-card-body {
-      padding: 16px 18px 18px;
+    .companion-body {
+      padding: 16px;
       overflow-y: auto;
       scrollbar-width: thin;
       scrollbar-color: rgba(255,255,255,0.2) transparent;
     }
 
-    .rag-card-body::-webkit-scrollbar {
+    .companion-body::-webkit-scrollbar {
       width: 5px;
     }
-    .rag-card-body::-webkit-scrollbar-thumb {
+    .companion-body::-webkit-scrollbar-thumb {
       background: rgba(255,255,255,0.2);
       border-radius: 4px;
     }
 
-    .rag-greeting-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255, 189, 57, 0.12);
-      border: 1px solid rgba(255, 189, 57, 0.32);
-      color: #ffbd39;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 999px;
-      letter-spacing: 0.8px;
-      margin-bottom: 10px;
-    }
-
-    .rag-wave-hand {
-      font-size: 12px;
-    }
-
-    .rag-main-statement {
-      font-size: 14.5px;
-      font-weight: 700;
-      color: #ffffff;
-      line-height: 1.45;
-      margin-bottom: 6px;
-    }
-
-    .rag-main-statement strong {
-      color: #00c853;
-    }
-
-    .rag-sub-statement {
-      font-size: 12px;
-      color: #a1a1aa;
-      line-height: 1.5;
+    /* Bot Speech Row */
+    .companion-speech-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
       margin-bottom: 14px;
     }
 
-    /* Pillars Group */
-    .rag-pillars-group {
+    .companion-mini-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid #ffbd39;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .companion-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .companion-speech-bubble {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px 16px 16px 16px;
+      padding: 12px 14px;
+      font-size: 12px;
+      color: #e4e4e7;
+      line-height: 1.55;
+    }
+
+    .companion-greeting-bold {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* Question Chips */
+    .companion-chips-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 16px;
+      gap: 7px;
+      margin-bottom: 14px;
     }
 
-    .rag-pillar-item {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: 12px;
+    .companion-chip-btn {
+      width: 100%;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
       padding: 10px 12px;
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .rag-pillar-item:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 189, 57, 0.3);
-    }
-
-    .rag-pillar-head {
+      border-radius: 10px;
+      border: 1px solid;
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      outline: none !important;
     }
 
-    .rag-bullet-icon {
-      font-size: 12px;
+    .companion-chip-btn:hover {
+      transform: translateX(2px);
     }
 
-    .rag-pillar-title {
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .rag-pillar-desc {
-      font-size: 11.5px;
-      color: #d4d4d8;
-      line-height: 1.5;
-      margin: 0 0 6px 0;
-    }
-
-    .rag-pillar-desc strong {
-      color: #ffffff;
-    }
-
-    .rag-micro-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-
-    .rag-tag {
+    .chip-arrow {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9.5px;
-      font-weight: 600;
-      color: #e4e4e7;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 1px 6px;
-      border-radius: 4px;
+      font-size: 11px;
+      transition: transform 0.2s;
     }
 
-    .rag-tag.green {
+    .companion-chip-btn:hover .chip-arrow {
+      transform: translateX(3px);
+    }
+
+    .chip-emerald {
       color: #00c853;
       background: rgba(0, 200, 83, 0.1);
-      border-color: rgba(0, 200, 83, 0.3);
+      border-color: rgba(0, 200, 83, 0.32);
+    }
+    .chip-emerald:hover {
+      background: rgba(0, 200, 83, 0.2);
     }
 
-    .rag-tag.gold {
+    .chip-gold {
       color: #ffbd39;
       background: rgba(255, 189, 57, 0.1);
-      border-color: rgba(255, 189, 57, 0.3);
+      border-color: rgba(255, 189, 57, 0.32);
+    }
+    .chip-gold:hover {
+      background: rgba(255, 189, 57, 0.2);
     }
 
-    .rag-tag.blue {
+    .chip-sky {
       color: #38bdf8;
       background: rgba(56, 189, 248, 0.1);
-      border-color: rgba(56, 189, 248, 0.3);
+      border-color: rgba(56, 189, 248, 0.32);
+    }
+    .chip-sky:hover {
+      background: rgba(56, 189, 248, 0.2);
     }
 
-    /* Footer Buttons */
-    .rag-card-footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 6px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255, 255, 255, 0.09);
-      margin-bottom: 10px;
+    .chip-purple {
+      color: #c084fc;
+      background: rgba(192, 132, 252, 0.1);
+      border-color: rgba(192, 132, 252, 0.32);
+    }
+    .chip-purple:hover {
+      background: rgba(192, 132, 252, 0.2);
     }
 
-    .rag-btn-pill {
+    .companion-sub-chip {
+      width: 100%;
+      text-align: left;
+      font-size: 11.5px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      color: #e4e4e7;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .companion-sub-chip:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: #ffbd39;
+      color: #ffffff;
+    }
+
+    .companion-action-pill {
+      display: inline-block;
       text-align: center;
-      background: rgba(0, 200, 83, 0.14);
-      border: 1px solid rgba(0, 200, 83, 0.45);
-      color: #00c853 !important;
-      font-size: 10.5px;
-      font-weight: 700;
       font-family: 'JetBrains Mono', monospace;
-      padding: 7px 6px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 7px 12px;
       border-radius: 8px;
       text-decoration: none !important;
       transition: all 0.2s;
-      white-space: nowrap;
     }
 
-    .rag-btn-pill:hover {
+    .companion-action-pill.emerald {
+      background: rgba(0, 200, 83, 0.2);
+      border: 1px solid rgba(0, 200, 83, 0.5);
+      color: #00c853 !important;
+    }
+    .companion-action-pill.emerald:hover {
       background: #00c853;
       color: #09090c !important;
-      transform: translateY(-1px);
     }
 
-    .rag-btn-pill.gold-pill {
-      background: rgba(255, 189, 57, 0.12);
-      border-color: rgba(255, 189, 57, 0.4);
+    .companion-action-pill.gold {
+      background: rgba(255, 189, 57, 0.2);
+      border: 1px solid rgba(255, 189, 57, 0.5);
       color: #ffbd39 !important;
     }
-
-    .rag-btn-pill.gold-pill:hover {
+    .companion-action-pill.gold:hover {
       background: #ffbd39;
       color: #09090c !important;
     }
 
-    .rag-btn-pill.contact-pill {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.2);
-      color: #ffffff !important;
+    .companion-action-pill.purple {
+      background: rgba(192, 132, 252, 0.2);
+      border: 1px solid rgba(192, 132, 252, 0.5);
+      color: #c084fc !important;
     }
-
-    .rag-btn-pill.contact-pill:hover {
-      background: #ffffff;
+    .companion-action-pill.purple:hover {
+      background: #c084fc;
       color: #09090c !important;
     }
 
-    .rag-status-strip {
+    .companion-footer-bar {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 6px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      color: #71717a;
-      text-align: center;
-      padding-top: 4px;
+      justify-content: space-between;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .rag-strip-dot {
-      color: rgba(255, 255, 255, 0.2);
+    .companion-footer-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      color: #71717a;
+    }
+
+    .companion-reset-btn {
+      background: none;
+      border: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: #00c853;
+      cursor: pointer;
+      padding: 0;
+    }
+    .companion-reset-btn:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 576px) {
-      .ai-rag-container {
+      .ai-companion-container {
         bottom: 18px;
         right: 18px;
       }
-      .rag-card {
+      .companion-chat-card {
         width: calc(100vw - 36px);
-        max-width: 340px;
+        max-width: 330px;
         right: 0;
         max-height: 80vh;
       }
-      .rag-hover-tooltip {
+      .companion-hover-label {
         display: none;
-      }
-      .rag-card-footer {
-        grid-template-columns: 1fr;
       }
     }
   </style>
 
   <script>
-    var ragCardPinned = false;
-
-    function openRagOnHover() {
-      if (!ragCardPinned) {
-        document.getElementById('rag-speech-card').classList.add('is-active');
+    (function(){
+      // 1. Determine dynamic time-of-day greeting
+      function getDynamicGreeting() {
+        var h = new Date().getHours();
+        if (h < 12) return { headline: "Good morning! ☀️", sub: "Good morning! 👋" };
+        if (h < 17) return { headline: "Good afternoon! 🌤️", sub: "Good afternoon! 👋" };
+        return { headline: "Good evening! 🌙", sub: "Good evening! 👋" };
       }
+
+      var g = getDynamicGreeting();
+      var headlineEl = document.getElementById('pop-greeting-headline');
+      var botGreetingEl = document.getElementById('bot-time-greeting');
+      if (headlineEl) headlineEl.innerText = g.headline;
+      if (botGreetingEl) botGreetingEl.innerText = g.sub;
+
+      // 2. Trigger gentle pop notification bubble after 1.8 seconds on load
+      setTimeout(function(){
+        var pop = document.getElementById('greeting-pop-bubble');
+        var card = document.getElementById('chat-dialog-card');
+        if (pop && card && !card.classList.contains('is-active')) {
+          pop.classList.add('is-visible');
+        }
+      }, 1800);
+    })();
+
+    function openChatDialog() {
+      var card = document.getElementById('chat-dialog-card');
+      var pop = document.getElementById('greeting-pop-bubble');
+      if (card) card.classList.add('is-active');
+      if (pop) pop.classList.remove('is-visible');
     }
 
-    function closeRagOnLeave() {
-      if (!ragCardPinned) {
-        document.getElementById('rag-speech-card').classList.remove('is-active');
-      }
+    function closeChatDialog() {
+      var card = document.getElementById('chat-dialog-card');
+      if (card) card.classList.remove('is-active');
     }
 
-    function toggleRagWidget(e) {
-      if (e) e.stopPropagation();
-      var card = document.getElementById('rag-speech-card');
-      ragCardPinned = !ragCardPinned;
-      if (ragCardPinned) {
-        card.classList.add('is-active');
+    function toggleChatDialog() {
+      var card = document.getElementById('chat-dialog-card');
+      if (!card) return;
+      if (card.classList.contains('is-active')) {
+        closeChatDialog();
       } else {
-        card.classList.remove('is-active');
+        openChatDialog();
       }
     }
 
-    function closeRagWidget() {
-      ragCardPinned = false;
-      document.getElementById('rag-speech-card').classList.remove('is-active');
+    function dismissGreetingPop(e) {
+      if (e) e.stopPropagation();
+      var pop = document.getElementById('greeting-pop-bubble');
+      if (pop) pop.classList.remove('is-visible');
     }
 
-    // Close when clicking outside on mobile or desktop
+    // Close on outside click
     document.addEventListener('click', function(e){
       var widget = document.getElementById('ai-rag-widget');
-      if (widget && !widget.contains(e.target) && ragCardPinned) {
-        closeRagWidget();
+      var card = document.getElementById('chat-dialog-card');
+      if (widget && card && card.classList.contains('is-active') && !widget.contains(e.target)) {
+        closeChatDialog();
       }
     });
+
+    // Interactive Option Branches
+    function handleCompanionOption(opt) {
+      var speech = document.getElementById('bot-speech-text');
+      var chips = document.getElementById('chips-container');
+      if (!speech || !chips) return;
+
+      if (opt === 'mda') {
+        speech.innerHTML = '<strong style="color: #00c853;">⚡ AI Engineer at MDA</strong><br>At Mississippi Development Authority (MDA), Anand builds production <strong>Enterprise RAG architectures</strong>, neural vector retrieval pipelines, and automated Generative AI decision intelligence connecting state data.<div style="margin-top: 10px;"><a href="#resume-section" class="companion-action-pill emerald" onclick="closeChatDialog()">View MDA Experience &nearr;</a></div>';
+        chips.innerHTML = '<button type="button" onclick="handleCompanionOption(\'amplify\')" class="companion-sub-chip">📊 Tell me about his Amplify SAP role &rarr;</button><button type="button" onclick="handleCompanionOption(\'projects\')" class="companion-sub-chip">🚀 What projects did he build? &rarr;</button><button type="button" onclick="resetCompanionMenu()" class="companion-sub-chip" style="text-align: center; color: #a1a1aa;">&larr; Back to Main Menu</button>';
+      } else if (opt === 'amplify') {
+        speech.innerHTML = '<strong style="color: #ffbd39;">📊 SAP Analytics &amp; Integration Analyst</strong><br>At Amplify Cell Technologies (battery manufacturing), Anand deployed <strong>6+ SAP Analytics Cloud (SAC) dashboards</strong> for OPEX/CAPEX governance and cross-module SAP S/4HANA Public Cloud integration.<div style="margin-top: 10px;"><a href="#resume-section" class="companion-action-pill gold" onclick="closeChatDialog()">View Amplify Experience &nearr;</a></div>';
+        chips.innerHTML = '<button type="button" onclick="handleCompanionOption(\'mda\')" class="companion-sub-chip">⚡ Tell me about MDA AI &amp; RAG &rarr;</button><button type="button" onclick="handleCompanionOption(\'projects\')" class="companion-sub-chip">🚀 Show me his 17 projects &rarr;</button><button type="button" onclick="resetCompanionMenu()" class="companion-sub-chip" style="text-align: center; color: #a1a1aa;">&larr; Back to Main Menu</button>';
+      } else if (opt === 'projects') {
+        speech.innerHTML = '<strong style="color: #38bdf8;">🚀 17 Authentic Projects</strong><br>Anand has engineered solutions across SAP Cloud Analytics, Python ML, Tableau, Power BI, and Cloud Analytics. Which area would you like to explore?';
+        chips.innerHTML = '<button type="button" onclick="showCompanionProjectStack(\'sap\')" class="companion-sub-chip">🔷 SAP Cloud Analytics - ERP Simulation</button><button type="button" onclick="showCompanionProjectStack(\'python\')" class="companion-sub-chip">🐍 Python ML &amp; Financial Analytics</button><button type="button" onclick="showCompanionProjectStack(\'tableau\')" class="companion-sub-chip">📊 Tableau &amp; Power BI Dashboards</button><button type="button" onclick="resetCompanionMenu()" class="companion-sub-chip" style="text-align: center; color: #a1a1aa;">&larr; Back to Main Menu</button>';
+      } else if (opt === 'relocate') {
+        speech.innerHTML = '<strong style="color: #c084fc;">📍 Mississippi, USA &bull; Open to Relocate</strong><br>Anand holds an MS in MIS from Lamar University (<strong>GPA 3.90</strong>, Beta Gamma Sigma) and 3 Credly SAP Certifications. He is actively available and <strong>open to relocate</strong> across the United States!<div style="margin-top: 10px;"><a href="#contact-section" class="companion-action-pill purple" onclick="closeChatDialog()">Get in Touch with Anand &nearr;</a></div>';
+        chips.innerHTML = '<button type="button" onclick="resetCompanionMenu()" class="companion-sub-chip" style="text-align: center; color: #a1a1aa;">&larr; Back to Main Menu</button>';
+      }
+    }
+
+    function showCompanionProjectStack(stack) {
+      var speech = document.getElementById('bot-speech-text');
+      var chips = document.getElementById('chips-container');
+      if (!speech || !chips) return;
+
+      if (stack === 'sap') {
+        speech.innerHTML = '<strong>SAP Cloud Analytics:</strong> Implemented ERP simulation analysis with SAC, applying Benford\'s Law with SAP Predictive Analytics for anomaly detection and financial integrity.';
+      } else if (stack === 'python') {
+        speech.innerHTML = '<strong>Python Machine Learning:</strong> Includes Customer Satisfaction Analysis, Mutual Fund portfolio planning, and Netflix Content Strategy with Pandas/Seaborn.';
+      } else {
+        speech.innerHTML = '<strong>Tableau &amp; Power BI:</strong> Includes NYC Airbnb Market geospatial analysis, Tripadvisor hotel analytics, and Power BI executive sales forecasting.';
+      }
+
+      chips.innerHTML = '<a href="#project-section" class="companion-action-pill gold" style="display: block; width: 100%; text-align: center; margin-bottom: 6px;" onclick="closeChatDialog()">Explore All 17 Projects On Page &nearr;</a><button type="button" onclick="resetCompanionMenu()" class="companion-sub-chip" style="text-align: center; color: #a1a1aa;">&larr; Back to Main Menu</button>';
+    }
+
+    function resetCompanionMenu() {
+      var speech = document.getElementById('bot-speech-text');
+      var chips = document.getElementById('chips-container');
+      if (!speech || !chips) return;
+
+      var h = new Date().getHours();
+      var sub = (h < 12) ? "Good morning! 👋" : (h < 17) ? "Good afternoon! 👋" : "Good evening! 👋";
+
+      speech.innerHTML = '<span class="companion-greeting-bold">' + sub + '</span><br>I am Anand’s personal AI Agent. What would you like to explore about him?';
+      chips.innerHTML = '<button type="button" onclick="handleCompanionOption(\'mda\')" class="companion-chip-btn chip-emerald"><span>⚡ 1. MDA (AI Engineer &amp; RAG)</span><span class="chip-arrow">&rarr;</span></button><button type="button" onclick="handleCompanionOption(\'amplify\')" class="companion-chip-btn chip-gold"><span>📊 2. Amplify (SAP Analytics &amp; SAC)</span><span class="chip-arrow">&rarr;</span></button><button type="button" onclick="handleCompanionOption(\'projects\')" class="companion-chip-btn chip-sky"><span>🚀 3. Projects (What did he build?)</span><span class="chip-arrow">&rarr;</span></button><button type="button" onclick="handleCompanionOption(\'relocate\')" class="companion-chip-btn chip-purple"><span>📍 4. Relocation, Lamar MIS &amp; Certs</span><span class="chip-arrow">&rarr;</span></button>';
+    }
   </script>
 </body>
 </html>
