@@ -1921,5 +1921,427 @@ p, li, .normal-txt {
   })();
   </script>
 
+
+  <!-- ======================================================== -->
+  <!-- 2026 FLOATING AI RAG AGENT WIDGET (ANAND'S AI SHOWCASE)  -->
+  <!-- ======================================================== -->
+  <div id="ai-rag-widget" class="ai-rag-container">
+    
+    <!-- Glassmorphic Speech Bubble / What I Have Done Card -->
+    <div id="rag-speech-card" class="rag-card" role="dialog" aria-label="AI RAG System Assistant">
+      <div class="rag-card-header">
+        <div class="rag-header-left">
+          <span class="rag-radar-pulse"></span>
+          <span class="rag-title-tag">AI RAG SYSTEM &bull; 2026 ARCHITECTURE</span>
+        </div>
+        <button type="button" class="rag-close" onclick="toggleRagWidget(event)" aria-label="Close">&times;</button>
+      </div>
+
+      <div class="rag-card-body">
+        <div class="rag-main-statement">
+          "I am the <strong>AI RAG System</strong> architected by Anand Kumar Bhagat."
+        </div>
+        <p class="rag-sub-statement">
+          Anand engineers enterprise neural intelligence and scalable cloud architectures:
+        </p>
+
+        <ul class="rag-feature-list">
+          <li>
+            <span class="rag-bullet-icon">&bull;</span>
+            <div><strong>Enterprise RAG &amp; Vector Search:</strong> Production retrieval pipelines at Mississippi Development Authority (MDA).</div>
+          </li>
+          <li>
+            <span class="rag-bullet-icon">&bull;</span>
+            <div><strong>Generative AI &amp; Prompt Engineering:</strong> Automated decision-support and structured knowledge extraction.</div>
+          </li>
+          <li>
+            <span class="rag-bullet-icon">&bull;</span>
+            <div><strong>SAP S/4HANA &amp; SAC Integration:</strong> 6+ executive dashboards and OPEX/CAPEX governance at Amplify Cell Technologies.</div>
+          </li>
+        </ul>
+
+        <div class="rag-card-footer">
+          <a href="#resume-section" class="rag-btn-pill" onclick="closeRagWidget()">View Experience &nearr;</a>
+          <a href="#project-section" class="rag-btn-pill gold-pill" onclick="closeRagWidget()">View 17 Projects &nearr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating 2026 Neural Sparkle Trigger Orb -->
+    <button id="rag-trigger-btn" class="rag-trigger" onclick="toggleRagWidget(event)" onmouseenter="openRagOnHover()" onmouseleave="closeRagOnLeave()" aria-label="Open AI RAG Assistant">
+      <div class="rag-halo-ring"></div>
+      <div class="rag-orb-inner">
+        <!-- 2026 Option 3: Synaptic Neural Frequency Wave -->
+        <div class="rag-wave-container">
+          <span class="rag-wave-bar wave-1"></span>
+          <span class="rag-wave-bar wave-2"></span>
+          <span class="rag-wave-bar wave-3"></span>
+          <span class="rag-wave-bar wave-4"></span>
+          <span class="rag-wave-bar wave-5"></span>
+        </div>
+        <span class="rag-live-dot"></span>
+      </div>
+      <span class="rag-hover-tooltip">I am the AI RAG system &bull; Click to explore</span>
+    </button>
+  </div>
+
+  <style>
+    /* 2026 AI RAG Floating Agent Styles */
+    .ai-rag-container {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Floating Levitation */
+    @keyframes ragFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .rag-trigger {
+      position: relative;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      outline: none !important;
+      animation: ragFloat 3.8s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rag-halo-ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 200, 83, 0.35) 0%, rgba(255, 189, 57, 0.2) 60%, transparent 80%);
+      filter: blur(8px);
+      pointer-events: none;
+      animation: ragHaloPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes ragHaloPulse {
+      0%, 100% { transform: scale(0.92); opacity: 0.6; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+
+    .rag-orb-inner {
+      position: relative;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #181820 0%, #0a0a0e 100%);
+      border: 2px solid rgba(0, 200, 83, 0.7);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7), 0 0 18px rgba(0, 200, 83, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+    }
+
+    .rag-trigger:hover .rag-orb-inner {
+      transform: scale(1.08);
+      border-color: #ffbd39;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 189, 57, 0.45);
+    }
+
+
+    /* Option 3: Synaptic Neural Wave Frequency Bars */
+    .rag-wave-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.5px;
+      height: 26px;
+    }
+
+    .rag-wave-bar {
+      width: 3.5px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffbd39 0%, #00c853 100%);
+      box-shadow: 0 0 6px rgba(0, 200, 83, 0.7);
+      display: inline-block;
+      transform-origin: center;
+      transition: height 0.2s ease;
+    }
+
+    @keyframes ragWavePulse {
+      0%, 100% {
+        transform: scaleY(0.42);
+        opacity: 0.65;
+      }
+      50% {
+        transform: scaleY(1.35);
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(255, 189, 57, 0.9);
+      }
+    }
+
+    .rag-wave-bar.wave-1 { height: 10px; animation: ragWavePulse 1.1s ease-in-out infinite; }
+    .rag-wave-bar.wave-2 { height: 18px; animation: ragWavePulse 1.1s ease-in-out 0.2s infinite; background: linear-gradient(180deg, #00c853 0%, #38bdf8 100%); }
+    .rag-wave-bar.wave-3 { height: 26px; animation: ragWavePulse 1.1s ease-in-out 0.4s infinite; background: linear-gradient(180deg, #ffbd39 0%, #38bdf8 50%, #00c853 100%); box-shadow: 0 0 10px rgba(56, 189, 248, 0.8); }
+    .rag-wave-bar.wave-4 { height: 16px; animation: ragWavePulse 1.1s ease-in-out 0.6s infinite; background: linear-gradient(180deg, #ffbd39 0%, #00c853 100%); }
+    .rag-wave-bar.wave-5 { height: 9px;  animation: ragWavePulse 1.1s ease-in-out 0.3s infinite; }
+
+    .rag-trigger:hover .rag-wave-bar {
+      animation-duration: 0.65s;
+    }
+
+
+    .rag-live-dot {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #00c853;
+      border: 2px solid #09090c;
+      box-shadow: 0 0 6px #00c853;
+    }
+
+    /* Hover Tooltip Label */
+    .rag-hover-tooltip {
+      position: absolute;
+      right: 70px;
+      white-space: nowrap;
+      background: rgba(18, 18, 22, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #f4f4f5;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(8px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .rag-trigger:hover .rag-hover-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Speech Card */
+    .rag-card {
+      position: absolute;
+      bottom: 74px;
+      right: 0;
+      width: 360px;
+      max-width: calc(100vw - 32px);
+      background: rgba(18, 18, 24, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(0, 200, 83, 0.35);
+      border-radius: 18px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(0, 200, 83, 0.18);
+      padding: 18px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px) scale(0.95);
+      transform-origin: bottom right;
+      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .rag-card.is-active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    .rag-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .rag-header-left {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .rag-radar-pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00c853;
+      box-shadow: 0 0 8px #00c853;
+      animation: ragRadarDot 2s infinite;
+    }
+
+    @keyframes ragRadarDot {
+      0% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7); }
+      70% { box-shadow: 0 0 0 6px rgba(0, 200, 83, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
+    }
+
+    .rag-title-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #00c853;
+      letter-spacing: 0.8px;
+    }
+
+    .rag-close {
+      background: none;
+      border: none;
+      color: #71717a;
+      font-size: 20px;
+      line-height: 1;
+      padding: 0 4px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .rag-close:hover {
+      color: #ffffff;
+    }
+
+    .rag-main-statement {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .rag-sub-statement {
+      font-size: 12.5px;
+      color: #a1a1aa;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .rag-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px 0;
+      font-size: 12px;
+      color: #e4e4e7;
+    }
+
+    .rag-feature-list li {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .rag-bullet-icon {
+      color: #00c853;
+      font-weight: bold;
+    }
+
+    .rag-card-footer {
+      display: flex;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .rag-btn-pill {
+      flex: 1;
+      text-align: center;
+      background: rgba(0, 200, 83, 0.15);
+      border: 1px solid rgba(0, 200, 83, 0.4);
+      color: #00c853 !important;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 7px 10px;
+      border-radius: 8px;
+      text-decoration: none !important;
+      transition: all 0.2s;
+    }
+
+    .rag-btn-pill:hover {
+      background: #00c853;
+      color: #09090c !important;
+      transform: translateY(-1px);
+    }
+
+    .rag-btn-pill.gold-pill {
+      background: rgba(255, 189, 57, 0.12);
+      border-color: rgba(255, 189, 57, 0.38);
+      color: #ffbd39 !important;
+    }
+
+    .rag-btn-pill.gold-pill:hover {
+      background: #ffbd39;
+      color: #09090c !important;
+    }
+
+    @media (max-width: 576px) {
+      .ai-rag-container {
+        bottom: 18px;
+        right: 18px;
+      }
+      .rag-card {
+        width: calc(100vw - 36px);
+        max-width: 320px;
+        right: 0;
+      }
+      .rag-hover-tooltip {
+        display: none;
+      }
+    }
+  </style>
+
+  <script>
+    var ragCardPinned = false;
+
+    function openRagOnHover() {
+      if (!ragCardPinned) {
+        document.getElementById('rag-speech-card').classList.add('is-active');
+      }
+    }
+
+    function closeRagOnLeave() {
+      if (!ragCardPinned) {
+        document.getElementById('rag-speech-card').classList.remove('is-active');
+      }
+    }
+
+    function toggleRagWidget(e) {
+      if (e) e.stopPropagation();
+      var card = document.getElementById('rag-speech-card');
+      ragCardPinned = !ragCardPinned;
+      if (ragCardPinned) {
+        card.classList.add('is-active');
+      } else {
+        card.classList.remove('is-active');
+      }
+    }
+
+    function closeRagWidget() {
+      ragCardPinned = false;
+      document.getElementById('rag-speech-card').classList.remove('is-active');
+    }
+
+    // Close when clicking outside on mobile/desktop
+    document.addEventListener('click', function(e){
+      var widget = document.getElementById('ai-rag-widget');
+      if (widget && !widget.contains(e.target) && ragCardPinned) {
+        closeRagWidget();
+      }
+    });
+  </script>
+
 </body>
 </html>
