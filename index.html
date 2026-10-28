@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -557,6 +559,268 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
 @media (prefers-reduced-motion: reduce) {
   #home-section.hero-center * { animation: none !important; opacity: 1 !important; transform: none !important; }
 }
+
+/* ===== EDITORIAL TYPOGRAPHY & ANDREVV-INSPIRED UPGRADES ===== */
+body {
+  font-family: 'Plus Jakarta Sans', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  letter-spacing: -0.01em !important;
+  color: #e4e4e7 !important;
+  background: #0d0d11 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+}
+
+p, li, .normal-txt {
+  font-size: clamp(14px, 1.05vw, 15.5px) !important;
+  line-height: 1.7 !important;
+  color: #d4d4d8 !important;
+}
+
+/* Hide legacy Colorlib watermark clutter across entire site */
+.heading-section h1.big,
+.heading-section h1.big.big-2,
+.big,
+.big.big-2,
+.big-4 {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Modern Editorial Eyebrow & Section Header Architecture */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 189, 57, 0.12);
+  border: 1px solid rgba(255, 189, 57, 0.32);
+  color: #ffbd39;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.eyebrow-pill.green-accent {
+  background: rgba(0, 200, 83, 0.12);
+  border-color: rgba(0, 200, 83, 0.35);
+  color: #00c853;
+}
+
+.eyebrow-sub {
+  color: #71717a;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+  .eyebrow-sub { display: none; }
+}
+
+.section-title {
+  font-size: clamp(28px, 4.2vw, 46px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  color: #ffffff !important;
+  margin-bottom: 12px !important;
+  line-height: 1.2 !important;
+}
+
+.section-subtitle {
+  font-size: clamp(14px, 1.1vw, 16px) !important;
+  color: #a1a1aa !important;
+  max-width: 720px;
+  margin: 0 auto 32px auto !important;
+  line-height: 1.65 !important;
+}
+
+/* Editorial Serif Quotes (andrevv.com Signature) */
+.editorial-quote {
+  font-family: 'Newsreader', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: clamp(16px, 1.35vw, 20px) !important;
+  line-height: 1.65 !important;
+  color: #f4f4f5 !important;
+  border-left: 2px solid #ffbd39 !important;
+  padding-left: 18px !important;
+  margin: 18px 0 !important;
+}
+
+.font-mono-tag {
+  font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+}
+
+/* 1. MDA Active Role Radar Pulse */
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 9px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.radar-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+  animation: radarPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.current-status-badge {
+  color: #22c55e;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(34, 197, 94, 0.14);
+  border: 1px solid rgba(34, 197, 94, 0.38);
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: 0.5px;
+}
+
+/* 2. Ambient Card Glow & Smooth Lift (Experience, Projects, Certifications) */
+.resume-wrap {
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.38s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.38s ease !important;
+  will-change: transform, box-shadow;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(22, 22, 26, 0.75) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px !important;
+}
+
+.resume-wrap:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.85), 0 0 28px -4px rgba(255, 189, 57, 0.22) !important;
+  border-color: rgba(255, 189, 57, 0.45) !important;
+}
+
+.resume-wrap.logo-mda:hover {
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.85), 0 0 32px -4px rgba(34, 197, 94, 0.28) !important;
+  border-color: rgba(34, 197, 94, 0.55) !important;
+}
+
+/* Project Cards */
+.blog-entry {
+  background: rgba(20, 20, 24, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+  padding: 14px;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.38s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.38s ease !important;
+  will-change: transform, box-shadow;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.blog-entry:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 22px 48px -12px rgba(0, 0, 0, 0.88), 0 0 28px -4px rgba(255, 189, 57, 0.2) !important;
+  border-color: rgba(255, 189, 57, 0.4) !important;
+}
+
+.blog-entry .block-20 {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Project Tech Tag Badges */
+.proj-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.proj-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #ffbd39;
+  background: rgba(255, 189, 57, 0.1);
+  border: 1px solid rgba(255, 189, 57, 0.25);
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+
+.proj-tag.green {
+  color: #00c853;
+  background: rgba(0, 200, 83, 0.1);
+  border-color: rgba(0, 200, 83, 0.25);
+}
+
+.proj-tag.blue {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+/* 3. Dynamic Skill Fill Animation */
+.skill-mf .progress {
+  height: 8px;
+  background-color: #202024;
+  border-radius: 999px;
+  margin: 6px 0 16px 0;
+  overflow: hidden;
+}
+
+.skill-mf .progress .progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ffbd39, #ffd369);
+  border-radius: 999px;
+  transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: width;
+}
+
+/* 4. Contact Cards */
+.contact-info .box {
+  background: rgba(20, 20, 24, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+.contact-info .box:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(255, 189, 57, 0.4) !important;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.75), 0 0 20px -5px rgba(255, 189, 57, 0.15) !important;
+}
+
 </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -785,7 +1049,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
             Navigating Pathways in Tech &amp; Applied AI
           </h3>
 
-          <p style="color: #e4e4e7; font-size: 14px; line-height: 1.65; margin-bottom: 18px; border-left: 2px solid #ffbd39; padding-left: 14px; font-style: italic;">
+          <p class="editorial-quote">
             "Sitting down with Roadtrip Nation in Mississippi to share the journey from international graduate studies to architecting enterprise SAP analytics and Generative AI pipelines."
           </p>
 
@@ -928,8 +1192,11 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
             <div class="row justify-content-start pb-3">
               <div class="col-md-12 heading-section ftco-animate">
                 
-                <h1 class="big">About</h1>
-                <h2 class="mb-4">About Me</h2>
+                <div class="section-eyebrow">
+                  <span class="eyebrow-pill green-accent">// 01. EXECUTIVE BIO</span>
+                  <span class="eyebrow-sub">BACKGROUND &amp; PHILOSOPHY</span>
+                </div>
+                <h2 class="section-title">About Me</h2>
                 
                 <p>With a <strong>Master’s in Management Information Systems (GPA 3.90)</strong> and hands-on experience in SAP S/4HANA Public Cloud implementation, I specialize in transforming complex business processes into data-driven, scalable solutions. As an SAP Certified professional in Business Data Cloud (BDC), SAP Analytics Cloud (SAC), and S/4HANA Business Process Integration (TS410), I bridge functional enterprise systems with modern data &amp; AI architectures.</p>
 
@@ -968,15 +1235,19 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
     <div class="container-fluid resume-wide">
       <div class="row justify-content-center pb-5">
         <div class="col-md-10 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Resume</h1>
-          <h2 class="mb-4">Resume</h2>
-          <p>AI Engineer and SAP Analytics professional with 5+ years of experience across enterprise analytics, SAP S/4HANA Public Cloud, SAP Analytics Cloud (SAC), business intelligence, SQL, Python, and AI-enabled data solutions.</p>
+          <div class="section-eyebrow">
+            <span class="eyebrow-pill">// 02. CAREER TRAJECTORY</span>
+            <span class="eyebrow-sub">ENTERPRISE &amp; APPLIED AI</span>
+          </div>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">AI Engineer and SAP Analytics professional with 5+ years of experience across enterprise analytics, SAP S/4HANA Public Cloud, SAP Analytics Cloud (SAC), business intelligence, SQL, Python, and AI-enabled data solutions.</p>
         </div>
       </div>
 
-      <div class="row">
-        <h1 class="big-4">Experience</h1>
-        <div class="underline"></div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #ffbd39; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700;">// ROLES &amp; IMPACT</span>
+        </div>
       </div>
       <br>
 
@@ -987,7 +1258,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="resume-wrap ftco-animate has-logo logo-mda w-100" style="border: 2px solid rgba(255, 189, 57, 0.45) !important;">
             <div class="d-flex justify-content-between align-items-center mb-2">
               <span class="date" style="background: rgba(255, 189, 57, 0.15); color: #ffbd39; padding: 4px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold;">March 2026 – Present</span>
-              <span style="color: #22c55e; font-size: 11px; font-family: 'Courier New', monospace; font-weight: 600;">🟢 Current</span>
+              <span class="current-status-badge"><span class="radar-dot"></span> CURRENT</span>
             </div>
             <h2 style="font-size: 19px;">AI Engineer</h2>
             <span class="company-line">
@@ -1068,9 +1339,14 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
 
       <br><br>
 
-      <div class="row">
-        <h1 class="big-4">Education</h1>
-        <div class="underline"></div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <div class="section-eyebrow mt-4">
+            <span class="eyebrow-pill">// ACADEMIC FOUNDATION</span>
+            <span class="eyebrow-sub">GRADUATE &amp; UNDERGRADUATE DEGREES</span>
+          </div>
+          <h2 class="section-title" style="font-size: 28px !important;">Education</h2>
+        </div>
       </div>
       <br>
 
@@ -1118,10 +1394,13 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
   <section class="ftco-section" id="project-section">
     <div class="container-fluid">
       <div class="row justify-content-center mb-5 pb-5">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Projects</h1>
-          <h2 class="mb-4">Projects</h2>
-          <p>Below are sample AI, Machine Learning, and Data Analytics projects using Python, SQL, Tableau, Power BI &amp; SAP.</p>
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <div class="section-eyebrow">
+            <span class="eyebrow-pill">// 03. SELECTED WORKS</span>
+            <span class="eyebrow-sub">ENTERPRISE ARCHITECTURE &amp; APPLIED AI</span>
+          </div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Below are sample AI, Machine Learning, and Data Analytics projects using Python, SQL, Tableau, Power BI &amp; SAP.</p>
         </div>
       </div>
 
@@ -1131,6 +1410,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="images/Cloudanalytics.docx" class="block-20 zoom-effect" style="background-image: url('images/SAP.png');" target="_blank"></a>
             <div class="text mt-3 d-block">
+              <div class="proj-tags-wrap"><span class="proj-tag">SAP SAC</span><span class="proj-tag">Predictive Analytics</span><span class="proj-tag">ERP Simulation</span></div>
               <h3 class="heading"><a href="images/Cloudanalytics.docx" target="_blank">SAP Cloud Analytics - ERP Simulation &amp; Data Analysis</a></h3>
               <p>Implemented an ERP simulation analysis using SAP Cloud Analytics to extract actionable insights from sales and revenue data. Applied Benford’s Law with SAP Predictive Analytics to detect anomalies and ensure data integrity in financial reports.</p>
               <p><a href="images/Cloudanalytics.docx" target="_blank">Click here to download project details.</a></p>
@@ -1143,6 +1423,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/project24.webp');" target="_blank"></a>
             <div class="text mt-3 d-block">
+              <div class="proj-tags-wrap"><span class="proj-tag">SAP SAC</span><span class="proj-tag">Association Analysis</span><span class="proj-tag green">Machine Learning</span></div>
               <h3 class="heading"><a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" target="_blank">Titanic Association Analysis Using SAP Analytics Cloud</a></h3>
               <p>Implemented an association analysis using SAC to derive insights into passenger survivability. Used bar and bubble charts to visualize rule frequencies and statistical associations.</p>
               <p><a href="https://docs.google.com/document/d/1UzpWR6701Rko2IPpsbnaI95unwmEtLs6NmrMjVUP27c/edit?usp=sharing" target="_blank">Click here to view analysis.</a></p>
@@ -1155,6 +1436,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" class="block-20 zoom-effect" style="background-image: url('images/globalbike.webp');" target="_blank"></a>
             <div class="text mt-3 d-block">
+              <div class="proj-tags-wrap"><span class="proj-tag">SAP Analytics Cloud</span><span class="proj-tag">K-Means Clustering</span><span class="proj-tag blue">BI Dashboard</span></div>
               <h3 class="heading"><a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" target="_blank">Global Bike Sales Analysis Using SAP Analytics Cloud</a></h3>
               <p>Leveraged SAP Analytics Cloud (SAC) to create an interactive dashboard analyzing sales data, uncovering trends, and performing k-means customer clustering.</p>
               <p><a href="https://docs.google.com/document/d/1JAkhk-b0RsU0IRqyPAF6YmSYGEAAXoiS/edit" target="_blank">Click here to view analysis.</a></p>
@@ -1168,6 +1450,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry justify-content-end">
             <a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book2_17294682765470/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');"></a>
             <div class="text mt-3 float-right d-block">
+              <div class="proj-tags-wrap"><span class="proj-tag blue">Tableau</span><span class="proj-tag">Geospatial</span><span class="proj-tag">Pricing Optimization</span></div>
               <h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book2_17294682765470/Dashboard1">Comprehensive Data Analytics and Visualization of NYC Airbnb Market</a></h3>
               <p>Explores metrics including host reviews, neighborhood pricing dynamics, seasonal booking patterns, and geospatial analysis.</p>
             </div>
@@ -1177,6 +1460,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry justify-content-end">
             <a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book1_17295392959840/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');"></a>
             <div class="text mt-3 float-right d-block">
+              <div class="proj-tags-wrap"><span class="proj-tag blue">Tableau</span><span class="proj-tag">Sentiment Analysis</span><span class="proj-tag">Hospitality BI</span></div>
               <h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Book1_17295392959840/Dashboard1">Tripadvisor Hotel Analytics Dashboard using Tableau</a></h3>
               <p>Intuitive multi-dimensional data analysis with interactive filters and tooltips showcasing user demographics and key hotel metrics.</p>
             </div>
@@ -1186,6 +1470,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry justify-content-end">
             <a href="https://github.com/Anandlamar/Movie-Portfolio-Project/blob/main/Untitled7.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_13.webp');"></a>
             <div class="text mt-3 float-right d-block">
+              <div class="proj-tags-wrap"><span class="proj-tag green">Python</span><span class="proj-tag">Pandas</span><span class="proj-tag">Correlation Analysis</span></div>
               <h3 class="heading"><a href="https://github.com/Anandlamar/Movie-Portfolio-Project/blob/main/Untitled7.ipynb">Film Data Analysis</a></h3>
               <p>Python data analysis across a dataset of over 7,668 films exploring correlations between budget, gross revenue, and audience ratings.</p>
             </div>
@@ -1202,6 +1487,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
         <div class="blog-entry">
           <a href="https://github.com/Anandlamar/Customer-Satisfaction-Analysis-with-Python/blob/main/Untitled5.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_9.png');"></a>
           <div class="text mt-3 d-block">
+            <div class="proj-tags-wrap"><span class="proj-tag green">Python</span><span class="proj-tag">Seaborn</span><span class="proj-tag">EDA &amp; Retention</span></div>
             <h3 class="heading"><a href="https://github.com/Anandlamar/Customer-Satisfaction-Analysis-with-Python/blob/main/Untitled5.ipynb">Customer Satisfaction Analysis with Python</a></h3>
             <p>Analyzed customer satisfaction survey data using Python, employing data visualization and statistical analysis to uncover key factors impacting customer experience.</p>
           </div>
@@ -1212,6 +1498,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
         <div class="blog-entry">
           <a href="https://github.com/Anandlamar/Creating-a-Mutual-Fund-Plan-with-Python/blob/main/Untitled2.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_12.jfif');"></a>
           <div class="text mt-3 d-block">
+            <div class="proj-tags-wrap"><span class="proj-tag green">Python</span><span class="proj-tag">Financial Analytics</span><span class="proj-tag">Risk Modeling</span></div>
             <h3 class="heading"><a href="https://github.com/Anandlamar/Creating-a-Mutual-Fund-Plan-with-Python/blob/main/Untitled2.ipynb">Creating a Mutual Fund Plan with Python</a></h3>
             <p>Developed a Python model to analyze and create personalized mutual fund plans, offering investment insights and projected returns based on historical data.</p>
           </div>
@@ -1222,6 +1509,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
         <div class="blog-entry">
           <a href="https://github.com/Anandlamar/Netflix-Content-Strategy-Analysis-with-Python/blob/main/Untitled3.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_11.png');"></a>
           <div class="text mt-3 d-block">
+            <div class="proj-tags-wrap"><span class="proj-tag green">Python</span><span class="proj-tag">Content Strategy</span><span class="proj-tag">Market Analytics</span></div>
             <h3 class="heading"><a href="https://github.com/Anandlamar/Netflix-Content-Strategy-Analysis-with-Python/blob/main/Untitled3.ipynb">Netflix Content Strategy Analysis with Python</a></h3>
             <p>Examined Netflix’s content library to identify trends in genre popularity, release patterns, and viewer preferences for data-driven content decisions.</p>
           </div>
@@ -1238,7 +1526,8 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://github.com/Anandlamar/Netflix-Data-Analytics-with-AWS-QuickSight/blob/main/AWS%20S3.docx" class="block-20 zoom-effect" style="background-image: url('images/proj_aws.PNG');"></a>
             <div class="text mt-3 d-block">
-              <h3 class="heading"><a href="https://github.com/Anandlamar/Netflix-Data-Analytics-with-AWS-QuickSight/blob/main/AWS%20S3.docx">Netflix Data Analysis using AWS S3</a></h3>
+              <div class="proj-tags-wrap"><span class="proj-tag">AWS QuickSight</span><span class="proj-tag">AWS S3</span><span class="proj-tag blue">Cloud Analytics</span></div>
+            <h3 class="heading"><a href="https://github.com/Anandlamar/Netflix-Data-Analytics-with-AWS-QuickSight/blob/main/AWS%20S3.docx">Netflix Data Analysis using AWS S3</a></h3>
               <p>Utilized AWS S3 to manage and analyze Netflix datasets, building a scalable cloud data pipeline for large-scale entertainment analytics.</p>
             </div>
           </div>
@@ -1248,6 +1537,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://github.com/Anandlamar/Health-Monitoring-and-Analysis/blob/main/Untitled9.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_16.webp');"></a>
             <div class="text mt-3 d-block">
+              <div class="proj-tags-wrap"><span class="proj-tag green">Python</span><span class="proj-tag">Healthcare Data</span><span class="proj-tag">Predictive Health</span></div>
               <h3 class="heading"><a href="https://github.com/Anandlamar/Health-Monitoring-and-Analysis/blob/main/Untitled9.ipynb">Health Monitoring and Analysis</a></h3>
               <p>Analyzed health-related datasets using data science techniques to identify anomalies, monitor vitals, and predict potential health risks.</p>
             </div>
@@ -1258,7 +1548,8 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://app.powerbi.com/groups/me/reports/96278b8d-cb91-4af2-bc02-9186cf566af5/828d26aafdb26c6f6cf8?experience=power-bi" class="block-20 zoom-effect" style="background-image: url('images/proj_15.png');"></a>
             <div class="text mt-3 d-block">
-              <h3 class="heading"><a href="https://app.powerbi.com/groups/me/reports/96278b8d-cb91-4af2-bc02-9186cf566af5/828d26aafdb26c6f6cf8?experience=power-bi">HR Analytics Dashboard</a></h3>
+              <div class="proj-tags-wrap"><span class="proj-tag">Power BI</span><span class="proj-tag">DAX</span><span class="proj-tag">Workforce Intelligence</span></div>
+            <h3 class="heading"><a href="https://app.powerbi.com/groups/me/reports/96278b8d-cb91-4af2-bc02-9186cf566af5/828d26aafdb26c6f6cf8?experience=power-bi">HR Analytics Dashboard</a></h3>
               <p>Provides workforce insights on attrition, salary distribution, and tenure across demographics to support data-driven retention strategies.</p>
             </div>
           </div>
@@ -1271,6 +1562,7 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry justify-content-end">
             <a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Netflixprojectanand/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');"></a>
             <div class="text mt-3 d-block">
+              <div class="proj-tags-wrap"><span class="proj-tag blue">Tableau</span><span class="proj-tag">Media Analytics</span><span class="proj-tag">Genre Distribution</span></div>
               <h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Netflixprojectanand/Dashboard1">Netflix Movies &amp; TV Shows Analysis Using Tableau</a></h3>
               <p>Created a Tableau dashboard analyzing Netflix’s movie and TV show data, providing insights into top genres, global content distribution, release trends, and content types.</p>
             </div>
@@ -1282,7 +1574,8 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Primevideo_17296990475160/Dashboard1?publish=yes" class="block-20 zoom-effect" style="background-image: url('images/proj_8.png');"></a>
             <div class="text mt-3 d-block">
-              <h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Primevideo_17296990475160/Dashboard1?publish=yes">Prime Video Shows &amp; Movies Analysis Using Tableau</a></h3>
+              <div class="proj-tags-wrap"><span class="proj-tag blue">Tableau</span><span class="proj-tag">Comparative Analytics</span><span class="proj-tag">Streaming Trends</span></div>
+            <h3 class="heading"><a href="https://public.tableau.com/app/profile/anand.bhagat/viz/Primevideo_17296990475160/Dashboard1?publish=yes">Prime Video Shows &amp; Movies Analysis Using Tableau</a></h3>
               <p>Developed a visually engaging Tableau dashboard to analyze Prime Video's vast collection of shows across countries, exploring content distribution, genres, and audience ratings.</p>
             </div>
           </div>
@@ -1293,7 +1586,8 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://app.powerbi.com/groups/me/reports/2c4c2d37-acd0-4422-9947-aaec6a59c480/528e3f210c01c0102c8c?experience=power-bi" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');"></a>
             <div class="text mt-3 d-block">
-              <h3 class="heading"><a href="https://app.powerbi.com/groups/me/reports/2c4c2d37-acd0-4422-9947-aaec6a59c480/528e3f210c01c0102c8c?experience=power-bi">Power BI Sales Dashboard Project</a></h3>
+              <div class="proj-tags-wrap"><span class="proj-tag">Power BI</span><span class="proj-tag">Sales Forecasting</span><span class="proj-tag">Revenue DAX</span></div>
+            <h3 class="heading"><a href="https://app.powerbi.com/groups/me/reports/2c4c2d37-acd0-4422-9947-aaec6a59c480/528e3f210c01c0102c8c?experience=power-bi">Power BI Sales Dashboard Project</a></h3>
               <p>Built a robust Power BI dashboard for Blinkit, focusing on real-time sales data and regional performance analysis across India, offering detailed insights for decision-making.</p>
             </div>
           </div>
@@ -1310,7 +1604,8 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" class="block-20 zoom-effect" style="background-image: url('images/craft-haven.webp');" target="_blank"></a>
             <div class="text mt-3 d-block">
-              <h3 class="heading"><a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" target="_blank">Craft Haven - E-Commerce Platform for Handmade Crafts</a></h3>
+              <div class="proj-tags-wrap"><span class="proj-tag green">Full-Stack</span><span class="proj-tag">Database Architecture</span><span class="proj-tag">E-Commerce</span></div>
+            <h3 class="heading"><a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" target="_blank">Craft Haven - E-Commerce Platform for Handmade Crafts</a></h3>
               <p>E-commerce platform designed to connect artisans with customers seeking handcrafted products. Features seamless listings, transactions, and recommendations.</p>
               <p><a href="https://drive.google.com/drive/folders/15HF3-yUl1w1EOvhOvSBYZObbx8bK8Y3h" target="_blank">Click here to access details.</a></p>
             </div>
@@ -1321,7 +1616,8 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
           <div class="blog-entry">
             <a href="https://public.tableau.com/views/Dataanalyticsprojectfinal/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="block-20 zoom-effect" style="background-image: url('images/Tesla.png');" target="_blank"></a>
             <div class="text mt-3 d-block">
-              <h3 class="heading"><a href="https://public.tableau.com/views/Dataanalyticsprojectfinal/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Tesla vs. Ford (2017–2023): Innovation Outpaces Legacy</a></h3>
+              <div class="proj-tags-wrap"><span class="proj-tag blue">Tableau</span><span class="proj-tag">Automotive BI</span><span class="proj-tag">Financial Valuation</span></div>
+            <h3 class="heading"><a href="https://public.tableau.com/views/Dataanalyticsprojectfinal/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Tesla vs. Ford (2017–2023): Innovation Outpaces Legacy</a></h3>
               <p>Analyzes financial performance between Tesla and Ford, comparing R&amp;D investments, margins, and manufacturing costs in the EV transition.</p>
               <p><a href="https://docs.google.com/document/d/1whsykJRFmOB8GEwMxUx-UXFYYGWBs2Ej/edit?usp=sharing&ouid=102117268856523270424&rtpof=true&sd=true" target="_blank">Click here to access findings.</a></p>
             </div>
@@ -1335,10 +1631,13 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
   <section class="ftco-section" id="certification-section">
     <div class="container-fluid">
       <div class="row justify-content-center mb-5 pb-3">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Certification</h1>
-          <h2 class="mb-4">Professional Certifications</h2>
-          <p>Click a badge to verify on Credly.</p>
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <div class="section-eyebrow">
+            <span class="eyebrow-pill">// 04. CREDENTIALS</span>
+            <span class="eyebrow-sub">VERIFIED CREDLY BADGES</span>
+          </div>
+          <h2 class="section-title">Professional Certifications</h2>
+          <p class="section-subtitle">Official SAP and enterprise technology certifications verified directly on Credly.</p>
         </div>
       </div>
 
@@ -1377,10 +1676,13 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
   <section class="ftco-section" id="volunteering-section">
     <div class="container-fluid">
       <div class="row justify-content-center mb-5 pb-5">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Volunteering</h1>
-          <h2 class="mb-4">Educational Leadership Activities</h2>
-          <p>Empowering students with cybersecurity, digital literacy, and leadership skills as part of the AT&amp;T Foundation's Bridging the Digital Divide initiative at Lamar University.</p>
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <div class="section-eyebrow">
+            <span class="eyebrow-pill">// 05. LEADERSHIP &amp; COMMUNITY</span>
+            <span class="eyebrow-sub">AT&amp;T BRIDGING THE DIGITAL DIVIDE</span>
+          </div>
+          <h2 class="section-title">Educational Leadership Activities</h2>
+          <p class="section-subtitle">Empowering students with cybersecurity, digital literacy, and leadership skills as part of the AT&amp;T Foundation's Bridging the Digital Divide initiative at Lamar University.</p>
         </div>
       </div>
 
@@ -1487,10 +1789,13 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
   <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
     <div class="container">
       <div class="row justify-content-center mb-5 pb-3">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Contact</h1>
-          <h2 class="mb-4">Contact Me</h2>
-          <p>Below are the details to reach out to me!</p>
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <div class="section-eyebrow">
+            <span class="eyebrow-pill">// 06. CONNECT</span>
+            <span class="eyebrow-sub">OPEN TO RELOCATE</span>
+          </div>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Feel free to reach out for enterprise analytics, AI engineering roles, or consulting opportunities.</p>
         </div>
       </div>
 
@@ -1581,5 +1886,40 @@ p, li, .title-s, .pull-right, .about-info span, .normal-txt,
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
     
-  </body>
+  
+  <!-- Dynamic Skill Bar Animation on Scroll (Inspired by andrevv.com) -->
+  <script>
+  (function(){
+    var skillSection = document.querySelector('.skill-mf');
+    if(!skillSection) return;
+    var bars = skillSection.querySelectorAll('.progress-bar');
+    bars.forEach(function(b){
+      var w = b.getAttribute('aria-valuenow') || '85';
+      b.dataset.targetWidth = w + '%';
+      b.style.width = '0%';
+    });
+
+    function triggerFill(){
+      bars.forEach(function(b){
+        b.style.width = b.dataset.targetWidth;
+      });
+    }
+
+    if('IntersectionObserver' in window){
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            triggerFill();
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      obs.observe(skillSection);
+    } else {
+      triggerFill();
+    }
+  })();
+  </script>
+
+</body>
 </html>
