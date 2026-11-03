@@ -846,6 +846,322 @@ ul.about-info li span:first-child {
 a, .text-primary {
   color: var(--accent-primary) !important;
 }
+
+/* ======================================================== */
+/* 2026 WORLD-CLASS CERTIFICATION SHOWCASE STYLES           */
+/* ======================================================== */
+#certification-section {
+  background: var(--canvas-bg) !important;
+  padding: 100px 0 !important;
+  position: relative;
+}
+
+#certification-section .cert-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cert-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px !important;
+  padding: 28px 24px 22px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563EB, #60A5FA);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  border-color: var(--accent-border) !important;
+}
+
+.cert-card:hover::before {
+  opacity: 1;
+}
+
+.cert-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.cert-org-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1D4ED8;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.cert-verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #047857;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.cert-badge-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 14px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-pedestal {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.09) 0%, rgba(37, 99, 235, 0.02) 65%, transparent 75%);
+  pointer-events: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.cert-card:hover .cert-pedestal {
+  transform: scale(1.15);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(37, 99, 235, 0.03) 65%, transparent 75%);
+}
+
+.cert-badge-link {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-badge-img {
+  width: 120px !important;
+  max-width: 120px !important;
+  height: 120px !important;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.08));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.cert-card:hover .cert-badge-img {
+  transform: scale(1.08);
+  filter: drop-shadow(0 14px 26px rgba(37, 99, 235, 0.22));
+}
+
+.cert-content {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: var(--accent-primary) !important;
+  margin-bottom: 4px !important;
+}
+
+.cert-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.cert-desc {
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 16px !important;
+  flex: 1;
+}
+
+.cert-skills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cert-skill-chip {
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.cert-card:hover .cert-skill-chip {
+  background: #EFF6FF;
+  border-color: #DBEAFE;
+  color: #1D4ED8;
+}
+
+.cert-card-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+}
+
+.cert-verify-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  color: var(--text-primary) !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.cert-verify-btn:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+  transform: translateY(-1px);
+}
+
+.cert-verify-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.cert-verify-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ======================================================== */
+/* EXECUTIVE COMPETENCY MATRIX (REPLACES PERCENTAGE BARS)   */
+/* ======================================================== */
+.executive-skill-matrix {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.matrix-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: var(--text-primary) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px !important;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 8px;
+}
+
+.matrix-group {
+  margin-bottom: 14px;
+}
+
+.matrix-group-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.matrix-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-ai { background: #2563EB; box-shadow: 0 0 6px rgba(37, 99, 235, 0.5); }
+.dot-sap { background: #0284C7; box-shadow: 0 0 6px rgba(2, 132, 199, 0.5); }
+.dot-data { background: #059669; box-shadow: 0 0 6px rgba(5, 150, 105, 0.5); }
+
+.matrix-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.m-chip {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.chip-ai {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1D4ED8;
+}
+
+.chip-sap {
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  color: #0369A1;
+}
+
+.chip-data {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #047857;
+}
+
+.m-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
 </style>
 
   </head>
@@ -912,7 +1228,7 @@ a, .text-primary {
 
         var md = Math.hypot(a.x - mx, a.y - my);
         if(md < M){
-          ctx.strokeStyle = 'rgba(255, 189, 57, ' + ((1 - md / M) * 0.75) + ')';
+          ctx.strokeStyle = 'rgba(37, 99, 235, ' + ((1 - md / M) * 0.5) + ')';
           ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mx, my); ctx.stroke();
         }
 
@@ -1059,7 +1375,7 @@ a, .text-primary {
           <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
             <span style="color: #00c853; font-weight: 800; font-size: 15px; letter-spacing: 1px;">ROADTRIP NATION</span>
             <span style="color: rgba(255,255,255,0.25);">&bull;</span>
-            <span style="color: #ffbd39; font-size: 11px; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: 0.5px;">LEADER ARCHIVE</span>
+            <span style="color: #2563EB; font-size: 11px; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: 0.5px;">LEADER ARCHIVE</span>
           </div>
 
           <h3 style="font-size: 26px; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 14px;">
@@ -1108,7 +1424,7 @@ a, .text-primary {
       if (v.muted) {
         v.muted = false;
         btn.innerHTML = '🔊 Mute Audio';
-        btn.style.background = '#ffbd39';
+        btn.style.background = '#2563EB';
         btn.style.color = '#111';
       } else {
         v.muted = true;
@@ -1162,41 +1478,48 @@ a, .text-primary {
                       <p><span class="title-s">Name: </span> <span>Anand Kumar Bhagat </span></p>
                       <p><span class="title-s">Job Role: </span> <span>AI &amp; SAP Analytics Professional</span></p>
                       <p><span class="title-s">Experience: </span> <span>5+ Years </span></p>
-                      <p><span class="title-s">Address: </span> <span>Mississippi, USA &bull; <strong style="color: #ffbd39;">Open to Relocate</strong></span></p>
+                      <p><span class="title-s">Address: </span> <span>Mississippi, USA &bull; <strong style="color: #2563EB;">Open to Relocate</strong></span></p>
                     </div>
                   </div>
                 </div>
 
-                <div class="skill-mf">
-                  <p class="title-s">Skills</p>
-                  <span>SAP S/4HANA</span> <span class="pull-right">95%</span>
-                  <div class="progress">
-                    <div class="progress-bar skill-bar-sap" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
+                <div class="executive-skill-matrix mt-4">
+                  <p class="matrix-title">Core Competency Matrix</p>
                   
-                  <span>SQL</span> <span class="pull-right">85%</span>
-                  <div class="progress">
-                    <div class="progress-bar skill-bar-sql" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-                      aria-valuemax="100"></div>
+                  <div class="matrix-group">
+                    <div class="matrix-group-label">
+                      <span class="matrix-dot dot-ai"></span> Enterprise GenAI &amp; RAG
+                    </div>
+                    <div class="matrix-chips">
+                      <span class="m-chip chip-ai">Enterprise RAG</span>
+                      <span class="m-chip chip-ai">Hybrid Vector Search</span>
+                      <span class="m-chip chip-ai">Prompt Engineering</span>
+                      <span class="m-chip chip-ai">LlamaIndex &amp; LangChain</span>
+                    </div>
                   </div>
-                  
-                  <span>Data Visualization</span> <span class="pull-right">90%</span>
-                  <div class="progress">
-                    <div class="progress-bar skill-bar-viz" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-                      aria-valuemax="100"></div>
+
+                  <div class="matrix-group mt-3">
+                    <div class="matrix-group-label">
+                      <span class="matrix-dot dot-sap"></span> SAP Enterprise Ecosystem
+                    </div>
+                    <div class="matrix-chips">
+                      <span class="m-chip chip-sap">SAP S/4HANA</span>
+                      <span class="m-chip chip-sap">SAP Analytics Cloud (SAC)</span>
+                      <span class="m-chip chip-sap">Datasphere (BDC)</span>
+                      <span class="m-chip chip-sap">TS410 Business Integration</span>
+                    </div>
                   </div>
-                  
-                  <span>SAP Analytics Cloud(SAC)</span> <span class="pull-right">85%</span>
-                  <div class="progress">
-                    <div class="progress-bar skill-bar-sac" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  
-                  <span>PYTHON</span> <span class="pull-right">80%</span>
-                  <div class="progress">
-                    <div class="progress-bar skill-bar-python" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-                      aria-valuemax="100"></div>
+
+                  <div class="matrix-group mt-3">
+                    <div class="matrix-group-label">
+                      <span class="matrix-dot dot-data"></span> Data Engineering &amp; Analytics
+                    </div>
+                    <div class="matrix-chips">
+                      <span class="m-chip chip-data">Python</span>
+                      <span class="m-chip chip-data">Advanced SQL</span>
+                      <span class="m-chip chip-data">AWS QuickSight / S3</span>
+                      <span class="m-chip chip-data">Tableau Dashboards</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1261,7 +1584,7 @@ a, .text-primary {
 
       <div class="row mb-3">
         <div class="col-12">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #ffbd39; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700;">// ROLES &amp; IMPACT</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #2563EB; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700;">// ROLES &amp; IMPACT</span>
         </div>
       </div>
       <br>
@@ -1271,7 +1594,7 @@ a, .text-primary {
         <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 d-flex">
           <div class="resume-wrap ftco-animate has-logo logo-mda w-100" style="border: 2px solid rgba(255, 189, 57, 0.45) !important;">
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="date" style="background: rgba(255, 189, 57, 0.15); color: #ffbd39; padding: 4px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold;">March 2026 – Present</span>
+              <span class="date" style="background: rgba(255, 189, 57, 0.15); color: #2563EB; padding: 4px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold;">March 2026 – Present</span>
               <span class="current-status-badge"><span class="radar-dot"></span> CURRENT</span>
             </div>
             <h2 style="font-size: 19px;">AI Engineer</h2>
@@ -1666,43 +1989,145 @@ a, .text-primary {
 
   <!-- Certification Section -->
   <section class="ftco-section" id="certification-section">
-    <div class="container-fluid">
+    <div class="container cert-container">
       <div class="row justify-content-center mb-5 pb-3">
-        <div class="col-md-8 heading-section text-center ftco-animate">
+        <div class="col-md-9 heading-section text-center ftco-animate">
           <div class="section-eyebrow">
             <span class="eyebrow-pill">// 04. CREDENTIALS</span>
-            <span class="eyebrow-sub">VERIFIED CREDLY BADGES</span>
+            <span class="eyebrow-sub">OFFICIAL SAP &amp; CREDLY ACCREDITATIONS</span>
           </div>
           <h2 class="section-title">Professional Certifications</h2>
-          <p class="section-subtitle">Official SAP and enterprise technology certifications verified directly on Credly.</p>
+          <p class="section-subtitle">Globally recognized enterprise credentials verifying deep expertise in SAP cloud analytics, data architecture, and end-to-end ERP integration.</p>
         </div>
       </div>
 
-      <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
+      <div class="row justify-content-center align-items-stretch">
+        <!-- 1. SAP Business Data Cloud -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex ftco-animate mb-4">
           <div class="cert-card w-100">
-            <a href="https://www.credly.com/earner/earned/badge/99384e7b-0e0e-4fba-9866-ca70d69d6ef8" target="_blank">
-              <img src="images/bdc-badge.png" class="cert-badge" alt="SAP Business Data Cloud">
-            </a>
-            <div class="cert-title">SAP Certified Associate – Business Data Cloud</div>
+            <div class="cert-card-top">
+              <span class="cert-org-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                SAP SE
+              </span>
+              <span class="cert-verified-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Credly Verified
+              </span>
+            </div>
+
+            <div class="cert-badge-wrapper">
+              <div class="cert-pedestal"></div>
+              <a href="https://www.credly.com/earner/earned/badge/99384e7b-0e0e-4fba-9866-ca70d69d6ef8" target="_blank" rel="noopener" class="cert-badge-link" title="Verify on Credly">
+                <img src="images/bdc-badge.png" class="cert-badge-img" alt="SAP Business Data Cloud Certification Badge">
+              </a>
+            </div>
+
+            <div class="cert-content">
+              <h3 class="cert-title">SAP Certified Associate</h3>
+              <div class="cert-subtitle">Business Data Cloud</div>
+              <p class="cert-desc">Validates core competency in SAP Datasphere architecture, cloud data warehousing, data governance, and unified data integration across hybrid enterprise landscapes.</p>
+              
+              <div class="cert-skills-group">
+                <span class="cert-skill-chip">SAP Datasphere</span>
+                <span class="cert-skill-chip">Cloud Data Warehousing</span>
+                <span class="cert-skill-chip">Data Governance</span>
+                <span class="cert-skill-chip">SAP HANA Cloud</span>
+              </div>
+            </div>
+
+            <div class="cert-card-footer">
+              <a href="https://www.credly.com/earner/earned/badge/99384e7b-0e0e-4fba-9866-ca70d69d6ef8" target="_blank" rel="noopener" class="cert-verify-btn">
+                <span>Verify on Credly</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
+        <!-- 2. SAP Analytics Cloud -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex ftco-animate mb-4">
           <div class="cert-card w-100">
-            <a href="https://www.credly.com/badges/f8e77581-0b88-416f-a537-592aa4b3c4d7" target="_blank">
-              <img src="images/sac-badge3.png" class="cert-badge" alt="SAP Analytics Cloud">
-            </a>
-            <div class="cert-title">SAP Certified Associate – SAP Analytics Cloud</div>
+            <div class="cert-card-top">
+              <span class="cert-org-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                SAP SE
+              </span>
+              <span class="cert-verified-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Credly Verified
+              </span>
+            </div>
+
+            <div class="cert-badge-wrapper">
+              <div class="cert-pedestal"></div>
+              <a href="https://www.credly.com/badges/f8e77581-0b88-416f-a537-592aa4b3c4d7" target="_blank" rel="noopener" class="cert-badge-link" title="Verify on Credly">
+                <img src="images/sac-badge3.png" class="cert-badge-img" alt="SAP Analytics Cloud Certification Badge">
+              </a>
+            </div>
+
+            <div class="cert-content">
+              <h3 class="cert-title">SAP Certified Associate</h3>
+              <div class="cert-subtitle">SAP Analytics Cloud (SAC)</div>
+              <p class="cert-desc">Demonstrates proven mastery in designing executive BI dashboards, predictive forecasting models, augmented analytics, and strategic planning scenarios.</p>
+              
+              <div class="cert-skills-group">
+                <span class="cert-skill-chip">Augmented Analytics</span>
+                <span class="cert-skill-chip">Predictive Forecasting</span>
+                <span class="cert-skill-chip">Enterprise BI</span>
+                <span class="cert-skill-chip">Data Modeling</span>
+              </div>
+            </div>
+
+            <div class="cert-card-footer">
+              <a href="https://www.credly.com/badges/f8e77581-0b88-416f-a537-592aa4b3c4d7" target="_blank" rel="noopener" class="cert-verify-btn">
+                <span>Verify on Credly</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center ftco-animate mb-4">
+        <!-- 3. SAP TS410 Business Process Integration -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex ftco-animate mb-4">
           <div class="cert-card w-100">
-            <a href="https://www.credly.com/badges/cf4ecc7a-bc1c-45aa-949e-c01934d6a705" target="_blank">
-              <img src="images/ts410-badge3.png" class="cert-badge" alt="SAP TS410">
-            </a>
-            <div class="cert-title">SAP Certified Associate – Business Process Integration (TS410)</div>
+            <div class="cert-card-top">
+              <span class="cert-org-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                SAP SE
+              </span>
+              <span class="cert-verified-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Credly Verified
+              </span>
+            </div>
+
+            <div class="cert-badge-wrapper">
+              <div class="cert-pedestal"></div>
+              <a href="https://www.credly.com/badges/cf4ecc7a-bc1c-45aa-949e-c01934d6a705" target="_blank" rel="noopener" class="cert-badge-link" title="Verify on Credly">
+                <img src="images/ts410-badge3.png" class="cert-badge-img" alt="SAP TS410 Business Process Integration Badge">
+              </a>
+            </div>
+
+            <div class="cert-content">
+              <h3 class="cert-title">SAP Certified Associate</h3>
+              <div class="cert-subtitle">Business Process Integration (TS410)</div>
+              <p class="cert-desc">Certifies end-to-end integration across core SAP S/4HANA business cycles: Order-to-Cash (SD), Procure-to-Pay (MM), Plan-to-Produce (PP), and Financial Accounting (FI/CO).</p>
+              
+              <div class="cert-skills-group">
+                <span class="cert-skill-chip">SAP S/4HANA</span>
+                <span class="cert-skill-chip">Order-to-Cash (SD)</span>
+                <span class="cert-skill-chip">Procure-to-Pay (MM)</span>
+                <span class="cert-skill-chip">FI / CO Integration</span>
+              </div>
+            </div>
+
+            <div class="cert-card-footer">
+              <a href="https://www.credly.com/badges/cf4ecc7a-bc1c-45aa-949e-c01934d6a705" target="_blank" rel="noopener" class="cert-verify-btn">
+                <span>Verify on Credly</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1843,7 +2268,7 @@ a, .text-primary {
               <span class="icon-map-signs"></span>
             </div>
             <h3 class="mb-4">Location</h3>
-            <p>Mississippi, USA<br><span style="color: #ffbd39; font-weight: 600; font-size: 13px;">(Open to Relocate)</span></p>
+            <p>Mississippi, USA<br><span style="color: #2563EB; font-weight: 600; font-size: 13px;">(Open to Relocate)</span></p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -3538,7 +3963,7 @@ a, .text-primary {
         title: "📅 Connect & Schedule with Anand",
         body: "Ready to discuss AI Engineering roles, enterprise RAG consulting, or SAP analytics?",
         bullets: [
-          "<strong>Email:</strong> <a href='mailto:Bhagatanand28@gmail.com' style='color:#ffbd39;'>Bhagatanand28@gmail.com</a>",
+          "<strong>Email:</strong> <a href='mailto:Bhagatanand28@gmail.com' style='color:#2563EB; font-weight: 600;'>Bhagatanand28@gmail.com</a>",
           "<strong>Phone:</strong> <a href='tel://4094343518' style='color:#00c853;'>+1 (409) 434-3518</a>",
           "<strong>LinkedIn:</strong> <a href='https://www.linkedin.com/in/anand-bhagat-a616462b4' target='_blank' style='color:#38bdf8;'>linkedin.com/in/anand-bhagat</a>"
         ],
@@ -3777,7 +4202,7 @@ a, .text-primary {
       } else {
         row.innerHTML = "<div class='companion-mini-avatar'><img src='images/cropped-1750471618951.jpeg' onerror=\"this.src='images/damon.JPG'\" class='companion-avatar-img'></div>" +
           "<div class='companion-speech-bubble'>" +
-            "<div style='font-family: monospace; font-size: 9.5px; color: #ffbd39; font-weight: 700; margin-bottom: 4px;'>// STRICT GROUNDING GUARDRAIL</div>" +
+            "<div style='font-family: monospace; font-size: 9.5px; color: #2563EB; font-weight: 700; margin-bottom: 4px;'>// STRICT GROUNDING GUARDRAIL</div>" +
             "<div style='color: #ffffff; font-weight: 600; margin-bottom: 4px;'>I focus strictly on Anand's engineering expertise!</div>" +
             "<div style='color: #d4d4d8; margin-bottom: 8px;'>I don't answer general trivia, but I can tell you about Anand's <strong>Enterprise RAG work at MDA</strong>, his <strong>3x SAP Certifications</strong>, or <strong>how this assistant was built</strong>.</div>" +
             "<div style='display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;'>" +
