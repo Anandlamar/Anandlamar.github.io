@@ -1395,6 +1395,268 @@ a, .text-primary {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
 }
 
+
+/* ======================================================== */
+/* 2026 WORLD-CLASS CONTACT & CONNECT STYLES                */
+/* (REPLACES YELLOW ICONS & CLUNKY DEAD BUTTONS)            */
+/* ======================================================== */
+.contact-section {
+  padding: 80px 0 60px !important;
+  background: var(--canvas-bg) !important;
+  position: relative;
+}
+
+.contact-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-cards-grid {
+  margin-bottom: 30px;
+}
+
+.contact-box {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px !important;
+  padding: 30px 20px 26px !important;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-box:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.08) !important;
+  border-color: var(--accent-border) !important;
+}
+
+.contact-icon-pedestal {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+
+.contact-box:hover .contact-icon-pedestal {
+  transform: scale(1.08);
+}
+
+.icon-location {
+  background: #EFF6FF !important;
+  border: 1px solid #BFDBFE !important;
+  color: #2563EB !important;
+}
+
+.icon-phone {
+  background: #ECFDF5 !important;
+  border: 1px solid #A7F3D0 !important;
+  color: #059669 !important;
+}
+
+.icon-email {
+  background: #EEF2FF !important;
+  border: 1px solid #C7D2FE !important;
+  color: #4F46E5 !important;
+}
+
+.icon-linkedin {
+  background: #F0F9FF !important;
+  border: 1px solid #BAE6FD !important;
+  color: #0284C7 !important;
+}
+
+.contact-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 8px !important;
+}
+
+.contact-card-value {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 8px !important;
+  word-break: break-word;
+}
+
+.contact-card-value a {
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.contact-card-value a:hover {
+  color: var(--accent-primary) !important;
+}
+
+.contact-card-meta {
+  font-size: 11.5px !important;
+  color: #64748B !important;
+  font-weight: 500 !important;
+}
+
+.contact-reloc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #047857;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* Question Banner (Ask AI Assistant) */
+.contact-ai-prompt-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px !important;
+  padding: 32px 28px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-ai-prompt-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563EB, #60A5FA);
+}
+
+.contact-ai-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .contact-ai-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.contact-ai-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #2563EB;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.contact-ai-left h4 {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #0F172A !important;
+  margin-bottom: 4px !important;
+  letter-spacing: -0.02em;
+}
+
+.contact-ai-left p {
+  font-size: 13.5px !important;
+  color: #64748B !important;
+  margin: 0 !important;
+}
+
+.btn-ask-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563EB;
+  color: #FFFFFF !important;
+  border: none;
+  padding: 13px 24px;
+  border-radius: 9999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-ask-ai:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.38);
+}
+
+/* Social links pill bar */
+.contact-social-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-lead-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.social-pills-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 9999px;
+  padding: 6px 14px;
+  color: #334155 !important;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.social-pill:hover {
+  border-color: #2563EB;
+  color: #2563EB !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+}
+
 </style>
 
   </head>
@@ -2500,72 +2762,122 @@ a, .text-primary {
   </section>
 
   <!-- Contact Section -->
+  <!-- ======================================================== -->
+  <!-- 2026 WORLD-CLASS CONTACT & CONNECT SHOWCASE              -->
+  <!-- ======================================================== -->
   <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-    <div class="container">
+    <div class="container contact-container">
       <div class="row justify-content-center mb-5 pb-3">
         <div class="col-md-8 heading-section text-center ftco-animate">
           <div class="section-eyebrow">
-            <span class="eyebrow-pill">// 06. CONNECT</span>
-            <span class="eyebrow-sub">OPEN TO RELOCATE</span>
+            <span class="eyebrow-pill">// 06. DIRECT CONTACT</span>
+            <span class="eyebrow-sub">EXECUTIVE AVAILABILITY</span>
           </div>
           <h2 class="section-title">Get In Touch</h2>
-          <p class="section-subtitle">Feel free to reach out for enterprise analytics, AI engineering roles, or consulting opportunities.</p>
+          <p class="section-subtitle">Reach out for enterprise AI &amp; RAG architecture, SAP Analytics integration, or full-time engineering opportunities.</p>
         </div>
       </div>
 
-      <div class="row d-flex contact-info mb-5">
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-map-signs"></span>
+      <div class="row d-flex contact-cards-grid mb-5">
+        <!-- 1. Location -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex ftco-animate mb-4">
+          <div class="contact-box w-100">
+            <div class="contact-icon-pedestal icon-location">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
-            <h3 class="mb-4">Location</h3>
-            <p>Mississippi, USA<br><span style="color: #2563EB; font-weight: 600; font-size: 13px;">(Open to Relocate)</span></p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-phone2"></span>
+            <h3 class="contact-card-title">LOCATION</h3>
+            <div class="contact-card-value">Mississippi, USA</div>
+            <div class="contact-badge-wrap">
+              <span class="contact-reloc-badge">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Open to Relocate (USA)
+              </span>
             </div>
-            <h3 class="mb-4">Contact Number</h3>
-            <p><a href="tel://4094343518">+1 (409) 434-3518</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-paper-plane"></span>
-            </div>
-            <h3 class="mb-4">Email Address</h3>
-            <p><a href="mailto:Bhagatanand28@gmail.com">Bhagatanand28@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-globe"></span>
-            </div>
-            <h3 class="mb-4">Professional Profile</h3>
-            <p><a href="https://www.linkedin.com/in/anand-bhagat-a616462b4" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
           </div>
         </div>
 
-        <div class="container">
-          <br><br>
-          <div class="row justify-content-center">
-            <div class="col-md-7 ftco-animate text-center">
-              <h2>Have a<span> Question?  </span> <a href="#contact-section" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+        <!-- 2. Phone -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex ftco-animate mb-4">
+          <div class="contact-box w-100">
+            <div class="contact-icon-pedestal icon-phone">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
+            <h3 class="contact-card-title">DIRECT PHONE</h3>
+            <div class="contact-card-value">
+              <a href="tel:4094343518">+1 (409) 434-3518</a>
+            </div>
+            <span class="contact-card-meta">Mon – Fri &bull; Direct Voice / SMS</span>
           </div>
-          <br>
-          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-            <li class="ftco-animate normal-txt">Find me on  </li>
-            <li class="ftco-animate"><a href="https://www.youtube.com/@traveller_arrives1755"><span class="icon-youtube"></span></a></li>
-            <li class="ftco-animate"><a href="https://www.linkedin.com/in/anand-bhagat-a616462b4"><span class="icon-linkedin"></span></a></li>  
-            <li class="ftco-animate"><a href="https://www.instagram.com/traveller_arrives"><span class="icon-instagram"></span></a></li>
-          </ul>
-          <br>
+        </div>
+
+        <!-- 3. Email -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex ftco-animate mb-4">
+          <div class="contact-box w-100">
+            <div class="contact-icon-pedestal icon-email">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <h3 class="contact-card-title">OFFICIAL EMAIL</h3>
+            <div class="contact-card-value">
+              <a href="mailto:Bhagatanand28@gmail.com">Bhagatanand28@gmail.com</a>
+            </div>
+            <span class="contact-card-meta">Fast Response (&lt; 24 hrs)</span>
+          </div>
+        </div>
+
+        <!-- 4. LinkedIn -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex ftco-animate mb-4">
+          <div class="contact-box w-100">
+            <div class="contact-icon-pedestal icon-linkedin">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 0 0 0-3.36 1.68 1.68 0 0 0 0 3.36m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+            </div>
+            <h3 class="contact-card-title">PROFESSIONAL PROFILE</h3>
+            <div class="contact-card-value">
+              <a href="https://www.linkedin.com/in/anand-bhagat-a616462b4" target="_blank" rel="noopener">linkedin.com/in/anand-bhagat</a>
+            </div>
+            <span class="contact-card-meta">Verified Executive Profile &nearr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Question / AI Assistant Prompt Bar -->
+      <div class="contact-ai-prompt-card ftco-animate text-center">
+        <div class="contact-ai-inner">
+          <div class="contact-ai-left">
+            <span class="contact-ai-badge">&#x26A1; INSTANT ANSWERS</span>
+            <h4>Have a question about Anand's enterprise work or technical stack?</h4>
+            <p>Ask his grounded conversational AI assistant about MDA RAG architecture, SAP certifications, or projects.</p>
+          </div>
+          <button type="button" class="btn-ask-ai" onclick="openChatDialog(event)">
+            <span>Ask Anand's AI Assistant</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Clean Social Bar -->
+      <div class="contact-social-wrap text-center mt-5 mb-3">
+        <span class="social-lead-label">Connect Across Platforms:</span>
+        <div class="social-pills-row">
+          <a href="https://www.linkedin.com/in/anand-bhagat-a616462b4" target="_blank" rel="noopener" class="social-pill" title="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 0 0 0-3.36 1.68 1.68 0 0 0 0 3.36m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Anandlamar" target="_blank" rel="noopener" class="social-pill" title="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://public.tableau.com/app/profile/anand.bhagat" target="_blank" rel="noopener" class="social-pill" title="Tableau Public">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Tableau</span>
+          </a>
+          <a href="https://www.youtube.com/@traveller_arrives1755" target="_blank" rel="noopener" class="social-pill" title="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 22c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 2c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.instagram.com/traveller_arrives" target="_blank" rel="noopener" class="social-pill" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.79-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram</span>
+          </a>
         </div>
       </div>
     </div>
